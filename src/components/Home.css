@@ -21,6 +21,11 @@
   fill: var(--color-primary);
 }
 
+.home-content,
+.home-image-container {
+  flex: 1;
+}
+
 .home-image-container {
   background-color: var(--color-primary);
   background-size: contain;

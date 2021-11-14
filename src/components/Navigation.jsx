@@ -8,9 +8,9 @@ import "./Navigation.css";
 
 const Navigation = () => {
   const hueColors = [
-    { key: "red", value: 0 },
-    { key: "green", value: 155 },
-    { key: "blue", value: 200 },
+    { key: "red", value: 5 },
+    { key: "green", value: 140 },
+    { key: "blue", value: 210 },
     { key: "purple", value: 270 },
   ];
 
