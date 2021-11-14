@@ -9,7 +9,7 @@ import "./Navigation.css";
 const Navigation = () => {
   const hueColors = [
     { key: "red", value: 5 },
-    { key: "green", value: 140 },
+    { key: "green", value: 145 },
     { key: "blue", value: 210 },
     { key: "purple", value: 270 },
   ];
@@ -63,17 +63,17 @@ const Navigation = () => {
         </div>
         <div className={showMenu ? `nav-menu show-menu` : `nav-menu`}>
           <ul className="nav-list">
-            <li className="nav-item home" onClick={() => setShowMenu(false)}>
+            <li className="nav-item" onClick={() => setShowMenu(false)}>
               <a href="#home" className="nav-link ">
                 Home
               </a>
             </li>
-            <li className="nav-item about" onClick={() => setShowMenu(false)}>
+            <li className="nav-item" onClick={() => setShowMenu(false)}>
               <a href="#about" className="nav-link">
                 About
               </a>
             </li>
-            <li className="nav-item contact" onClick={() => setShowMenu(false)}>
+            <li className="nav-item" onClick={() => setShowMenu(false)}>
               <a href="#contact" className="nav-link">
                 Contact
               </a>
