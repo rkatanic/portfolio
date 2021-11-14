@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.e3a8f379.chunk.css",
+    "main.js": "/portfolio/static/js/main.4611317f.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.4611317f.chunk.js.map",
+    "runtime-main.js": "/portfolio/static/js/runtime-main.5e749f4e.js",
+    "runtime-main.js.map": "/portfolio/static/js/runtime-main.5e749f4e.js.map",
+    "static/js/2.241c4fee.chunk.js": "/portfolio/static/js/2.241c4fee.chunk.js",
+    "static/js/2.241c4fee.chunk.js.map": "/portfolio/static/js/2.241c4fee.chunk.js.map",
+    "static/js/3.b1b75ce5.chunk.js": "/portfolio/static/js/3.b1b75ce5.chunk.js",
+    "static/js/3.b1b75ce5.chunk.js.map": "/portfolio/static/js/3.b1b75ce5.chunk.js.map",
+    "index.html": "/portfolio/index.html",
+    "static/css/main.e3a8f379.chunk.css.map": "/portfolio/static/css/main.e3a8f379.chunk.css.map",
+    "static/js/2.241c4fee.chunk.js.LICENSE.txt": "/portfolio/static/js/2.241c4fee.chunk.js.LICENSE.txt",
+    "static/media/angular.f70a0063.svg": "/portfolio/static/media/angular.f70a0063.svg",
+    "static/media/calendar.a7acacfe.svg": "/portfolio/static/media/calendar.a7acacfe.svg",
+    "static/media/css.b68b82c8.svg": "/portfolio/static/media/css.b68b82c8.svg",
+    "static/media/education.9726844b.svg": "/portfolio/static/media/education.9726844b.svg",
+    "static/media/Home.css": "/portfolio/static/media/home-blob.6148f0d2.svg",
+    "static/media/html.ee8aead2.svg": "/portfolio/static/media/html.ee8aead2.svg",
+    "static/media/mail-send.f76f0770.svg": "/portfolio/static/media/mail-send.f76f0770.svg",
+    "static/media/me1.9cbc0b85.png": "/portfolio/static/media/me1.9cbc0b85.png",
+    "static/media/me2.464cf09e.png": "/portfolio/static/media/me2.464cf09e.png",
+    "static/media/menu.41e9ae37.svg": "/portfolio/static/media/menu.41e9ae37.svg",
+    "static/media/moon.687d47b4.svg": "/portfolio/static/media/moon.687d47b4.svg",
+    "static/media/react.f87a55c2.svg": "/portfolio/static/media/react.f87a55c2.svg",
+    "static/media/suitcase.62a817e5.svg": "/portfolio/static/media/suitcase.62a817e5.svg",
+    "static/media/sun.07b37acf.svg": "/portfolio/static/media/sun.07b37acf.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5e749f4e.js",
+    "static/js/2.241c4fee.chunk.js",
+    "static/css/main.e3a8f379.chunk.css",
+    "static/js/main.4611317f.chunk.js"
+  ]
+}
