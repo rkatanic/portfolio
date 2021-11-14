@@ -1,0 +1,13 @@
+.section {
+  padding: 3rem;
+  margin: auto;
+  max-width: var(--width-desktop);
+}
+
+.section-title {
+  font-size: var(--font-size-3);
+}
+
+.section-subtitle {
+  font-size: var(--font-size-0-75);
+}

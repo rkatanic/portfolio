@@ -1,0 +1,138 @@
+.icon {
+  height: var(--font-size-1-25);
+  fill: var(--color-text);
+  cursor: pointer;
+}
+
+.icon:hover {
+  fill: var(--color-primary);
+}
+
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--color-body);
+  box-shadow: 1px -5px 15px hsla(0, 8%, 40%, 0.5);
+  z-index: var(--z-index-100);
+}
+
+.nav {
+  font-weight: 600;
+  color: var(--color-title);
+  background-color: var(--color-body);
+  max-width: var(--width-desktop);
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3rem;
+  margin: auto;
+}
+
+.nav-left {
+  display: flex;
+}
+
+.night-mode-switch {
+  margin-left: var(--margin-1);
+}
+
+.nav-toggle:hover {
+  cursor: pointer;
+  fill: var(--color-primary);
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0;
+}
+
+.nav-item {
+  padding: 1rem;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-link {
+  color: var(--color-text);
+}
+
+.active {
+  border-bottom: 2px solid var(--color-primary);
+}
+
+.nav-link:hover {
+  color: var(--color-primary);
+}
+
+.nav-close {
+  position: absolute;
+  right: 2rem;
+  top: 0.5rem;
+  font-size: var(--font-size-1-25);
+}
+
+.color-switch-container {
+  display: flex;
+}
+
+.color-indicator {
+  box-sizing: border-box;
+  height: var(--font-size-1-25);
+  width: var(--font-size-1-25);
+  border-radius: 50%;
+  margin-right: var(--margin-0-5);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-menu {
+    width: 100%;
+    position: fixed;
+    top: -100%;
+    left: 0;
+    padding: 3rem;
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.35);
+    border-radius: 0 0 1.5rem 1.5rem;
+    transition: 0.5s;
+    background-color: var(--color-body);
+    box-sizing: border-box;
+  }
+
+  .header {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0 0 1.5rem 1.5rem;
+    padding: 0.75rem 0;
+  }
+
+  .color-indicator {
+    width: var(--font-size-1-25);
+    height: var(--font-size-1-25);
+    margin-right: var(--margin-1);
+  }
+
+  .icon {
+    height: var(--font-size-1-25);
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .nav-btns,
+  .nav-close {
+    display: none;
+  }
+
+  .nav-list {
+    flex-direction: row;
+  }
+}
+
+.show-menu {
+  top: 0;
+}

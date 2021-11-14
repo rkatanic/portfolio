@@ -1,13 +1,75 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --body-font: "Roboto", sans-serif;
+  --header-height: 3rem;
+
+  --color-hue: 270;
+  --color-primary: hsl(var(--color-hue), 70%, 60%);
+  --color-primary-two: hsl(var(--color-hue), 55%, 55%);
+  --color-primary-light: hsl(var(--color-hue), 90%, 85%);
+
+  --color-title: hsl(var(--color-hue), 8%, 15%);
+  --color-text: hsl(var(--color-hue), 8%, 45%);
+  --color-text-light: hsl(var(--color-hue), 8%, 65%);
+
+  --color-input: hsl(var(--color-hue), 70%, 95%);
+  --color-body: hsl(var(--color-hue), 60%, 99%);
+  --color-container: #fff;
+
+  --font-size-0-75: 0.75rem;
+  --font-size-1: 1rem;
+  --font-size-1-25: 1.25rem;
+  --font-size-1-5: 1.5rem;
+  --font-size-2: 2rem;
+  --font-size-2-5: 2.5rem;
+  --font-size-3: 3rem;
+
+  --margin-0-5: 0.5rem;
+  --margin-0-75: 0.75rem;
+  --margin-1: 1rem;
+  --margin-1-25: 1.25rem;
+  --margin-1-5: 1.5rem;
+  --margin-2: 2rem;
+  --margin-3: 3rem;
+
+  --width-desktop: 1280px;
+  --width-tablet: 768px;
+
+  --z-index-1: 1;
+  --z-index-10: 10;
+  --z-index-100: 100;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  color: var(--color-text);
+  background-color: var(--color-body);
+  font-size: var(--font-size-1);
+  font-family: var(--body-font);
+  margin: var(--header-height) 0 0 0;
+}
+
+body.dark-mode {
+  --color-primary-two: hsl(var(--color-hue), 30%, 8%);
+  --color-title: hsl(var(--color-hue), 8%, 95%);
+  --color-text: hsl(var(--color-hue), 8%, 75%);
+  --color-input: hsl(var(--color-hue), 30%, 15%);
+  --color-body: hsl(var(--color-hue), 25%, 10%);
+  --color-container: hsl(var(--color-hue), 30%, 15%);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-title);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth !important;
 }
