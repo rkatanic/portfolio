@@ -12,13 +12,12 @@ const Home = () => {
           <h2 className="home-title">Hi, I'm Radivoje</h2>
           <h3 className="home-subtitle">Full Stack Developer</h3>
           <p className="home-description">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat
-            aperiam nam unde sunt dicta error doloribus est ex animi reiciendis
-            necessitatibus debitis nulla, nemo quis earum aliquid perferendis
-            esse iure!
+            My main focus is on building efficient web apps that work across all
+            platforms and browsers. Building web solutions is my satisfaction.
+            Sometimes a problem solving can be relaxing too.
           </p>
           <button type="button" className="btn-primary">
-            Contact
+            Contact me
             <MailSendIcon />
           </button>
         </div>
