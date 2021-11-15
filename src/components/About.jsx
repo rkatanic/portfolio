@@ -29,7 +29,7 @@ const About = () => {
               <div className="about-line"></div>
 
               <h2>ProductDock</h2>
-              <h3>Full stack developer</h3>
+              <h3>Sotware developer</h3>
               <p>
                 <CalendarIcon />
                 August 2020 - present
