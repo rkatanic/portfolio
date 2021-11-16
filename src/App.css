@@ -18,6 +18,11 @@
   opacity: 0.9;
 }
 
+.btn:disabled {
+  cursor: not-allowed;
+  background-color: var(--color-text-light);
+}
+
 .btn-primary {
   color: #fff;
   background-color: var(--color-primary);

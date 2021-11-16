@@ -2,10 +2,31 @@ import Section from "./Section";
 import { ReactComponent as EmailIcon } from "../assets/icons/email.svg";
 import { ReactComponent as GithubIcon } from "../assets/icons/github.svg";
 import { ReactComponent as LinkedinIcon } from "../assets/icons/linkedin.svg";
-
+import emailjs from "emailjs-com";
 import "./Contact.css";
+import { useState } from "react";
 
 const Contact = () => {
+  const [isSendingEmail, setIsSendingEmail] = useState(false);
+
+  const handleEmailSend = async (e) => {
+    e.preventDefault();
+
+    try {
+      setIsSendingEmail(true);
+      await emailjs.sendForm(
+        process.env.REACT_APP_EMAIL_SERVICE_ID,
+        process.env.REACT_APP_EMAIL_TEMPLATE_ID,
+        e.target,
+        process.env.REACT_APP_EMAIL_USER_ID
+      );
+      setIsSendingEmail(false);
+    } catch (err) {
+      alert(err.text);
+      setIsSendingEmail(false);
+    }
+  };
+
   return (
     <Section id="contact">
       <div className="contact">
@@ -37,15 +58,24 @@ const Contact = () => {
             </div>
           </div>
 
-          <form action="" className="contact-form">
-            <input type="text" placeholder="Enter your name" />
-            <input type="text" placeholder="Enter your email" />
+          <form className="contact-form" onSubmit={handleEmailSend}>
+            <input type="text" placeholder="Enter your name" name="name" />
+            <input type="text" placeholder="Enter your email" name="email" />
+            <input type="text" placeholder="Enter subject" name="subject" />
+
             <textarea
               type="textarea"
               maxLength="400"
               placeholder="Your message ..."
+              name="message"
             />
-            <button className="btn btn-primary">Send email</button>
+            <button
+              type="submit"
+              disabled={isSendingEmail}
+              className="btn btn-primary"
+            >
+              {isSendingEmail ? "Sending ..." : "Send email"}
+            </button>
           </form>
         </div>
       </div>
