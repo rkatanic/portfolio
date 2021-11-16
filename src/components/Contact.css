@@ -1,29 +1,62 @@
 .contact {
   flex: 1;
 }
+
+.contact .icon {
+  fill: var(--color-primary);
+  height: 2.5rem;
+  margin-right: var(--margin-1);
+}
+
 .contact-title {
+  text-align: center;
   font-size: var(--font-size-3);
 }
+
 .contact-subtitle {
+  text-align: center;
   color: var(--color-text);
 }
 
-.contact-form {
+.contact-container {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+}
 
+.contact-links,
+.contact-form {
+  margin: var(--margin-1) 0;
+  flex: 1;
+}
+
+.contact-form {
+  flex: 2;
+}
+
+.contact-link {
+  display: flex;
   align-items: center;
-  justify-content: center;
+}
+
+.contact-link-info {
+  margin: var(--margin-0-5);
+  flex: 1;
+}
+
+.contact-link-info h3 {
+  color: var(--color-title);
+  margin: 0.125rem 0;
 }
 
 input,
 textarea {
   resize: none;
   border: none;
+  box-sizing: border-box;
   outline: none;
   width: 100%;
   border-radius: 8px;
-  margin: 1rem;
+  margin: 1rem 0;
   padding: 1rem;
   font-family: var(--body-font);
   color: var(--color-text);
@@ -32,4 +65,15 @@ textarea {
 
 textarea {
   height: 200px;
+}
+
+@media screen and (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-form button {
+    width: 100%;
+    justify-content: center;
+  }
 }

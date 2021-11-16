@@ -26,10 +26,10 @@ const Home = () => {
             platforms and browsers. Building web solutions is my satisfaction.
             Sometimes a problem solving can be relaxing too.
           </p>
-          <button type="button" className="btn-primary">
+          <a className="btn btn-primary" href="#contact">
             Contact me
             <MailSendIcon />
-          </button>
+          </a>
         </div>
         <div className="home-image-container">
           <img className="home-img" src={myimage} alt="my-img" />

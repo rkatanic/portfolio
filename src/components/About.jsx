@@ -105,7 +105,7 @@ const About = () => {
             <p>
               For more details, feel free to download my CV and take a look!
             </p>
-            <button className="btn-outline">Download CV</button>
+            <button className="btn btn-outline">Download CV</button>
           </div>
           <img src={myimage} alt="" />
         </div>
