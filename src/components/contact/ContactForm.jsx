@@ -1,12 +1,19 @@
+import { useState } from "react";
 import emailjs from "emailjs-com";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
 import FormField from "./FormField";
 import { ReactComponent as SandWatchIcon } from "../../assets/icons/sandwatch.svg";
+import ContactFormModal from "./ContactFormModal";
 
 import "./ContactForm.css";
 
 const ContactForm = () => {
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+
+  const handleModalClose = () => setIsContactModalOpen(false);
+
   const validationSchema = Yup.object({
     name: Yup.string()
       .min(2, "Must be atleast 2 chars long")
@@ -39,9 +46,12 @@ const ContactForm = () => {
         process.env.REACT_APP_EMAIL_USER_ID
       );
       setSubmitting(false);
+      setIsSuccess(true);
+      setIsContactModalOpen(true);
     } catch (err) {
-      alert(err.text);
       setSubmitting(false);
+      setIsSuccess(false);
+      setIsContactModalOpen(true);
     }
   };
   return (
@@ -90,6 +100,11 @@ const ContactForm = () => {
               "Send email"
             )}
           </button>
+          <ContactFormModal
+            isSuccess={isSuccess}
+            closeModal={handleModalClose}
+            isOpen={isContactModalOpen}
+          />
         </Form>
       )}
     </Formik>
