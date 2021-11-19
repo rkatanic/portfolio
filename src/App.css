@@ -1,4 +1,4 @@
-button {
+.btn {
   display: flex;
   align-items: center;
   padding: 1rem 2rem;
@@ -13,9 +13,14 @@ button {
   transition: 0.4s;
 }
 
-button:hover {
+.btn:hover {
   transform: translateY(-2px);
   opacity: 0.9;
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  background-color: var(--color-text-light);
 }
 
 .btn-primary {
@@ -27,8 +32,4 @@ button:hover {
   border: none;
   color: var(--color-title);
   background-color: var(--color-container);
-}
-
-.home-mail-send-icon {
-  margin-left: 0.5rem;
 }

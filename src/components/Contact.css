@@ -1,6 +1,64 @@
-.contact-form {
-  align-items: center;
-  justify-content: center;
+.contact {
+  flex: 1;
+}
+
+.contact .icon {
+  fill: var(--color-primary);
+  height: 2.5rem;
+  margin-right: var(--margin-1);
+}
+
+.contact-title {
+  text-align: center;
+  font-size: var(--font-size-3);
+}
+
+.contact-subtitle {
+  text-align: center;
+  color: var(--color-text);
+}
+
+.contact-container {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.contact-links {
+  margin: var(--margin-1) 0;
+  flex: 1;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+}
+
+.contact-link-info {
+  margin: var(--margin-0-5);
+  flex: 1;
+}
+
+.contact-link-info h3 {
+  color: var(--color-title);
+  margin: 0.125rem 0;
+}
+
+.contact-link a {
+  text-decoration: underline;
+  color: var(--color-text);
+}
+
+.contact-link a:hover {
+  color: var(--color-primary);
+}
+
+@media screen and (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-form button {
+    width: 100%;
+    justify-content: center;
+  }
 }
