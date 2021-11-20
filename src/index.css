@@ -50,7 +50,7 @@ body {
 }
 
 body.dark-mode {
-  --color-primary-two: hsl(var(--color-hue), 30%, 8%);
+  --color-primary-two: hsl(var(--color-hue), 30%, 5%);
   --color-title: hsl(var(--color-hue), 8%, 95%);
   --color-text: hsl(var(--color-hue), 8%, 75%);
   --color-input: hsl(var(--color-hue), 30%, 15%);
