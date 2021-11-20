@@ -3,6 +3,7 @@ import { useIsDarkMode, useToggleDarkMode } from "../context/GlobalContext";
 import { ReactComponent as MenuIcon } from "../assets/icons/menu.svg";
 import { ReactComponent as SunIcon } from "../assets/icons/sun.svg";
 import { ReactComponent as MoonIcon } from "../assets/icons/moon.svg";
+import { ReactComponent as CloseIcon } from "../assets/icons/close.svg";
 
 import "./Navigation.css";
 
@@ -79,14 +80,11 @@ const Navigation = () => {
               </a>
             </li>
           </ul>
-          <div className="nav-close" onClick={handleMenuToggle}>
-            x
-          </div>
+
+          <CloseIcon className="nav-close" onClick={handleMenuToggle} />
         </div>
-        <div className="nav-btns">
-          <div className="nav-toggle">
-            <MenuIcon onClick={handleMenuToggle} />
-          </div>
+        <div className="nav-toggle">
+          <MenuIcon onClick={handleMenuToggle} />
         </div>
       </nav>
     </header>
