@@ -1,20 +1,20 @@
 import { useEffect, useState } from "react";
 import { useIsDarkMode, useToggleDarkMode } from "../context/GlobalContext";
+import ColorDropdown from "./ColorDropdown";
 import { ReactComponent as MenuIcon } from "../assets/icons/menu.svg";
 import { ReactComponent as SunIcon } from "../assets/icons/sun.svg";
 import { ReactComponent as MoonIcon } from "../assets/icons/moon.svg";
 import { ReactComponent as CloseIcon } from "../assets/icons/close.svg";
 
 import "./Navigation.css";
-import ColorDropdown from "./ColorDropdown";
 
-const Navigation = () => {
+const Navigation = (): JSX.Element => {
   const [showMenu, setShowMenu] = useState(false);
 
   const isDarkMode = useIsDarkMode();
   const toggleDarkMode = useToggleDarkMode();
 
-  const shouldShowDarkMode = () => {
+  const shouldShowDarkMode = (): void => {
     if (isDarkMode) {
       window.document.body.setAttribute("class", "dark-mode");
     } else {
@@ -26,7 +26,7 @@ const Navigation = () => {
     shouldShowDarkMode();
   }, [isDarkMode]);
 
-  const handleMenuToggle = () => setShowMenu((prevState) => !prevState);
+  const handleMenuToggle = (): void => setShowMenu((prevState) => !prevState);
 
   return (
     <header className="header">

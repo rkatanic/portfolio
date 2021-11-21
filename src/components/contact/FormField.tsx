@@ -2,7 +2,7 @@ import { Field, ErrorMessage, useField } from "formik";
 
 import "./FormField.css";
 
-const FormField = (props) => {
+const FormField = (props: any): JSX.Element => {
   const [field, meta] = useField(props);
   return (
     <div className="form-field">
@@ -11,12 +11,14 @@ const FormField = (props) => {
         <ErrorMessage
           name={field.name}
           component="div"
-          className={meta.touched && meta.error ? "input-error-message" : null}
+          className={
+            meta.touched && meta.error ? "input-error-message" : undefined
+          }
         />
       </div>
       <Field
         {...props}
-        className={meta.touched && meta.error ? "input-error-field" : null}
+        className={meta.touched && meta.error ? "input-error-field" : undefined}
       />
     </div>
   );
