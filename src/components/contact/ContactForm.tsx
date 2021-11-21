@@ -3,16 +3,15 @@ import emailjs from "emailjs-com";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
 import FormField from "./FormField";
+import Button from "../Button";
 import { ReactComponent as SandWatchIcon } from "../../assets/icons/sandwatch.svg";
 import ContactFormModal from "./ContactFormModal";
 
 import "./ContactForm.css";
 
-const ContactForm = () => {
+const ContactForm = (): JSX.Element => {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
-
-  const handleModalClose = () => setIsContactModalOpen(false);
 
   const validationSchema = Yup.object({
     name: Yup.string()
@@ -35,15 +34,19 @@ const ContactForm = () => {
     message: "",
   };
 
-  const handleEmailSend = async (values, setSubmitting) => {
-    console.log(values);
+  const handleModalClose = (): void => setIsContactModalOpen(false);
+
+  const handleEmailSend = async (
+    values: Record<string, unknown>,
+    setSubmitting: (flag: boolean) => void
+  ): Promise<void> => {
     try {
       setSubmitting(true);
       await emailjs.send(
-        process.env.REACT_APP_EMAIL_SERVICE_ID,
-        process.env.REACT_APP_EMAIL_TEMPLATE_ID,
+        process.env.REACT_APP_EMAIL_SERVICE_ID ?? "email_service_id",
+        process.env.REACT_APP_EMAIL_TEMPLATE_ID ?? "email_template_id",
         values,
-        process.env.REACT_APP_EMAIL_USER_ID
+        process.env.REACT_APP_EMAIL_USER_ID ?? "email_user_id"
       );
       setSubmitting(false);
       setIsSuccess(true);
@@ -54,15 +57,16 @@ const ContactForm = () => {
       setIsContactModalOpen(true);
     }
   };
+
   return (
     <Formik
       initialValues={initialValues}
       validationSchema={validationSchema}
-      onSubmit={(values, { setSubmitting }) =>
+      onSubmit={(values, { setSubmitting }): Promise<void> =>
         handleEmailSend(values, setSubmitting)
       }
     >
-      {({ isValid, values, isSubmitting }) => (
+      {({ isValid, values, isSubmitting }): JSX.Element => (
         <Form className="contact-form">
           <FormField
             name="name"
@@ -86,11 +90,7 @@ const ContactForm = () => {
             value={values.message}
             placeholder="Enter your message"
           />
-          <button
-            type="submit"
-            disabled={!isValid || isSubmitting}
-            className="btn btn-primary"
-          >
+          <Button type="submit" disabled={!isValid || isSubmitting}>
             {isSubmitting ? (
               <>
                 <SandWatchIcon />
@@ -99,11 +99,11 @@ const ContactForm = () => {
             ) : (
               "Send email"
             )}
-          </button>
+          </Button>
           <ContactFormModal
             isSuccess={isSuccess}
-            closeModal={handleModalClose}
             isOpen={isContactModalOpen}
+            closeModal={handleModalClose}
           />
         </Form>
       )}

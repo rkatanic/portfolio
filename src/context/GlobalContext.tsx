@@ -5,10 +5,10 @@ const GlobalContext = createContext({
   toggleDarkMode: () => {},
 });
 
-const GlobalContextProvider = (props) => {
+const GlobalContextProvider = (props: any) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
-  const toggleDarkMode = () => {
+  const toggleDarkMode = (): void => {
     setIsDarkMode((prevState) => !prevState);
     console.log(isDarkMode);
   };
@@ -20,7 +20,7 @@ const GlobalContextProvider = (props) => {
   );
 };
 
-const useIsDarkMode = () => {
+const useIsDarkMode = (): boolean => {
   const { isDarkMode } = useContext(GlobalContext);
   return isDarkMode;
 };
