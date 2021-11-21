@@ -82,19 +82,6 @@
   fill: var(--color-text);
 }
 
-.color-switch-container {
-  display: flex;
-}
-
-.color-indicator {
-  box-sizing: border-box;
-  height: var(--font-size-1-25);
-  width: var(--font-size-1-25);
-  border-radius: 50%;
-  margin-right: var(--margin-0-5);
-  cursor: pointer;
-}
-
 @media screen and (max-width: 768px) {
   .nav-menu {
     width: 100%;
@@ -115,12 +102,6 @@
 
   .header {
     border-radius: 0 0 1.5rem 1.5rem;
-  }
-
-  .color-indicator {
-    width: var(--font-size-1-25);
-    height: var(--font-size-1-25);
-    margin-right: var(--margin-1);
   }
 
   .icon {
