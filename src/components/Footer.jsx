@@ -34,7 +34,7 @@ const Footer = () => {
           </a>
         </li>
       </ul>
-      <div class="footer-divider">
+      <div className="footer-divider">
         <hr />
         <div className="center-diamond"></div>
       </div>

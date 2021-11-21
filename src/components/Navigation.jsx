@@ -6,15 +6,9 @@ import { ReactComponent as MoonIcon } from "../assets/icons/moon.svg";
 import { ReactComponent as CloseIcon } from "../assets/icons/close.svg";
 
 import "./Navigation.css";
+import ColorDropdown from "./ColorDropdown";
 
 const Navigation = () => {
-  const hueColors = [
-    { key: "red", value: 5 },
-    { key: "green", value: 145 },
-    { key: "blue", value: 210 },
-    { key: "purple", value: 270 },
-  ];
-
   const [showMenu, setShowMenu] = useState(false);
 
   const isDarkMode = useIsDarkMode();
@@ -34,30 +28,11 @@ const Navigation = () => {
 
   const handleMenuToggle = () => setShowMenu((prevState) => !prevState);
 
-  const handleColorSwitch = (colorValue) => {
-    window.document.documentElement.style.setProperty(
-      "--color-hue",
-      colorValue
-    );
-  };
-
   return (
     <header className="header">
       <nav className="nav">
         <div className="nav-left">
-          <div className="color-switch-container">
-            {hueColors.map((hueColor) => (
-              <div
-                onClick={() => handleColorSwitch(hueColor.value)}
-                key={hueColor.key}
-                className="color-indicator"
-                style={{
-                  backgroundColor: `hsl(${hueColor.value},70%,60%)`,
-                  border: `2px solid hsl(${hueColor.value},90%,75%)`,
-                }}
-              ></div>
-            ))}
-          </div>
+          <ColorDropdown />
           <div className="night-mode-switch" onClick={toggleDarkMode}>
             {isDarkMode ? <SunIcon /> : <MoonIcon />}
           </div>
