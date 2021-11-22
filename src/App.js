@@ -5,6 +5,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 import "./App.css";
+import Skills from "./components/Skills";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <Navigation />
       <Home />
       <About />
+      <Skills />
       <Contact />
       <Footer />
     </div>

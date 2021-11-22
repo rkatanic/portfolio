@@ -2,7 +2,7 @@
 
 :root {
   --body-font: "Poppins", sans-serif;
-  --header-height: 3rem;
+  --header-height: 3.25rem;
 
   --color-hue: 270;
   --color-primary: hsl(var(--color-hue), 70%, 60%);
@@ -67,6 +67,11 @@ h2,
 h3 {
   color: var(--color-title);
   align-items: center;
+  margin: 0;
+}
+
+p {
+  margin: 0;
 }
 
 ul {

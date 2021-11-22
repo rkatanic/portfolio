@@ -1,19 +1,14 @@
 import Section from "./Section";
-import Skills from "./Skills";
 import { ReactComponent as CalendarIcon } from "../assets/icons/calendar.svg";
 import { ReactComponent as SuitcaseIcon } from "../assets/icons/suitcase.svg";
 import { ReactComponent as EducationIcon } from "../assets/icons/education.svg";
-import { ReactComponent as DocumentIcon } from "../assets/icons/document.svg";
-
-import myimage from "../assets/images/me2.png";
 
 import "./About.css";
-import Button from "./Button";
 
 const About = (): JSX.Element => (
   <Section id="about">
     <div className="about">
-      <h1 className="title">About</h1>
+      <h2 className="title">About</h2>
       <h3 className="subtitle">My personal journey</h3>
 
       <div className="about-content">
@@ -71,21 +66,6 @@ const About = (): JSX.Element => (
             <h2>Electrotechnical High School in Doboj</h2>
           </div>
         </div>
-      </div>
-
-      <Skills />
-      <div className="download-cv-container">
-        <div className="download-cv-container-left">
-          <h2 className="download-cv-container-title">
-            Want more information?
-          </h2>
-          <p>For more details, feel free to download my CV and take a look!</p>
-          <Button variant="btn-outline">
-            <span>Download CV</span>
-            <DocumentIcon />
-          </Button>
-        </div>
-        <img src={myimage} alt="" />
       </div>
     </div>
   </Section>

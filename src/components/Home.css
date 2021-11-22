@@ -19,6 +19,7 @@
 }
 
 .home-description {
+  text-align: justify;
   margin-bottom: var(--margin-2);
 }
 

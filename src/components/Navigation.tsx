@@ -5,6 +5,7 @@ import { ReactComponent as MenuIcon } from "../assets/icons/menu.svg";
 import { ReactComponent as SunIcon } from "../assets/icons/sun.svg";
 import { ReactComponent as MoonIcon } from "../assets/icons/moon.svg";
 import { ReactComponent as CloseIcon } from "../assets/icons/close.svg";
+import Scrollspy from "react-scrollspy";
 
 import "./Navigation.css";
 
@@ -38,7 +39,12 @@ const Navigation = (): JSX.Element => {
           </div>
         </div>
         <div className={showMenu ? `nav-menu show-menu` : `nav-menu`}>
-          <ul className="nav-list">
+          <Scrollspy
+            offset={-30}
+            className="nav-list"
+            currentClassName="active"
+            items={["home", "about", "skills", "contact"]}
+          >
             <li className="nav-item" onClick={() => setShowMenu(false)}>
               <a href="#home" className="nav-link ">
                 Home
@@ -50,11 +56,16 @@ const Navigation = (): JSX.Element => {
               </a>
             </li>
             <li className="nav-item" onClick={() => setShowMenu(false)}>
+              <a href="#skills" className="nav-link">
+                Skills
+              </a>
+            </li>
+            <li className="nav-item" onClick={() => setShowMenu(false)}>
               <a href="#contact" className="nav-link">
                 Contact
               </a>
             </li>
-          </ul>
+          </Scrollspy>
 
           <CloseIcon className="nav-close" onClick={handleMenuToggle} />
         </div>

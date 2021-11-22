@@ -29,6 +29,11 @@ const Footer = (): JSX.Element => (
         </a>
       </li>
       <li className="nav-item">
+        <a href="#skills" className="nav-link">
+          Skills
+        </a>
+      </li>
+      <li className="nav-item">
         <a href="#contact" className="nav-link">
           Contact
         </a>
