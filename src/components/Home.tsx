@@ -2,7 +2,7 @@ import Section from "./Section";
 import Typewriter from "typewriter-effect";
 import myimage from "../assets/images/me1.png";
 import { ReactComponent as MailSendIcon } from "../assets/icons/mail-send.svg";
-
+import { ReactComponent as ArrowIcon } from "../assets/icons/arrow-up.svg";
 import "./Home.css";
 import Button from "./Button";
 
@@ -32,6 +32,12 @@ const Home = (): JSX.Element => (
           <span> Contact me</span>
           <MailSendIcon />
         </Button>
+        <a className="scroll-down" href="#about">
+          <div className="scroll-down-container">
+            <div className="scroll-down-bubble"></div>
+          </div>
+          Read more <ArrowIcon />
+        </a>
       </div>
       <div className="home-image-container">
         <img className="home-img" src={myimage} alt="my-img" />

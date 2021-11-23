@@ -48,12 +48,67 @@
   position: relative;
 }
 
+.scroll-down {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--color-text);
+  transition: 0.4s;
+  margin-top: 3.5rem;
+  padding: 0 2rem;
+}
+
+.scroll-down:hover {
+  transform: translateY(4px);
+}
+
+.scroll-down .icon-arrow-up {
+  margin-left: 0.25rem;
+  height: 1rem;
+  transform: rotate(180deg);
+  fill: var(--color-text);
+}
+
+.scroll-down-container {
+  width: 1rem;
+  height: 2rem;
+  border-radius: 8px;
+  border: 2px solid var(--color-text);
+  position: relative;
+  margin-right: 1rem;
+}
+
+.scroll-down-bubble {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--color-text);
+  position: absolute;
+  left: 2px;
+  animation: animation-move-up-down 2.5s ease-in-out infinite;
+}
+
 @media screen and (max-width: 768px) {
   .home {
     flex-direction: column-reverse;
     text-align: center;
   }
+
   .home button {
     margin: auto;
+  }
+
+  .scroll-down {
+    display: none !important;
+  }
+}
+
+@keyframes animation-move-up-down {
+  0%,
+  100% {
+    bottom: 4px;
+  }
+  50% {
+    bottom: 16px;
   }
 }
