@@ -37,13 +37,13 @@
   transform: translateX(-50%);
 }
 
-.icon-arrow-up {
+.footer .icon-arrow-up {
   height: 70%;
   fill: hsla(0, 0%, 100%, 0.863);
   transition: 0.4s;
 }
 
-.icon-arrow-up:hover {
+.footer .icon-arrow-up:hover {
   transform: translateY(-6px);
 }
 

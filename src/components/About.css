@@ -10,71 +10,71 @@
 }
 
 .about-content {
-  width: 100%;
-  padding: 2rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  box-sizing: border-box;
-}
-
-.about-rounder {
-  box-sizing: border-box;
-  width: var(--font-size-1);
-  height: var(--font-size-1);
-  background-color: var(--color-primary);
-  border-radius: 50%;
-  border: 2px solid var(--color-primary-light);
-  position: relative;
-  left: -1.5rem;
-  top: var(--font-size-1-25);
-}
-
-.about-line {
-  position: absolute;
-  left: -16px;
-  top: 24px;
-  width: 1px;
-  height: 100%;
-  background-color: var(--color-primary);
-}
-
-.about-content-container {
-  padding: 1rem;
-  margin: 1rem;
-  position: relative;
-  flex: 1;
-  max-width: 300px;
-  box-sizing: border-box;
-}
-
-.about-content-container-title {
-  display: flex;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-rows: auto;
+  align-items: baseline;
 }
 
 .about-content h3 {
-  font-size: 1.25rem;
+  font-size: 2rem;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.about-content h3::after {
+  content: "";
+  background: var(--color-primary);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 2rem;
+}
+
+.about-container {
+  height: 16rem;
+  margin: 1rem 0;
+}
+
+.about-container-text {
+  text-align: justify;
+}
+
+.about-container-item {
+  display: flex;
+  align-items: baseline;
+  margin: 1rem 0;
+}
+
+.about-container-item-content {
+  flex: 2;
+}
+
+.about-container-label {
+  flex: 1;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.75rem;
   color: var(--color-primary);
-  margin: 0.75rem 0;
 }
 
-.about-content p {
-  font-style: italic;
-  font-size: var(--font-size-1);
-  color: var(--color-text);
-}
-
-.icon-calendar {
-  margin-right: var(--margin-0-5);
-  width: var(--font-size-0-75);
-  height: var(--font-size-0-75);
+.about-container-label .icon {
   fill: var(--color-primary);
+  height: 0.75rem;
 }
 
-.icon-education,
-.icon-suitcase {
-  margin-right: var(--margin-0-5);
-  fill: var(--color-primary);
-  width: var(--font-size-1-5);
-  height: var(--font-size-1-5);
+.about-container-item-title {
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--color-title);
+}
+
+.about-container-item-desc {
+  flex: 2;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.825rem;
+  color: var(--color-text-light);
 }

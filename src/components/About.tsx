@@ -1,7 +1,4 @@
 import Section from "./Section";
-import { ReactComponent as CalendarIcon } from "../assets/icons/calendar.svg";
-import { ReactComponent as SuitcaseIcon } from "../assets/icons/suitcase.svg";
-import { ReactComponent as EducationIcon } from "../assets/icons/education.svg";
 
 import "./About.css";
 
@@ -12,58 +9,90 @@ const About = (): JSX.Element => (
       <h3 className="subtitle">My personal journey</h3>
 
       <div className="about-content">
-        <div className="about-content-container">
-          <h2 className="about-content-container-title">
-            <SuitcaseIcon />
-            Work
-          </h2>
-
-          <div style={{ position: "relative" }}>
-            <div className="about-rounder"></div>
-            <div className="about-line"></div>
-            <p>
-              <CalendarIcon />
-              08/2020 - present
-            </p>
-            <h3>Software Developer</h3>
-            <h2>ProductDock</h2>
+        <div>
+          <div className="about-container">
+            <h3>Work</h3>
+            <div className="about-container-item">
+              <p className="about-container-label">08/2019 - PRESENT</p>
+              <div className="about-container-item-content">
+                <p className="about-container-item-title">Software Developer</p>
+                <p className="about-container-item-desc">ProductDock</p>
+              </div>
+            </div>
+            <div className="about-container-item">
+              <p className="about-container-label">03/2019 - 06/2019</p>
+              <div className="about-container-item-content">
+                <p className="about-container-item-title">Intern</p>
+                <p className="about-container-item-desc">
+                  ProductDock Rookie BootCamp
+                </p>
+              </div>
+            </div>
           </div>
 
-          <div style={{ position: "relative" }}>
-            <div className="about-rounder"></div>
-            <p>
-              <CalendarIcon />
-              03/2020 - 06/2020
-            </p>
-            <h3>Intern</h3>
-            <h2>ProductDock Rookie Bootcamp</h2>
+          <div className="about-container">
+            <h3>Education</h3>
+
+            <div className="about-container-item">
+              <p className="about-container-label">2015-2019</p>
+              <div className="about-container-item-content">
+                <p className="about-container-item-title">IT Engineer </p>
+                <p className="about-container-item-desc">
+                  Slobomir P University
+                </p>
+              </div>
+            </div>
+            <div className="about-container-item">
+              <p className="about-container-label">2011-2015</p>
+              <div className="about-container-item-content">
+                <p className="about-container-item-title">
+                  Computing Technician
+                </p>
+                <p className="about-container-item-desc">
+                  ElectroTechnical High School IN Doboj
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div className="about-content-container">
-          <h2 className="about-content-container-title">
-            <EducationIcon />
-            Education
-          </h2>
-
-          <div style={{ position: "relative" }}>
-            <div className="about-rounder"></div>
-            <div className="about-line"></div>
-            <p>
-              <CalendarIcon />
-              2015 - 2019
-            </p>
-            <h3>IT Engineer</h3>
-            <h2>Slobomir P University</h2>
+        <div>
+          <div className="about-container">
+            <h3>My info</h3>
+            <div className="about-container-item">
+              <p className="about-container-label">Full Name</p>
+              <p className="about-container-item-desc">Radivoje Katanic</p>
+            </div>
+            <div className="about-container-item">
+              <p className="about-container-label">Age</p>
+              <p className="about-container-item-desc">
+                {new Date().getFullYear() - 1996}
+              </p>
+            </div>
+            <div className="about-container-item">
+              <p className="about-container-label">Location</p>
+              <p className="about-container-item-desc">
+                Doboj, Bosnia & Herzegovina
+              </p>
+            </div>
+            <div className="about-container-item">
+              <p className="about-container-label">Languages</p>
+              <p className="about-container-item-desc">Serbian, English</p>
+            </div>
           </div>
 
-          <div style={{ position: "relative" }}>
-            <div className="about-rounder"></div>
-            <p>
-              <CalendarIcon /> 2011 - 2015
+          <div className="about-container">
+            <h3>About me</h3>
+            <p className="about-container-text">
+              I do what coders do. I like what coders like. In the end of the
+              day, I'm just a regular person who likes doing some sports in free
+              time, running, watching movies.
             </p>
-            <h3>Computer Technician</h3>
-            <h2>Electrotechnical High School in Doboj</h2>
+
+            <p className="about--container-text">
+              Sometimes writing dozens of lines of code I consider as an art, or
+              atleast I have such an approach.
+            </p>
           </div>
         </div>
       </div>
