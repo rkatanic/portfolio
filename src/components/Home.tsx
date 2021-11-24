@@ -1,10 +1,11 @@
 import Section from "./Section";
+import Button from "./Button";
 import Typewriter from "typewriter-effect";
 import myimage from "../assets/images/me1.png";
 import { ReactComponent as MailSendIcon } from "../assets/icons/mail-send.svg";
 import { ReactComponent as ArrowIcon } from "../assets/icons/arrow-up.svg";
+
 import "./Home.css";
-import Button from "./Button";
 
 const Home = (): JSX.Element => (
   <Section id="home">

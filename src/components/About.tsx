@@ -86,7 +86,7 @@ const About = (): JSX.Element => (
             <p className="about-container-text">
               I do what coders do. I like what coders like. In the end of the
               day, I'm just a regular person who likes doing some sports in free
-              time, running, watching movies.
+              time, running, watching movies and so on.
             </p>
 
             <p className="about--container-text">

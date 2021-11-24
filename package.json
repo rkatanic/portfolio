@@ -17,6 +17,7 @@
     "react-scripts": "4.0.3",
     "react-scrollspy": "^3.4.3",
     "react-scrollspy-nav": "^1.2.4",
+    "swiper": "^6.8.4",
     "typewriter-effect": "^2.18.2",
     "web-vitals": "^1.1.2",
     "yup": "^0.32.11"

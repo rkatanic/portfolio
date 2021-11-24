@@ -9,7 +9,12 @@
 }
 
 .home-title {
+  position: relative;
   font-size: 3rem;
+}
+
+.home-title .Typewriter {
+  color: var(--color-primary);
 }
 
 .home-subtitle {
@@ -85,7 +90,7 @@
   background-color: var(--color-text);
   position: absolute;
   left: 2px;
-  animation: animation-move-up-down 2.5s ease-in-out infinite;
+  animation: animation-move-up-down 1.5s linear infinite;
 }
 
 @media screen and (max-width: 768px) {
