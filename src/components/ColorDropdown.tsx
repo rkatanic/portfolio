@@ -46,21 +46,29 @@ const ColorDropdown = (): JSX.Element => {
   return (
     <div className="color-dropdown">
       <div className="color-dropdown-header" onClick={handleDropdownToggle}>
-        <PalleteIcon />
+        <p>
+          .<b className="color-primary">setColor</b>()
+        </p>
       </div>
       {isDropdownOpen && (
         <div ref={dropdrownRef} className="color-dropdown-list">
           {colors.map(
             (color): JSX.Element => (
-              <div
+              <p
                 onClick={() => handleColorSwitch(color.value)}
                 key={color.key}
-                style={{
-                  backgroundColor: `hsl(${color.value},70%,60%)`,
-                  border: `2px solid hsl(${color.value},90%,75%)`,
-                }}
                 className="color-dropdown-item"
-              ></div>
+              >
+                {"${"}
+                <b
+                  style={{
+                    color: `hsl(${color.value},70%,60%)`,
+                  }}
+                >
+                  {color.key}
+                </b>
+                {"}"}
+              </p>
             )
           )}
         </div>

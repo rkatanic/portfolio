@@ -1,19 +1,14 @@
 .home {
-  display: flex;
-  align-items: center;
   flex: 1;
+  margin-bottom: 100vh;
 }
 
 .home a {
   display: inline-flex;
 }
 
-.home-title {
-  position: relative;
-  font-size: 3rem;
-}
-
 .home-title .Typewriter {
+  display: inline;
   color: var(--color-primary);
 }
 
@@ -116,4 +111,17 @@
   50% {
     bottom: 16px;
   }
+}
+
+.color-primary {
+  color: var(--color-primary);
+}
+
+.comment {
+  font-style: italic;
+  font-weight: 600;
+}
+
+.white {
+  color: var(--color-title);
 }

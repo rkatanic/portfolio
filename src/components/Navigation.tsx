@@ -32,12 +32,6 @@ const Navigation = (): JSX.Element => {
   return (
     <header className="header">
       <nav className="nav">
-        <div className="nav-left">
-          <ColorDropdown />
-          <div className="night-mode-switch" onClick={toggleDarkMode}>
-            {isDarkMode ? <SunIcon /> : <MoonIcon />}
-          </div>
-        </div>
         <div className={showMenu ? `nav-menu show-menu` : `nav-menu`}>
           <Scrollspy
             offset={-30}
@@ -47,25 +41,35 @@ const Navigation = (): JSX.Element => {
           >
             <li className="nav-item" onClick={() => setShowMenu(false)}>
               <a href="#home" className="nav-link ">
-                Home
+                {"<"}
+                <b className="color-primary">Home</b>
+                {"/>"}
               </a>
             </li>
             <li className="nav-item" onClick={() => setShowMenu(false)}>
               <a href="#about" className="nav-link">
-                About
+                {"<"}
+                <b className="color-primary">About</b>
+                {"/>"}
               </a>
             </li>
             <li className="nav-item" onClick={() => setShowMenu(false)}>
               <a href="#skills" className="nav-link">
-                Skills
+                {"<"}
+                <b className="color-primary">Skills</b>
+                {"/>"}
               </a>
             </li>
             <li className="nav-item" onClick={() => setShowMenu(false)}>
               <a href="#contact" className="nav-link">
-                Contact
+                {"<"}
+                <b className="color-primary">Contact</b>
+                {"/>"}
               </a>
             </li>
           </Scrollspy>
+
+          <ColorDropdown />
 
           <CloseIcon className="nav-close" onClick={handleMenuToggle} />
         </div>
