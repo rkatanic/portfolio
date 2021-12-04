@@ -2,14 +2,10 @@
   display: flex;
   align-items: center;
   padding: 1rem 2rem;
-  border-radius: 8px;
   border: none;
   font-size: var(--font-size-1-25);
   font-family: var(--body-font);
   font-weight: 600;
-  box-shadow: hsla(var(--color-hue), 31%, 20%, 0.4) 0 2px 4px,
-    hsla(var(--color-hue), 31%, 20%, 0.3) 0 7px 13px -3px,
-    hsla(var(--color-hue), 6%, 28%, 0.5) 0 -3px 0 inset;
   cursor: pointer;
   transition: 0.4s;
 }

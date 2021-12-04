@@ -5,6 +5,7 @@ import "./About.css";
 
 const About = (): JSX.Element => (
   <Section id="about">
+    <h3>My personal journey</h3>
     <div className="about">
       <div className="about-item">
         <h3 className="about-item-title">Experience</h3>

@@ -44,6 +44,12 @@ const Home = (): JSX.Element => {
 
   return (
     <div className="container">
+      <div className="actions">
+        <div className="night-mode-switch" onClick={toggleDarkMode}>
+          {isDarkMode ? <SunIcon /> : <MoonIcon />}
+        </div>
+        <ColorDropdown />
+      </div>
       <div className="column-left">
         <div className="progress-bar">
           <div className="progress-bar-pulse"></div>
@@ -52,13 +58,6 @@ const Home = (): JSX.Element => {
             style={{ height: `${scroll}%` }}
           ></div>
         </div>
-        <div className="actions">
-          <div className="night-mode-switch" onClick={toggleDarkMode}>
-            {isDarkMode ? <SunIcon /> : <MoonIcon />}
-          </div>
-          <ColorDropdown />
-        </div>
-
         <h3 className="typewriter-headline">
           <Typewriter
             options={{

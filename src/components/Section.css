@@ -1,7 +1,5 @@
 .section {
   min-height: 100vh;
-  border-radius: 8px;
-  margin: auto;
   max-width: var(--width-desktop);
 }
 

@@ -6,7 +6,6 @@ import "./Contact.css";
 const Contact = (): JSX.Element => (
   <Section id="contact">
     <div className="contact">
-      <h2 className="title">Contact</h2>
       <h3 className="subtitle">Don't hesitate to ask anything</h3>
       <ContactForm />
     </div>
