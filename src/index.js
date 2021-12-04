@@ -4,13 +4,11 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { GlobalContextProvider } from "./context/GlobalContext";
-import { ParallaxProvider } from "react-scroll-parallax";
+
 ReactDOM.render(
   <React.StrictMode>
     <GlobalContextProvider>
-      <ParallaxProvider>
-        <App />
-      </ParallaxProvider>
+      <App />
     </GlobalContextProvider>
   </React.StrictMode>,
   document.getElementById("root")

@@ -1,13 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
 :root {
-  --body-font: monospace, monospace;
+  --font-body: "Poppins";
   --header-height: 3.25rem;
 
-  --color-hue: 270;
+  --color-hue: 190;
   --color-primary: hsl(var(--color-hue), 70%, 60%);
   --color-primary-two: hsl(var(--color-hue), 55%, 55%);
   --color-primary-light: hsl(var(--color-hue), 90%, 85%);
+  --color-gradient: linear-gradient(
+    60deg,
+    var(--color-primary-light),
+    var(--color-primary)
+  );
 
   --color-title: hsl(var(--color-hue), 8%, 15%);
   --color-text: hsl(var(--color-hue), 8%, 45%);
@@ -49,7 +54,7 @@ body {
   color: var(--color-text);
   background-color: var(--color-body);
   font-size: var(--font-size-1);
-  font-family: monospace, monospace;
+  font-family: var(--font-body);
   margin: 0;
 }
 
@@ -67,11 +72,6 @@ h2,
 h3 {
   color: var(--color-title);
   align-items: center;
-  margin: 2rem 0;
-}
-
-p {
-  margin: 1rem 0;
 }
 
 ul {
@@ -84,14 +84,4 @@ a {
 
 html {
   scroll-behavior: smooth !important;
-}
-
-#matrix {
-  opacity: 0.2;
-  top: 0;
-  right: 0;
-  position: fixed;
-  margin-bottom: -100vh;
-  height: 100vh;
-  width: 25vw;
 }

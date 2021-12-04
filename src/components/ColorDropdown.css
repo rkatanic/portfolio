@@ -1,11 +1,6 @@
 .color-dropdown {
   position: relative;
-}
-
-.color-dropdown-header {
-  display: flex;
-  cursor: pointer;
-  transition: 0.4s;
+  margin: 1rem 0;
 }
 
 .color-dropdown-header:hover {

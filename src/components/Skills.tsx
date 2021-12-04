@@ -1,16 +1,12 @@
 import Section from "./Section";
 import Button from "./Button";
 import { ReactComponent as DocumentIcon } from "../assets/icons/document.svg";
+import { ReactComponent as JavaCodeSvg } from "../assets/icons/java-code.svg";
 import myimage from "../assets/images/me2.png";
-import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Pagination, Navigation, Autoplay } from "swiper";
-import "swiper/swiper-bundle.min.css";
-import "swiper/swiper.min.css";
 
 import "./Skills.css";
 
 const Skills = (): JSX.Element => {
-  SwiperCore.use([Navigation, Pagination, Autoplay]);
   return (
     <Section id="skills">
       <div className="skills">
@@ -39,71 +35,6 @@ const Skills = (): JSX.Element => {
               production ready spring applications.
             </p>
           </div>
-          <Swiper
-            effect="fade"
-            className="skills-swiper"
-            navigation
-            pagination
-            slidesPerView={1}
-            loop
-            autoplay={{ delay: 5000 }}
-            onSlideChange={() => console.log("slide change")}
-            onSwiper={(swiper) => console.log(swiper)}
-          >
-            <SwiperSlide className="skills-swiper-slide">
-              <div className="skills-item">
-                <h3>Front End Development</h3>
-                <div style={{ display: "flex" }}>
-                  <div>
-                    <div className="about-container-item">
-                      <p className="about-container-label">languages</p>
-                      <p className="about-container-item-desc">
-                        HTML, CSS, JavaScript
-                      </p>
-                    </div>
-                    <div className="about-container-item">
-                      <p className="about-container-label">frameworks</p>
-                      <p className="about-container-item-desc">
-                        Bootstrap, Sass, React, Angular
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide className="skills-swiper-slide">
-              <div className="skills-item">
-                <h3>Back End Development</h3>
-                <div style={{ display: "flex" }}>
-                  <div>
-                    <div className="about-container-item">
-                      <p className="about-container-label">languages</p>
-                      <p className="about-container-item-desc">Java</p>
-                    </div>
-                    <div className="about-container-item">
-                      <p className="about-container-label">frameworks</p>
-                      <p className="about-container-item-desc">Spring Boot</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide className="skills-swiper-slide">
-              <div className="skills-item">
-                <h3>Databases</h3>
-                <div style={{ display: "flex" }}>
-                  <div>
-                    <div className="about-container-item">
-                      <p className="about-container-label">Databases</p>
-                      <p className="about-container-item-desc">
-                        MySQL, MongoDB
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-          </Swiper>
         </div>
 
         <div className="download-cv-container">

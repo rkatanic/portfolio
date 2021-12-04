@@ -46,9 +46,7 @@ const ColorDropdown = (): JSX.Element => {
   return (
     <div className="color-dropdown">
       <div className="color-dropdown-header" onClick={handleDropdownToggle}>
-        <p>
-          .<b className="color-primary">setColor</b>()
-        </p>
+        <PalleteIcon />
       </div>
       {isDropdownOpen && (
         <div ref={dropdrownRef} className="color-dropdown-list">
