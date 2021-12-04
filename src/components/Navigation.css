@@ -54,12 +54,12 @@
   width: 3rem;
   height: 2px;
   margin: 0 1rem;
-  background-color: var(--color-text);
+  background-color: var(--color-title);
   transition: 0.5s ease;
 }
 
 .nav-link {
-  color: var(--color-text);
+  color: var(--color-title);
   display: flex;
   align-items: center;
   text-transform: uppercase;
