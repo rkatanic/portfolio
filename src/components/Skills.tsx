@@ -8,13 +8,13 @@ const Skills = (): JSX.Element => {
     { key: "HTML", value: 90 },
     { key: "CSS", value: 90 },
     { key: "JavaScript", value: 80 },
+    { key: "Java", value: 70 },
     { key: "Sass", value: 75 },
     { key: "React", value: 75 },
     { key: "Angular", value: 75 },
-    { key: "Java", value: 70 },
     { key: "Spring Boot", value: 70 },
-    { key: "MySQL", value: 70 },
-    { key: "MongoDB", value: 70 },
+    { key: "MySQL", value: 65 },
+    { key: "MongoDB", value: 65 },
   ];
   return (
     <Section id="skills">
