@@ -1,12 +1,14 @@
 import { createContext, useContext, useState } from "react";
 
 const GlobalContext = createContext({
-  isDarkMode: false,
+  isDarkMode: true,
   toggleDarkMode: () => {},
 });
 
 const GlobalContextProvider = (props: any) => {
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(
+    window.localStorage.getItem("dark-mode") ? false : true
+  );
 
   const toggleDarkMode = (): void => {
     setIsDarkMode((prevState) => !prevState);
