@@ -74,10 +74,10 @@ const Home = (): JSX.Element => {
           </h3>
           <h3 className="title">I'm Radivoje Katanic.</h3>
           <p className="desc">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Necessitatibus vel, facere cumque dolore iusto sit velit quisquam
-            laboriosam quia blanditiis modi accusamus, repellat consequuntur?
-            Quia assumenda voluptatibus provident sed dicta.
+            I am a full stack developer located in Doboj, Bosnia & Herzegovina.
+            I do what coders do. I like what coders like. In the end of the day,
+            I'm just a regular person who likes doing some sports in free time,
+            watching movies and reading all kinds of articles.
           </p>
           <Navigation />
         </div>

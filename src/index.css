@@ -4,7 +4,7 @@
   --font-body: "Poppins";
   --header-height: 3.25rem;
 
-  --color-hue: 190;
+  --color-hue: 160;
   --color-primary: hsl(var(--color-hue), 70%, 60%);
   --color-primary-two: hsl(var(--color-hue), 55%, 55%);
   --color-primary-light: hsl(var(--color-hue), 90%, 85%);
