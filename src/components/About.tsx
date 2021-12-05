@@ -2,6 +2,7 @@ import Section from "./Section";
 import Skills from "./Skills";
 
 import "./About.css";
+import Button from "./Button";
 
 const About = (): JSX.Element => (
   <Section id="about">
@@ -48,6 +49,7 @@ const About = (): JSX.Element => (
         </div>
       </div>
     </div>
+    <Button variant="btn-outline">Download CV</Button>
   </Section>
 );
 

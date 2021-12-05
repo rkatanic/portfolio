@@ -44,12 +44,6 @@ const Home = (): JSX.Element => {
 
   return (
     <div className="container">
-      <div className="actions">
-        <div className="night-mode-switch" onClick={toggleDarkMode}>
-          {isDarkMode ? <SunIcon /> : <MoonIcon />}
-        </div>
-        <ColorDropdown />
-      </div>
       <div className="column-left">
         <div className="progress-bar">
           <div className="progress-bar-pulse"></div>
@@ -86,18 +80,32 @@ const Home = (): JSX.Element => {
         </p>
         <Navigation />
         <div className="info">
-          <img className="my-photo" src={me1} />
-          <a
-            className="contact-link"
-            href="https://www.linkedin.com/in/radivoje-katanic"
-          >
-            <LinkedinIcon />
-            LinkedIn
-          </a>
-          <a className="contact-link" href="https://github.com/k-rade">
-            <GithubIcon />
-            GitHub
-          </a>
+          <div className="row">
+            <img className="my-photo" src={me1} />
+            <div className="contact-links">
+              <a
+                className="contact-link"
+                href="https://www.linkedin.com/in/radivoje-katanic"
+              >
+                <div className="contact-link-icon">
+                  <LinkedinIcon />
+                </div>
+                LinkedIn
+              </a>
+              <a className="contact-link" href="https://github.com/k-rade">
+                <div className="contact-link-icon">
+                  <GithubIcon />
+                </div>
+                GitHub
+              </a>
+            </div>
+          </div>
+          <div className="actions">
+            <ColorDropdown />
+            <div className="night-mode-switch" onClick={toggleDarkMode}>
+              {isDarkMode ? <SunIcon /> : <MoonIcon />}
+            </div>
+          </div>
         </div>
       </div>
       <div className="column-right">

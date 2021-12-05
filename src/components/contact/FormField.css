@@ -27,9 +27,11 @@ textarea::placeholder {
 }
 
 label {
+  text-transform: uppercase;
+  font-size: 0.825rem;
+  font-weight: 600;
   margin-right: 0.5rem;
-  color: var(--color-text-light);
-  text-transform: capitalize;
+  color: var(--color-title);
 }
 
 .input-error-field {

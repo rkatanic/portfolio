@@ -20,7 +20,7 @@ const Skills = (): JSX.Element => {
     <Section id="skills">
       <div className="skills">
         <div className="skill-bars">
-          <h3>Currently my skills are</h3>
+          <h3>My skills</h3>
           {skills.map(({ key, value }) => (
             <>
               <p className="skill-bar-label">{key}</p>
@@ -33,7 +33,7 @@ const Skills = (): JSX.Element => {
             </>
           ))}
         </div>
-        <h3>What I provide</h3>
+        <h3>Services I provide</h3>
         <div className="skills-container">
           <div className="skill-icon">
             <WebDevelopmentIcon />

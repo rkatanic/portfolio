@@ -52,11 +52,20 @@
 }
 
 .dash {
-  width: 3rem;
+  width: 4.5rem;
   height: 2px;
-  margin: 0 1rem;
+  margin: 1rem;
   background-color: var(--color-title);
   transition: 0.5s ease;
+}
+
+.number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-input);
+  width: 2.25rem;
+  height: 2.25rem;
 }
 
 .nav-link {
@@ -73,10 +82,12 @@
 .nav-link:hover .dash {
   background-color: var(--color-primary);
 }
+
 .active .dash {
-  width: 5rem;
+  width: 7rem;
   background-color: var(--color-primary);
 }
+
 .active a {
   color: var(--color-primary);
 }

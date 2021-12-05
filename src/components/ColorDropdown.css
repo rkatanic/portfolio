@@ -1,30 +1,27 @@
 .color-dropdown {
   position: relative;
-  margin: 1rem 0;
-}
-
-.color-dropdown-header:hover {
-  color: var(--color-primary);
-}
-
-.color-dropdown-header:hover b {
-  color: var(--color-title);
+  width: 2.25rem;
+  height: 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-input);
+  cursor: pointer;
 }
 
 .color-dropdown-list {
-  padding: 0.75rem;
   position: absolute;
-  border-radius: 8px;
-  box-shadow: 1px 1px 2px hsl(0deg 8% 40% / 50%);
-  top: 2.125rem;
-  left: -1rem;
-  background-color: var(--color-body);
+  bottom: 2.5rem;
+  left: 0rem;
+  width: 2.25rem;
+  background-color: var(--color-input);
+  z-index: 1;
 }
 
 .color-dropdown-item {
   cursor: pointer;
-}
-
-.color-dropdown-item:hover {
-  color: var(--color-text);
+  width: 1rem;
+  height: 1rem;
+  margin: 1rem 0.625rem;
+  border-radius: 50%;
 }

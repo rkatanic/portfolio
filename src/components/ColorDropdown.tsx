@@ -52,21 +52,14 @@ const ColorDropdown = (): JSX.Element => {
         <div ref={dropdrownRef} className="color-dropdown-list">
           {colors.map(
             (color): JSX.Element => (
-              <p
+              <div
                 onClick={() => handleColorSwitch(color.value)}
                 key={color.key}
                 className="color-dropdown-item"
-              >
-                {"${"}
-                <b
-                  style={{
-                    color: `hsl(${color.value},70%,60%)`,
-                  }}
-                >
-                  {color.key}
-                </b>
-                {"}"}
-              </p>
+                style={{
+                  background: `hsl(${color.value},70%,60%)`,
+                }}
+              ></div>
             )
           )}
         </div>
