@@ -2,7 +2,6 @@
         document.body.setAttribute("class", "day-mode");
       }
       if (!isNaN(parseInt(window.localStorage.getItem("color")?.valueOf()))) {
-        console.log("HERE");
         window.document.documentElement.style.setProperty(
           "--color-hue",
           parseInt(window.localStorage.getItem("color")?.valueOf()).toString()
