@@ -6,6 +6,10 @@
   background-color: var(--color-body);
 }
 
+.skills-container:hover .item-title::before {
+  width: 3.5rem;
+}
+
 .skill-badge {
   color: var(--color-primary);
 }
@@ -61,6 +65,7 @@
   width: 2rem;
   height: 2px;
   background-color: var(--color-primary);
+  transition: 0.5s ease;
 }
 
 .item-desc {
@@ -105,6 +110,7 @@
 
 .tool:hover {
   transform: scale(1.1);
+  background-color: var(--color-container);
 }
 
 .tool:hover .tool-label::before {

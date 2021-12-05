@@ -24,13 +24,14 @@ const Skills = (): JSX.Element => {
     { key: "MySQL", value: 65 },
     { key: "MongoDB", value: 65 },
   ];
+
   return (
     <Section id="skills">
       <div className="skills">
         <div className="skill-bars">
           <h3>My skills</h3>
           {skills.map(({ key, value }) => (
-            <>
+            <div key={key}>
               <p className="skill-bar-label">{key}</p>
               <div key={key} className="skill-bar">
                 <div
@@ -38,7 +39,7 @@ const Skills = (): JSX.Element => {
                   style={{ width: `${value}%` }}
                 ></div>
               </div>
-            </>
+            </div>
           ))}
         </div>
         <h3>Some of the tools that I use daily, and many more...</h3>
@@ -101,7 +102,7 @@ const Skills = (): JSX.Element => {
             Building scalable and maintainable server applications in
             <b className="skill-badge"> Java</b>, using
             <b className="skill-badge"> Spring Boot</b> framework and databases
-            such <b className="skill-badge"> MySQL</b> or
+            such as <b className="skill-badge"> MySQL</b> or
             <b className="skill-badge"> MongoDB</b>.
           </p>
         </div>

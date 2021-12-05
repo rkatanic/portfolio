@@ -10,7 +10,6 @@ const GlobalContextProvider = (props: any) => {
 
   const toggleDarkMode = (): void => {
     setIsDarkMode((prevState) => !prevState);
-    console.log(isDarkMode);
   };
 
   return (

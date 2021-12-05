@@ -1,8 +1,7 @@
 import Section from "./Section";
-import Skills from "./Skills";
+import Button from "./Button";
 
 import "./About.css";
-import Button from "./Button";
 
 const About = (): JSX.Element => (
   <Section id="about">

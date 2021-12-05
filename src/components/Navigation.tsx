@@ -24,29 +24,28 @@ const Navigation = (): JSX.Element => {
               <a href="#about" className="nav-link">
                 <div className="number">01</div>
                 <div className="dash"></div>
-                <span> About</span>
+                <span>About</span>
               </a>
             </li>
             <li className="nav-item" onClick={() => setShowMenu(false)}>
               <a href="#skills" className="nav-link">
                 <div className="number">02</div>
                 <div className="dash"></div>
-                <span> Skills</span>
+                <span>Skills</span>
               </a>
             </li>
             <li className="nav-item" onClick={() => setShowMenu(false)}>
               <a href="#contact" className="nav-link">
                 <div className="number">03</div>
                 <div className="dash"></div>
-                <span> Contact</span>
+                <span>Contact</span>
               </a>
             </li>
           </Scrollspy>
-
           <CloseIcon className="nav-close" onClick={handleMenuToggle} />
         </div>
-        <div className="nav-toggle">
-          <MenuIcon onClick={handleMenuToggle} />
+        <div className="nav-toggle" onClick={handleMenuToggle}>
+          <MenuIcon />
         </div>
       </nav>
     </header>
