@@ -6,18 +6,19 @@
 
 .column-right {
   flex: 1;
-  padding: 6rem 2rem;
+  padding: 5vh 2rem;
   position: relative;
 }
 
 .column-left {
   top: 0;
-  padding: 6rem 2rem;
+  padding: 5vh 2rem;
   position: sticky;
   display: flex;
+  justify-content: space-between;
   flex: 1;
   min-width: 300px;
-  max-height: 600px;
+  max-height: 90vh;
   flex-direction: column;
   align-items: flex-start;
 }
@@ -26,7 +27,7 @@
   position: absolute;
   content: "";
   top: 50%;
-  margin-top: 6rem;
+  margin-top: 5vh;
   right: 0;
   width: 2px;
   height: 50%;

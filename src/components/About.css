@@ -41,13 +41,17 @@
   font-weight: 600;
 }
 
+.about-item-content-wrapper {
+  flex: 1;
+}
+
 .about-item-content-date {
   margin-right: 2rem;
   text-transform: uppercase;
   font-size: 0.75rem;
   color: var(--color-primary);
   letter-spacing: 2px;
-  width: 10rem;
+  width: 6rem;
 }
 
 .about-item-content-headline {

@@ -38,7 +38,7 @@
 .btn-outline {
   border: 2px solid var(--color-primary);
   color: var(--color-primary);
-  background-color: transparent;
+  background-color: var(--color-body);
 }
 
 .btn-outline .icon {

@@ -17,7 +17,6 @@
   font-size: 0.825rem;
   font-weight: 600;
   color: var(--color-title);
-  background-color: var(--color-body);
   max-width: var(--width-desktop);
   display: flex;
   flex-direction: column;

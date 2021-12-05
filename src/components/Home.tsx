@@ -45,40 +45,42 @@ const Home = (): JSX.Element => {
   return (
     <div className="container">
       <div className="column-left">
-        <div className="progress-bar">
-          <div className="progress-bar-pulse"></div>
-          <div
-            className="progress-bar-percent"
-            style={{ height: `${scroll}%` }}
-          ></div>
+        <div>
+          <div className="progress-bar">
+            <div className="progress-bar-pulse"></div>
+            <div
+              className="progress-bar-percent"
+              style={{ height: `${scroll}%` }}
+            ></div>
+          </div>
+          <h3 className="typewriter-headline">
+            <Typewriter
+              options={{
+                cursor: "_",
+                strings: [
+                  "Hello",
+                  "Zdravo",
+                  "Konnichiwa",
+                  "Olá",
+                  "Hallo",
+                  "Privet",
+                  "Ciao",
+                  "Bonjour",
+                ],
+                autoStart: true,
+                loop: true,
+              }}
+            />
+          </h3>
+          <h3 className="title">I'm Radivoje Katanic.</h3>
+          <p className="desc">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Necessitatibus vel, facere cumque dolore iusto sit velit quisquam
+            laboriosam quia blanditiis modi accusamus, repellat consequuntur?
+            Quia assumenda voluptatibus provident sed dicta.
+          </p>
+          <Navigation />
         </div>
-        <h3 className="typewriter-headline">
-          <Typewriter
-            options={{
-              cursor: "_",
-              strings: [
-                "Hello",
-                "Zdravo",
-                "Konnichiwa",
-                "Olá",
-                "Hallo",
-                "Privet",
-                "Ciao",
-                "Bonjour",
-              ],
-              autoStart: true,
-              loop: true,
-            }}
-          />
-        </h3>
-        <h3 className="title">I'm Radivoje Katanic.</h3>
-        <p className="desc">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-          Necessitatibus vel, facere cumque dolore iusto sit velit quisquam
-          laboriosam quia blanditiis modi accusamus, repellat consequuntur? Quia
-          assumenda voluptatibus provident sed dicta.
-        </p>
-        <Navigation />
         <div className="info">
           <div className="row">
             <img className="my-photo" src={me1} />
