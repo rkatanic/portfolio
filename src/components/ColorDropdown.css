@@ -1,4 +1,4 @@
-.color-dropdown {
+.color-dropdown-header {
   position: relative;
   width: 2.25rem;
   height: 2.25rem;
@@ -7,21 +7,4 @@
   justify-content: center;
   background: var(--color-input);
   cursor: pointer;
-}
-
-.color-dropdown-list {
-  position: absolute;
-  bottom: 2.5rem;
-  left: 0rem;
-  width: 2.25rem;
-  background-color: var(--color-input);
-  z-index: 1;
-}
-
-.color-dropdown-item {
-  cursor: pointer;
-  width: 1rem;
-  height: 1rem;
-  margin: 1rem 0.625rem;
-  border-radius: 50%;
 }
