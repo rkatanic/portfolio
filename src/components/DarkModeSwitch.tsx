@@ -12,11 +12,10 @@ const DarkModeSwitch = (): JSX.Element => {
   const shouldShowDarkMode = (): void => {
     if (isDarkMode) {
       window.localStorage.removeItem("dark-mode");
-      window.document.body.setAttribute("class", "day-mode");
-    } else {
-      window.localStorage.setItem("dark-mode", "true");
-
       window.document.body.removeAttribute("class");
+    } else {
+      window.localStorage.setItem("dark-mode", "false");
+      window.document.body.setAttribute("class", "day-mode");
     }
   };
 
