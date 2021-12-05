@@ -12,9 +12,14 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <script>
-      const theme = localStorage.getItem("dark-mode");
-      if (theme) {
+      if (localStorage.getItem("dark-mode")) {
         document.body.setAttribute("class", "day-mode");
+      }
+      if (!isNaN(parseInt(window.localStorage.getItem("color")?.valueOf()))) {
+        window.document.documentElement.style.setProperty(
+          "--color-hue",
+          parseInt(window.localStorage.getItem("color")?.valueOf()).toString()
+        );
       }
     </script>
   </body>
