@@ -1,9 +1,5 @@
-import { useEffect, useState } from "react";
-import { useIsDarkMode, useToggleDarkMode } from "../context/GlobalContext";
-import ColorDropdown from "./ColorDropdown";
+import { useState } from "react";
 import { ReactComponent as MenuIcon } from "../assets/icons/menu.svg";
-import { ReactComponent as SunIcon } from "../assets/icons/sun.svg";
-import { ReactComponent as MoonIcon } from "../assets/icons/moon.svg";
 import { ReactComponent as CloseIcon } from "../assets/icons/close.svg";
 import Scrollspy from "react-scrollspy";
 
@@ -12,57 +8,37 @@ import "./Navigation.css";
 const Navigation = (): JSX.Element => {
   const [showMenu, setShowMenu] = useState(false);
 
-  const isDarkMode = useIsDarkMode();
-  const toggleDarkMode = useToggleDarkMode();
-
-  const shouldShowDarkMode = (): void => {
-    if (isDarkMode) {
-      window.document.body.setAttribute("class", "dark-mode");
-    } else {
-      window.document.body.removeAttribute("class");
-    }
-  };
-
-  useEffect(() => {
-    shouldShowDarkMode();
-  }, [isDarkMode]);
-
   const handleMenuToggle = (): void => setShowMenu((prevState) => !prevState);
 
   return (
     <header className="header">
       <nav className="nav">
-        <div className="nav-left">
-          <ColorDropdown />
-          <div className="night-mode-switch" onClick={toggleDarkMode}>
-            {isDarkMode ? <SunIcon /> : <MoonIcon />}
-          </div>
-        </div>
         <div className={showMenu ? `nav-menu show-menu` : `nav-menu`}>
           <Scrollspy
             offset={-30}
             className="nav-list"
             currentClassName="active"
-            items={["home", "about", "skills", "contact"]}
+            items={["about", "skills", "contact"]}
           >
             <li className="nav-item" onClick={() => setShowMenu(false)}>
-              <a href="#home" className="nav-link ">
-                Home
-              </a>
-            </li>
-            <li className="nav-item" onClick={() => setShowMenu(false)}>
               <a href="#about" className="nav-link">
-                About
+                <div className="number">01</div>
+                <div className="dash"></div>
+                <span> About</span>
               </a>
             </li>
             <li className="nav-item" onClick={() => setShowMenu(false)}>
               <a href="#skills" className="nav-link">
-                Skills
+                <div className="number">02</div>
+                <div className="dash"></div>
+                <span> Skills</span>
               </a>
             </li>
             <li className="nav-item" onClick={() => setShowMenu(false)}>
               <a href="#contact" className="nav-link">
-                Contact
+                <div className="number">03</div>
+                <div className="dash"></div>
+                <span> Contact</span>
               </a>
             </li>
           </Scrollspy>

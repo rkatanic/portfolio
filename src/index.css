@@ -1,13 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
 :root {
-  --body-font: "Poppins", sans-serif;
+  --font-body: "Poppins";
   --header-height: 3.25rem;
 
-  --color-hue: 270;
+  --color-hue: 160;
   --color-primary: hsl(var(--color-hue), 70%, 60%);
   --color-primary-two: hsl(var(--color-hue), 55%, 55%);
   --color-primary-light: hsl(var(--color-hue), 90%, 85%);
+  --color-gradient: linear-gradient(
+    60deg,
+    var(--color-primary-light),
+    var(--color-primary)
+  );
 
   --color-title: hsl(var(--color-hue), 8%, 15%);
   --color-text: hsl(var(--color-hue), 8%, 45%);
@@ -49,16 +54,16 @@ body {
   color: var(--color-text);
   background-color: var(--color-body);
   font-size: var(--font-size-1);
-  font-family: var(--body-font);
-  margin: var(--header-height) 0 0 0;
+  font-family: var(--font-body);
+  margin: 0;
 }
 
 body.dark-mode {
   --color-primary-two: hsl(var(--color-hue), 30%, 5%);
   --color-title: hsl(var(--color-hue), 8%, 95%);
   --color-text: hsl(var(--color-hue), 8%, 75%);
-  --color-input: hsl(var(--color-hue), 30%, 15%);
-  --color-body: hsl(var(--color-hue), 25%, 10%);
+  --color-input: hsl(var(--color-hue), 10%, 15%);
+  --color-body: hsl(var(--color-hue), 8%, 10%);
   --color-container: hsl(var(--color-hue), 30%, 15%);
 }
 
@@ -67,11 +72,6 @@ h2,
 h3 {
   color: var(--color-title);
   align-items: center;
-  margin: 0;
-}
-
-p {
-  margin: 0;
 }
 
 ul {

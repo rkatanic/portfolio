@@ -1,71 +1,36 @@
-import { useRef, useState, useEffect } from "react";
+import { useState } from "react";
+import ColorModal from "./ColorModal";
 import { ReactComponent as PalleteIcon } from "../assets/icons/pallete.svg";
 
 import "./ColorDropdown.css";
 
 const ColorDropdown = (): JSX.Element => {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const dropdrownRef = useRef<any>();
+  const [isColorModalOpen, setIsColorModalOpen] = useState(false);
 
-  const colors: { key: string; value: number }[] = [
-    { key: "red", value: 0 },
-    { key: "orange", value: 20 },
-    { key: "yellow", value: 45 },
-    { key: "green", value: 110 },
-    { key: "teal", value: 140 },
-    { key: "aqua", value: 190 },
-    { key: "lightblue", value: 210 },
-    { key: "blue", value: 230 },
-    { key: "purple", value: 270 },
-  ];
+  const handleColorModalClose = (): void => setIsColorModalOpen(false);
 
   const handleDropdownToggle = (): void =>
-    setIsDropdownOpen((prevState: boolean) => !prevState);
+    setIsColorModalOpen((prevState: boolean) => !prevState);
 
   const handleColorSwitch = (value: number): void => {
     window.document.documentElement.style.setProperty(
       "--color-hue",
       value.toString()
     );
-    setIsDropdownOpen(false);
+    setIsColorModalOpen(false);
   };
-
-  const handleClickOutside = (event: Event): void => {
-    if (dropdrownRef.current && !dropdrownRef.current.contains(event.target)) {
-      setIsDropdownOpen(false);
-    }
-  };
-
-  useEffect(() => {
-    document.addEventListener("click", handleClickOutside, true);
-    return (): void => {
-      document.removeEventListener("click", handleClickOutside, true);
-    };
-  }, []);
 
   return (
-    <div className="color-dropdown">
+    <>
       <div className="color-dropdown-header" onClick={handleDropdownToggle}>
         <PalleteIcon />
       </div>
-      {isDropdownOpen && (
-        <div ref={dropdrownRef} className="color-dropdown-list">
-          {colors.map(
-            (color): JSX.Element => (
-              <div
-                onClick={() => handleColorSwitch(color.value)}
-                key={color.key}
-                style={{
-                  backgroundColor: `hsl(${color.value},70%,60%)`,
-                  border: `2px solid hsl(${color.value},90%,75%)`,
-                }}
-                className="color-dropdown-item"
-              ></div>
-            )
-          )}
-        </div>
-      )}
-    </div>
+      <ColorModal
+        isOpen={isColorModalOpen}
+        closeModal={handleColorModalClose}
+        switchColor={handleColorSwitch}
+      />
+    </>
   );
 };
 

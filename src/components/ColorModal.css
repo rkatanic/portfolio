@@ -1,0 +1,46 @@
+.color-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 1rem;
+  transform: translate(-50%, -50%) !important;
+  margin: auto auto;
+  background-color: var(--color-body);
+  outline: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.color-modal-title {
+  margin: 0 0 1rem;
+}
+
+.color-dropdown-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  max-width: 30rem;
+  padding: 1rem 0;
+}
+
+.color-dropdown-item {
+  cursor: pointer;
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: 0.5s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.color-dropdown-item:hover {
+  transform: scale(1.5);
+}
+
+.color-modal .icon-close {
+  height: 1.75rem;
+  align-self: flex-end;
+}

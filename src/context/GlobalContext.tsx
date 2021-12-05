@@ -6,7 +6,7 @@ const GlobalContext = createContext({
 });
 
 const GlobalContextProvider = (props: any) => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true);
 
   const toggleDarkMode = (): void => {
     setIsDarkMode((prevState) => !prevState);

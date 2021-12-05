@@ -1,19 +1,6 @@
-.contact {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex: 1;
-}
-
-.contact .icon {
-  fill: var(--color-primary);
-  height: 2.5rem;
-  margin-right: var(--margin-1);
-}
-
-.contact-container {
-  display: flex;
-  flex-wrap: wrap;
+.sending-mails {
+  z-index: 1;
+  position: absolute;
 }
 
 @media screen and (max-width: 768px) {

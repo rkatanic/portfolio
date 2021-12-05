@@ -1,6 +1,5 @@
 .contact-form {
-  margin: var(--margin-1) 0;
-  flex: 2;
+  margin: 1rem 0;
 }
 
 .contact-form button > svg {
