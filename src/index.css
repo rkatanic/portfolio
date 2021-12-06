@@ -18,8 +18,8 @@
   --color-text: hsl(var(--color-hue), 8%, 75%);
   --color-text-light: hsl(var(--color-hue), 8%, 65%);
 
-  --color-input: hsl(var(--color-hue), 10%, 15%);
-  --color-body: hsl(var(--color-hue), 8%, 10%);
+  --color-input: hsl(var(--color-hue), 6%, 15%);
+  --color-body: hsl(var(--color-hue), 4%, 10%);
   --color-container: hsl(var(--color-hue), 30%, 15%);
 
   --font-size-0-75: 0.75rem;

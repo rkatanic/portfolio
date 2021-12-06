@@ -17,13 +17,7 @@
   font-size: 1.25rem;
   font-weight: 400;
   letter-spacing: 3px;
-  color: var(--color-primary);
+  color: var(--color-title);
   text-transform: uppercase;
   position: relative;
-}
-
-@media screen and (max-width: 767px) {
-  .headline {
-    text-align: center;
-  }
 }

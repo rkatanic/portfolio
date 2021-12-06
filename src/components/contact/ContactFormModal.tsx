@@ -1,6 +1,6 @@
 import Modal from "react-modal";
 import { ReactComponent as CloseIcon } from "../../assets/icons/close.svg";
-import { ReactComponent as SuccessIcon } from "../../assets/icons/success.svg";
+import { ReactComponent as SuccessIcon } from "../../assets/icons/check.svg";
 
 import "./ContactFormModal.css";
 
@@ -26,16 +26,31 @@ const ContactFormModal = ({
     <div className="contact-form-modal-content">
       {isSuccess ? (
         <>
-          <SuccessIcon />
-          <h3>Email successfully sent</h3>
-          <p>Thanks for reaching out to me!</p>
-          <p>I will respond as soon as possible.</p>
+          <div className="contact-form-modal-content-row">
+            <div className="contact-form-modal-content-icon">
+              <SuccessIcon />
+            </div>
+            <h3 className="headline">
+              Email <br />
+              successfully <br />
+              sent
+            </h3>
+          </div>
+          <span>Thanks for reaching out to me!</span>
+          <span>I will respond as soon as possible.</span>
         </>
       ) : (
         <>
-          <h3>Failed to send email</h3>
-          <p>Oh no, something went wrong.</p>
-          <p>Please try sending message again.</p>
+          <div className="contact-form-modal-content-row">
+            <div className="contact-form-modal-content-icon">!</div>
+            <h3 className="headline">
+              Sending <br />
+              email <br />
+              failed
+            </h3>
+          </div>
+          <span>Oh no, something went wrong.</span>
+          <span>Please try sending message later.</span>
         </>
       )}
     </div>

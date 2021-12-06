@@ -13,6 +13,7 @@
 .skill-bar-label {
   margin: 0;
   font-size: 0.825rem;
+  letter-spacing: 1px;
   margin: 1.5rem 0 0.125rem;
   color: var(--color-title);
 }
