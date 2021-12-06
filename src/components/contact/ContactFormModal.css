@@ -41,6 +41,7 @@
 .contact-form-modal-content-icon .icon,
 .contact-form-modal-content-icon .icon:hover {
   fill: var(--color-title);
+  cursor: initial;
 }
 
 .contact-form-modal .icon-close {
