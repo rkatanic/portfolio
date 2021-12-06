@@ -1,5 +1,4 @@
 import Section from "./Section";
-import { ReactComponent as CodeIcon } from "../assets/icons/code.svg";
 import { ReactComponent as VsCodeIcon } from "../assets/icons/vs-code.svg";
 import { ReactComponent as DockerIcon } from "../assets/icons/docker.svg";
 import { ReactComponent as StackOverflowIcon } from "../assets/icons/stack-overflow.svg";
@@ -10,6 +9,7 @@ import { ReactComponent as IntelliJIcon } from "../assets/icons/intellij.svg";
 import { ReactComponent as PostmanIcon } from "../assets/icons/postman.svg";
 
 import "./Skills.css";
+import Services from "./Services";
 
 const Skills = (): JSX.Element => {
   const skills = [
@@ -29,7 +29,7 @@ const Skills = (): JSX.Element => {
     <Section id="skills">
       <div className="skills">
         <div className="skill-bars">
-          <h3>My skills</h3>
+          <h3 className="headline">My skills</h3>
           {skills.map(({ key, value }) => (
             <div key={key}>
               <p className="skill-bar-label">{key}</p>
@@ -42,7 +42,7 @@ const Skills = (): JSX.Element => {
             </div>
           ))}
         </div>
-        <h3>Some of the tools that I use daily, and many more...</h3>
+        <h3 className="headline">Some of the tools I use, and many more...</h3>
         <div className="tools">
           <div id="a" className="tool">
             <GitIcon />
@@ -77,35 +77,7 @@ const Skills = (): JSX.Element => {
             <span className="tool-label">Stack Overflow</span>
           </div>
         </div>
-
-        <h3>Services I provide</h3>
-        <div className="skills-container">
-          <div className="skill-icon">
-            <CodeIcon />
-          </div>
-          <h3 className="item-title">Front End Development</h3>
-          <p className="item-desc">
-            Using <b className="skill-badge">HTML</b>,
-            <b className="skill-badge"> CSS</b>,
-            <b className="skill-badge"> Javascript</b>, and frameworks such as
-            <b className="skill-badge"> React</b> and
-            <b className="skill-badge"> Angular</b>, I can build fast,
-            responsive and interactive client-side applications.
-          </p>
-        </div>
-        <div className="skills-container">
-          <div className="skill-icon">
-            <CodeIcon />
-          </div>
-          <h3 className="item-title">Back End Development</h3>
-          <p className="item-desc">
-            Building scalable and maintainable server applications in
-            <b className="skill-badge"> Java</b>, using
-            <b className="skill-badge"> Spring Boot</b> framework and databases
-            such as <b className="skill-badge"> MySQL</b> or
-            <b className="skill-badge"> MongoDB</b>.
-          </p>
-        </div>
+        <Services />
       </div>
     </Section>
   );
