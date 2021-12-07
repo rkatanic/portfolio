@@ -1,4 +1,6 @@
-import { ReactComponent as ArrowUpIcon } from "../assets/icons/arrow-up.svg";
+import me1 from "../assets/images/me1.png";
+import ColorSwitch from "./ColorSwitch";
+import DarkModeSwitch from "./DarkModeSwitch";
 import { ReactComponent as GithubIcon } from "../assets/icons/github.svg";
 import { ReactComponent as LinkedinIcon } from "../assets/icons/linkedin.svg";
 
@@ -6,44 +8,30 @@ import "./Footer.css";
 
 const Footer = (): JSX.Element => (
   <div className="footer">
-    <a href="#home" className="footer-back-to-top">
-      <ArrowUpIcon />
-    </a>
-    <div className="footer-links">
-      <a href="https://github.com/k-rade">
-        <GithubIcon />
-      </a>
-      <a href="https://www.linkedin.com/in/radivoje-katanic">
-        <LinkedinIcon />
-      </a>
+    <div className="footer-content">
+      <img className="footer-image" src={me1} />
+      <div className="footer-links">
+        <a
+          className="footer-link"
+          href="https://www.linkedin.com/in/radivoje-katanic"
+        >
+          <div className="footer-link-icon">
+            <LinkedinIcon />
+          </div>
+          LinkedIn
+        </a>
+        <a className="footer-link" href="https://github.com/k-rade">
+          <div className="footer-link-icon">
+            <GithubIcon />
+          </div>
+          GitHub
+        </a>
+      </div>
     </div>
-    <ul className="nav-list">
-      <li className="nav-item">
-        <a href="#home" className="nav-link ">
-          Home
-        </a>
-      </li>
-      <li className="nav-item">
-        <a href="#about" className="nav-link">
-          About
-        </a>
-      </li>
-      <li className="nav-item">
-        <a href="#skills" className="nav-link">
-          Skills
-        </a>
-      </li>
-      <li className="nav-item">
-        <a href="#contact" className="nav-link">
-          Contact
-        </a>
-      </li>
-    </ul>
-    <div className="footer-divider">
-      <hr />
-      <div className="center-diamond"></div>
+    <div className="footer-actions">
+      <ColorSwitch />
+      <DarkModeSwitch />
     </div>
-    <p>Created by:&nbsp; Radivoje Katanic</p>
   </div>
 );
 

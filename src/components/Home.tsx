@@ -6,11 +6,12 @@ import Navigation from "./Navigation";
 import me1 from "../assets/images/me1.png";
 import { ReactComponent as GithubIcon } from "../assets/icons/github.svg";
 import { ReactComponent as LinkedinIcon } from "../assets/icons/linkedin.svg";
-import ColorDropdown from "./ColorDropdown";
+import ColorSwitch from "./ColorSwitch";
 import ProgressBar from "./ProgressBar";
 import DarkModeSwitch from "./DarkModeSwitch";
 
 import "./Home.css";
+import Footer from "./Footer";
 
 const Home = (): JSX.Element => (
   <div className="container">
@@ -45,32 +46,7 @@ const Home = (): JSX.Element => (
         </p>
         <Navigation />
       </div>
-      <div className="info">
-        <div className="row">
-          <img className="my-photo" src={me1} />
-          <div className="contact-links">
-            <a
-              className="contact-link"
-              href="https://www.linkedin.com/in/radivoje-katanic"
-            >
-              <div className="contact-link-icon">
-                <LinkedinIcon />
-              </div>
-              LinkedIn
-            </a>
-            <a className="contact-link" href="https://github.com/k-rade">
-              <div className="contact-link-icon">
-                <GithubIcon />
-              </div>
-              GitHub
-            </a>
-          </div>
-        </div>
-        <div className="actions">
-          <ColorDropdown />
-          <DarkModeSwitch />
-        </div>
-      </div>
+      <Footer />
     </div>
     <div className="column-right">
       <About />

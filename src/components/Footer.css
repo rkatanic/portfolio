@@ -1,92 +1,53 @@
 .footer {
   display: flex;
-  flex-direction: column;
-  position: relative;
-  text-align: center;
-  color: var(--color-title);
-  background-color: var(--color-primary-two);
+  justify-content: space-between;
+  width: 100%;
 }
 
-.footer a,
-.footer h3,
-.footer p {
-  color: hsla(0, 0%, 100%, 0.863);
+.footer-image {
+  width: 5rem;
+  height: 5rem;
+  background: var(--color-input);
 }
 
-.footer a:hover,
-.footer-links svg:hover {
-  fill: var(--color-input);
-  color: var(--color-input);
-}
-
-.footer .nav-list {
-  justify-content: center;
-}
-
-.footer-back-to-top {
+.footer-content {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--color-primary-two);
-  width: 4rem;
-  height: 4rem;
-  border-radius: 50%;
-  position: absolute;
-  left: 50%;
-  top: -1.5rem;
-  transform: translateX(-50%);
-}
-
-.footer .icon-arrow-up {
-  height: 70%;
-  fill: hsla(0, 0%, 100%, 0.863);
-  transition: 0.4s;
-}
-
-.footer .icon-arrow-up:hover {
-  transform: translateY(-6px);
 }
 
 .footer-links {
-  margin: 4rem 0 1rem;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.footer-links svg {
-  height: 2rem;
+.footer-link {
+  display: flex;
+  align-items: center;
+  font-size: 0.825rem;
+  letter-spacing: 1px;
+  color: var(--color-text);
+}
+
+.footer-link-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
   margin: 0 0.5rem;
-  fill: hsla(0, 0%, 100%, 0.863);
+  background: var(--color-input);
 }
 
-.footer p {
-  padding: 0.5rem 0;
-  font-size: 0.75rem;
+.footer-link:hover,
+.footer-link:hover svg {
+  fill: var(--color-primary);
+  color: var(--color-primary);
+  cursor: pointer;
 }
 
-.footer-divider {
-  position: relative;
-}
-
-hr {
-  border: 0;
-  height: 1px;
-  width: 100%;
-  position: relative;
-  background-image: linear-gradient(
-    to right,
-    var(--color-primary-two),
-    #fff,
-    var(--color-primary-two)
-  );
-  background-color: #fff;
-}
-
-.center-diamond {
-  position: absolute;
-  width: 6px;
-  height: 6px;
-  background: #fff;
-  top: 5px;
-  left: 50%;
-  transform: translate(-50%) rotate(-45deg);
+.footer-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
 }

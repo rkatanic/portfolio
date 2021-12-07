@@ -28,13 +28,13 @@ const ColorModal = ({
       <CloseIcon onClick={closeModal} />
 
       <h3 className="color-modal-title">Choose your favourite color</h3>
-      <div className="color-dropdown-list">
+      <div className="color-list">
         {COLORS.map(
           ({ key, value }): JSX.Element => (
             <div
               onClick={() => switchColor(value)}
               key={key}
-              className="color-dropdown-item"
+              className="color-item"
               style={{
                 background: `hsl(${value},70%,60%)`,
               }}

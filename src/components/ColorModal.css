@@ -17,7 +17,7 @@
   margin: 0 0 1rem;
 }
 
-.color-dropdown-list {
+.color-list {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -27,7 +27,7 @@
   padding: 1rem 0;
 }
 
-.color-dropdown-item {
+.color-item {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -39,14 +39,14 @@
   position: relative;
 }
 
-.color-dropdown-item .icon {
+.color-item:hover {
+  transform: scale(1.5);
+}
+
+.color-item .icon {
   fill: black;
   width: 1rem;
   height: 1rem;
-}
-
-.color-dropdown-item:hover {
-  transform: scale(1.5);
 }
 
 .color-modal .icon-close {

@@ -3,14 +3,14 @@ import ColorModal from "./ColorModal";
 import { ReactComponent as PalleteIcon } from "../assets/icons/pallete.svg";
 import { COLORS, DEFAULT_COLOR_HUE } from "../util/constants/colors";
 
-import "./ColorDropdown.css";
+import "./ColorSwitch.css";
 
-const ColorDropdown = (): JSX.Element => {
+const ColorSwitch = (): JSX.Element => {
   const [isColorModalOpen, setIsColorModalOpen] = useState(false);
 
   const handleColorModalClose = (): void => setIsColorModalOpen(false);
 
-  const handleDropdownToggle = (): void =>
+  const handleColorModalToggle = (): void =>
     setIsColorModalOpen((prevState: boolean) => !prevState);
 
   const handleColorSwitch = (value: number): void => {
@@ -39,7 +39,7 @@ const ColorDropdown = (): JSX.Element => {
 
   return (
     <>
-      <div className="color-dropdown-header" onClick={handleDropdownToggle}>
+      <div className="color-switch-header" onClick={handleColorModalToggle}>
         <PalleteIcon />
       </div>
       <ColorModal
@@ -51,4 +51,4 @@ const ColorDropdown = (): JSX.Element => {
   );
 };
 
-export default ColorDropdown;
+export default ColorSwitch;
