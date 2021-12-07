@@ -38,7 +38,7 @@
   --margin-2: 2rem;
   --margin-3: 3rem;
 
-  --width-desktop: 1280px;
+  --width-desktop: 1200px;
   --width-tablet: 768px;
 
   --z-index-1: 1;
@@ -62,8 +62,8 @@ body.day-mode {
   --color-primary-two: hsl(var(--color-hue), 55%, 55%);
   --color-title: hsl(var(--color-hue), 8%, 15%);
   --color-text: hsl(var(--color-hue), 8%, 45%);
-  --color-input: hsl(var(--color-hue), 70%, 95%);
-  --color-body: hsl(var(--color-hue), 60%, 99%);
+  --color-input: hsl(var(--color-hue), 30%, 90%);
+  --color-body: hsl(var(--color-hue), 20%, 95%);
   --color-container: #fff;
 }
 

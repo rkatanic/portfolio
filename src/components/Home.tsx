@@ -3,15 +3,10 @@ import About from "./About";
 import Skills from "./Skills";
 import Contact from "./Contact";
 import Navigation from "./Navigation";
-import me1 from "../assets/images/me1.png";
-import { ReactComponent as GithubIcon } from "../assets/icons/github.svg";
-import { ReactComponent as LinkedinIcon } from "../assets/icons/linkedin.svg";
-import ColorSwitch from "./ColorSwitch";
 import ProgressBar from "./ProgressBar";
-import DarkModeSwitch from "./DarkModeSwitch";
+import Footer from "./Footer";
 
 import "./Home.css";
-import Footer from "./Footer";
 
 const Home = (): JSX.Element => (
   <div className="container">
@@ -25,7 +20,6 @@ const Home = (): JSX.Element => (
               strings: [
                 "Hello!",
                 "Zdravo!",
-                "Konnichiwa!",
                 "Olá!",
                 "Hallo!",
                 "Privet!",

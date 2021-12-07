@@ -1,116 +1,49 @@
-.skill-bars {
-  margin: 0 0 2rem;
+.skill-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
+  grid-template-rows: auto;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 3rem;
 }
 
-.skill-bar {
-  position: relative;
-  width: 100%;
-  height: 4px;
-  background-color: var(--color-input);
-  z-index: 1;
+.skill-list:hover .skill-card {
+  opacity: 0.7;
 }
 
-.skill-bar-label {
-  margin: 0;
-  font-size: 0.825rem;
-  letter-spacing: 1px;
-  margin: 1.5rem 0 0.125rem;
-  color: var(--color-title);
+.skill-list .skill-card:hover {
+  opacity: 1;
+  transform: scale(1.1);
+  cursor: pointer;
+  background: var(--color-container);
 }
 
-.skill-bar-percent {
-  position: absolute;
-  top: 0;
-  height: 4px;
-  background-color: var(--color-primary);
-}
-
-.tool {
-  position: relative;
+.skill-card {
+  height: 7rem;
   display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
   justify-content: center;
   flex: 1;
-  min-width: 6rem;
-  min-height: 7rem;
   padding: 0.5rem;
   background-color: var(--color-input);
   transition: 0.25s ease;
   cursor: pointer;
 }
 
-.tool-label {
-  font-weight: 600;
-  letter-spacing: 2px;
+.skill-card-label {
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   position: relative;
+  margin: 0.25rem;
+  font-size: 0.825rem;
+  color: var(--color-title);
+  z-index: 1;
 }
 
-.tool-label::before {
-  position: absolute;
-  content: "";
-  bottom: 0;
-  width: 1rem;
-  height: 2px;
-  background-color: var(--color-primary);
-  transition: 0.5s ease;
-}
-
-.tool .icon {
+.skill-card .icon {
   fill: var(--color-primary);
-}
-
-.tool:hover {
-  transform: scale(1.1);
-  background-color: var(--color-container);
-}
-
-.tool:hover .tool-label::before {
-  width: 2rem;
-}
-
-.tools {
-  margin: 2rem 0;
-  display: grid;
-  grid-gap: 0.25rem;
-  grid-auto-columns: minmax(0, 1fr);
-  grid-auto-flow: column;
-  grid-template-areas:
-    "a b ."
-    "c . d"
-    "e f ."
-    "g . h";
-}
-
-#a {
-  grid-area: a;
-}
-
-#b {
-  grid-area: b;
-}
-
-#c {
-  grid-area: c;
-}
-
-#d {
-  grid-area: d;
-}
-
-#e {
-  grid-area: e;
-}
-
-#f {
-  grid-area: f;
-}
-
-#g {
-  grid-area: g;
-}
-
-#h {
-  grid-area: h;
+  z-index: 1;
 }

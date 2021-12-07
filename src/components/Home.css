@@ -17,7 +17,6 @@
   display: flex;
   justify-content: space-between;
   flex: 1;
-  min-width: 300px;
   max-height: 100vh;
   flex-direction: column;
   align-items: flex-start;
@@ -46,5 +45,10 @@
   .column-left {
     position: relative;
     max-height: none;
+  }
+
+  .column-left,
+  .column-right {
+    padding: 5vh 1rem;
   }
 }

@@ -26,12 +26,13 @@ textarea::placeholder {
   display: inline-flex;
 }
 
-label {
+.form-field-label label {
   text-transform: uppercase;
   font-size: 0.825rem;
   font-weight: 600;
   margin-right: 0.5rem;
   color: var(--color-title);
+  letter-spacing: 1px;
 }
 
 .input-error-field {
