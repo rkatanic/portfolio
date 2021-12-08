@@ -3,7 +3,7 @@
   flex: 1;
   height: 100%;
   margin: 1rem 0;
-  padding: 2rem;
+  padding: 1rem 2rem;
   transition: 0.5s ease;
   border-right: 4px solid hsl(var(--color-hue), 70%, 95%, 0.1);
 }
@@ -49,7 +49,7 @@
 
 .about-item-content-wrapper {
   flex: 1;
-  min-width: 10rem;
+  min-width: 9rem;
 }
 
 .about-item-content-date {
@@ -58,7 +58,7 @@
   font-size: 0.75rem;
   color: var(--color-text);
   letter-spacing: 2px;
-  min-width: 10rem;
+  min-width: 9rem;
 }
 
 .about-item-content-headline {
@@ -73,8 +73,16 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 400;
-  font-size: 0.825rem;
+  font-size: 0.925rem;
   color: var(--color-primary);
+}
+
+.about-item-content-location {
+  margin: 0;
+  font-weight: 400;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 #about .btn-outline {

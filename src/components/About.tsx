@@ -14,6 +14,7 @@ const About = (): JSX.Element => (
           <div className="about-item-content-wrapper">
             <p className="about-item-content-headline">Software Developer</p>
             <p className="about-item-content-description">ProductDock</p>
+            <p className="about-item-content-location">Doboj</p>
           </div>
         </div>
         <div className="about-item-content">
@@ -23,6 +24,7 @@ const About = (): JSX.Element => (
             <p className="about-item-content-description">
               ProductDock Rookie Boot Camp
             </p>
+            <p className="about-item-content-location">Doboj</p>
           </div>
         </div>
       </div>
@@ -35,6 +37,7 @@ const About = (): JSX.Element => (
             <p className="about-item-content-description">
               Slobomir P University
             </p>
+            <p className="about-item-content-location">Doboj</p>
           </div>
         </div>
         <div className="about-item-content">
@@ -42,8 +45,9 @@ const About = (): JSX.Element => (
           <div className="about-item-content-wrapper">
             <p className="about-item-content-headline">Computer Technician</p>
             <p className="about-item-content-description">
-              Electrotehnical High School in Doboj
+              Electro-tehnical High School
             </p>
+            <p className="about-item-content-location">Doboj</p>
           </div>
         </div>
       </div>
