@@ -14,36 +14,81 @@
 .skill-list .skill-card:hover {
   opacity: 1;
   transform: scale(1.1);
-  cursor: pointer;
-  background: var(--color-container);
+}
+
+.skill-card:hover .highlight {
+  animation: animation-highlight 1s linear;
 }
 
 .skill-card {
-  height: 7rem;
   display: flex;
   flex-direction: column;
-  text-align: center;
   align-items: center;
   justify-content: center;
-  flex: 1;
-  padding: 0.5rem;
-  background-color: var(--color-input);
-  transition: 0.25s ease;
-  cursor: pointer;
+  width: 100%;
+  min-height: 7rem;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  transition: 0.25s;
+}
+
+.skill-card::before {
+  content: "";
+  position: absolute;
+  top: 1%;
+  left: 1%;
+  display: block;
+  height: 98%;
+  width: 98%;
+  margin: auto;
+  align-self: center;
+  background: var(--color-input);
+  z-index: -1;
 }
 
 .skill-card-label {
-  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 1px;
   position: relative;
-  margin: 0.25rem;
+  margin: 0.5rem;
   font-size: 0.825rem;
   color: var(--color-title);
   z-index: 1;
+  cursor: default;
+  text-align: center;
 }
 
 .skill-card .icon {
   fill: var(--color-primary);
   z-index: 1;
+  cursor: initial;
+}
+
+.highlight {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  z-index: -9;
+  display: block;
+  height: 200%;
+  width: 200%;
+  transform: rotate(-60deg);
+  overflow: hidden;
+  background: linear-gradient(
+    to right,
+    var(--color-body) 0%,
+    var(--color-body) 40%,
+    var(--color-primary) 50%,
+    var(--color-primary) 55%,
+    var(--color-body) 70%,
+    var(--color-body) 100%
+  );
+  background-size: 200% auto;
+}
+
+@keyframes animation-highlight {
+  to {
+    background-position: 200% center;
+  }
 }

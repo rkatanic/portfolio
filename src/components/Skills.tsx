@@ -33,7 +33,7 @@ const Skills = (): JSX.Element => {
     { name: "Spring Boot", icon: <SpringBootIcon /> },
     { name: "MySQL", icon: <MySqlIcon /> },
     { name: "MongoDB", icon: <MongoDbIcon /> },
-    { name: "npm", icon: <NpmIcon /> },
+    { name: "Postman", icon: <PostmanIcon /> },
     { name: "Docker", icon: <DockerIcon /> },
     { name: "Git", icon: <GitIcon /> },
     { name: "GitHub", icon: <GitHubIcon /> },
@@ -44,12 +44,11 @@ const Skills = (): JSX.Element => {
   return (
     <Section id="skills">
       <div className="skills">
-        <h3 className="headline">
-          Skills & tools that I use to build web apps
-        </h3>
+        <h3 className="headline">Languages & tools i use</h3>
         <div className="skill-list">
           {skills.map(({ name, icon }) => (
             <div key={name} className="skill-card">
+              <div className="highlight"></div>
               {icon}
               <p className="skill-card-label">{name}</p>
             </div>
