@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.a7312693.chunk.css",
-    "main.js": "/portfolio/static/js/main.a8138b56.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.a8138b56.chunk.js.map",
+    "main.css": "/portfolio/static/css/main.6214660b.chunk.css",
+    "main.js": "/portfolio/static/js/main.3408917f.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.3408917f.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.71bc5cbc.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.71bc5cbc.js.map",
     "static/js/2.716246d2.chunk.js": "/portfolio/static/js/2.716246d2.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.67e2b08d.chunk.js": "/portfolio/static/js/3.67e2b08d.chunk.js",
     "static/js/3.67e2b08d.chunk.js.map": "/portfolio/static/js/3.67e2b08d.chunk.js.map",
     "index.html": "/portfolio/index.html",
-    "static/css/main.a7312693.chunk.css.map": "/portfolio/static/css/main.a7312693.chunk.css.map",
+    "static/css/main.6214660b.chunk.css.map": "/portfolio/static/css/main.6214660b.chunk.css.map",
     "static/js/2.716246d2.chunk.js.LICENSE.txt": "/portfolio/static/js/2.716246d2.chunk.js.LICENSE.txt",
     "static/media/angular.f70a0063.svg": "/portfolio/static/media/angular.f70a0063.svg",
     "static/media/check.5bb6248c.svg": "/portfolio/static/media/check.5bb6248c.svg",
@@ -30,8 +30,8 @@
     "static/media/mongodb.95d4f96b.svg": "/portfolio/static/media/mongodb.95d4f96b.svg",
     "static/media/moon.e04cdbd9.svg": "/portfolio/static/media/moon.e04cdbd9.svg",
     "static/media/mysql.bf5e0b3b.svg": "/portfolio/static/media/mysql.bf5e0b3b.svg",
-    "static/media/npm.28d6eb8e.svg": "/portfolio/static/media/npm.28d6eb8e.svg",
     "static/media/pallete.7251aa98.svg": "/portfolio/static/media/pallete.7251aa98.svg",
+    "static/media/postman.4097354e.svg": "/portfolio/static/media/postman.4097354e.svg",
     "static/media/react.91dfa836.svg": "/portfolio/static/media/react.91dfa836.svg",
     "static/media/sandwatch.b1c2c5e9.svg": "/portfolio/static/media/sandwatch.b1c2c5e9.svg",
     "static/media/sass.3b77c9bf.svg": "/portfolio/static/media/sass.3b77c9bf.svg",
@@ -42,7 +42,7 @@
   "entrypoints": [
     "static/js/runtime-main.71bc5cbc.js",
     "static/js/2.716246d2.chunk.js",
-    "static/css/main.a7312693.chunk.css",
-    "static/js/main.a8138b56.chunk.js"
+    "static/css/main.6214660b.chunk.css",
+    "static/js/main.3408917f.chunk.js"
   ]
 }
