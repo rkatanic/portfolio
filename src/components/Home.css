@@ -46,9 +46,4 @@
     position: relative;
     max-height: none;
   }
-
-  .column-left,
-  .column-right {
-    padding: 5vh 1rem;
-  }
 }

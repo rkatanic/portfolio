@@ -1,10 +1,22 @@
+.color-switch {
+  transition: 0.35s ease;
+  background: var(--color-input);
+}
+
+.color-switch:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.color-switch:hover .icon {
+  fill: var(--color-primary);
+}
+
 .color-switch-header {
   position: relative;
-  width: 2.25rem;
-  height: 2.25rem;
+  width: 2.75rem;
+  height: 2.75rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--color-input);
-  cursor: pointer;
 }

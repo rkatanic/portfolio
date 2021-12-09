@@ -20,7 +20,7 @@
 
   --color-input: hsl(var(--color-hue), 6%, 15%);
   --color-body: hsl(var(--color-hue), 4%, 10%);
-  --color-container: hsl(var(--color-hue), 30%, 15%);
+  --color-container: hsl(var(--color-hue), 15%, 20%);
 
   --font-size-0-75: 0.75rem;
   --font-size-1: 1rem;

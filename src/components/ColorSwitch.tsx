@@ -38,7 +38,7 @@ const ColorSwitch = (): JSX.Element => {
   }, []);
 
   return (
-    <>
+    <div className="color-switch">
       <div className="color-switch-header" onClick={handleColorModalToggle}>
         <PalleteIcon />
       </div>
@@ -47,7 +47,7 @@ const ColorSwitch = (): JSX.Element => {
         closeModal={handleColorModalClose}
         switchColor={handleColorSwitch}
       />
-    </>
+    </div>
   );
 };
 

@@ -1,9 +1,18 @@
 .night-mode-switch {
-  width: 2.25rem;
-  height: 2.25rem;
+  width: 2.75rem;
+  height: 2.75rem;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   background: var(--color-input);
+  transition: 0.35s ease;
+}
+
+.night-mode-switch:hover {
+  transform: scale(1.1);
+}
+
+.night-mode-switch:hover .icon {
+  fill: var(--color-primary);
 }

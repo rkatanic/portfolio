@@ -32,7 +32,7 @@ textarea::placeholder {
   font-weight: 600;
   margin-right: 0.5rem;
   color: var(--color-title);
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 
 .input-error-field {
@@ -40,6 +40,7 @@ textarea::placeholder {
 }
 
 .input-error-message {
+  letter-spacing: 1px;
   font-size: 0.825rem;
   color: var(--color-primary);
 }

@@ -21,3 +21,7 @@
   text-transform: uppercase;
   position: relative;
 }
+
+.primary {
+  color: var(--color-primary);
+}

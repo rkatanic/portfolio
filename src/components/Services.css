@@ -1,15 +1,19 @@
+.service-cards:hover .service-card {
+  opacity: 0.5;
+}
+
+.service-cards .service-card:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
 .service-card {
   position: relative;
   cursor: default;
-}
-
-.service-card-content {
-  position: relative;
+  transition: 0.25s;
+  margin: 1rem 0;
   padding: 2rem;
-  margin: 2rem 0;
-  border: 1px solid var(--color-primary);
-  background: var(--color-body);
-  overflow: hidden;
+  background: var(--color-input);
 }
 
 .service-card-content:hover .service-card-content-title::before {
@@ -17,6 +21,7 @@
 }
 
 .service-card-icon {
+  display: none;
   top: -0.75rem;
   left: 2rem;
   padding: 0 1rem;
@@ -32,9 +37,10 @@
 .service-card-content-badge {
   text-align: center;
   padding: 0.25rem 0.5rem;
-  background: var(--color-input);
+  background: var(--color-container);
   color: var(--color-primary);
-  font-size: 0.825rem;
+  font-size: 0.75rem;
+  font-weight: 500;
   letter-spacing: 1px;
   text-transform: uppercase;
 }

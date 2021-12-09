@@ -4,18 +4,16 @@
   height: 100%;
   margin: 1rem 0;
   padding: 1rem 2rem;
-  transition: 0.5s ease;
-  border-right: 4px solid hsl(var(--color-hue), 70%, 95%, 0.1);
+  transition: 0.25s ease;
 }
 
 .about:hover .about-item {
-  opacity: 0.3;
+  opacity: 0.5;
 }
 
 .about .about-item:hover {
   opacity: 1;
   transform: scale(1.1);
-  border-right: 4px solid var(--color-primary);
   cursor: default;
 }
 
@@ -53,6 +51,7 @@
 }
 
 .about-item-content-date {
+  font-weight: 400;
   margin-right: 2rem;
   text-transform: uppercase;
   font-size: 0.75rem;
@@ -72,7 +71,7 @@
   margin: 0;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 0.925rem;
   color: var(--color-primary);
 }

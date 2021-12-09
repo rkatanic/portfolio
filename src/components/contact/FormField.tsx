@@ -7,7 +7,10 @@ const FormField = (props: any): JSX.Element => {
   return (
     <div className="form-field">
       <div className="form-field-label">
-        <label htmlFor={field.name}>{field.name}*</label>
+        <label htmlFor={field.name}>
+          {field.name}
+          <span className="primary">*</span>
+        </label>
         <ErrorMessage
           name={field.name}
           component="div"

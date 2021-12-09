@@ -44,7 +44,9 @@ const Skills = (): JSX.Element => {
   return (
     <Section id="skills">
       <div className="skills">
-        <h3 className="headline">Languages & tools i use</h3>
+        <h3 className="headline">
+          Languages <span className="primary">&</span> tools i use
+        </h3>
         <div className="skill-list">
           {skills.map(({ name, icon }) => (
             <div key={name} className="skill-card">

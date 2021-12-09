@@ -31,7 +31,7 @@ const About = (): JSX.Element => (
       <div className="about-item">
         <h3 className="about-item-title">Education</h3>
         <div className="about-item-content">
-          <p className="about-item-content-date">2015 - 2019</p>
+          <p className="about-item-content-date">09/2015 - 09/2019</p>
           <div className="about-item-content-wrapper">
             <p className="about-item-content-headline">IT Engineer</p>
             <p className="about-item-content-description">
@@ -41,7 +41,7 @@ const About = (): JSX.Element => (
           </div>
         </div>
         <div className="about-item-content">
-          <p className="about-item-content-date">2011 - 2015</p>
+          <p className="about-item-content-date">09/2011 - 05/2015</p>
           <div className="about-item-content-wrapper">
             <p className="about-item-content-headline">Computer Technician</p>
             <p className="about-item-content-description">

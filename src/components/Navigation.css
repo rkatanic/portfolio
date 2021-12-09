@@ -79,6 +79,7 @@
   color: var(--color-primary);
 }
 .nav-link:hover .dash {
+  width: 7rem;
   background-color: var(--color-primary);
 }
 
@@ -97,7 +98,7 @@
   justify-content: center;
   position: fixed;
   bottom: 1rem;
-  right: 1rem;
+  right: 2rem;
   width: 3rem;
   height: 3rem;
   background-color: var(--color-primary);
