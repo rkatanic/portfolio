@@ -10,7 +10,6 @@
 
 .header {
   margin: 2rem 0;
-  z-index: var(--z-index-100);
 }
 
 .nav {

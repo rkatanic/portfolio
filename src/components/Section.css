@@ -5,11 +5,3 @@
   min-height: 100vh;
   max-width: var(--width-desktop);
 }
-
-.section-title {
-  font-size: var(--font-size-3);
-}
-
-.section-subtitle {
-  font-size: var(--font-size-0-75);
-}
