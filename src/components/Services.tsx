@@ -1,5 +1,3 @@
-import { ReactComponent as CodeIcon } from "../assets/icons/code.svg";
-
 import "./Services.css";
 
 const Services = (): JSX.Element => (

@@ -9,13 +9,13 @@
 }
 
 .header {
-  margin: 2.5rem 0;
+  margin: 2rem 0;
   z-index: var(--z-index-100);
 }
 
 .nav {
-  font-size: 0.825rem;
-  font-weight: 600;
+  font-size: 0.75rem;
+  font-weight: 500;
   color: var(--color-title);
   max-width: var(--width-desktop);
   display: flex;
@@ -45,7 +45,7 @@
 }
 
 .nav-item {
-  padding: 1rem 0;
+  padding: 0.5rem 0;
   transition: 0.5s;
   display: flex;
 }
@@ -63,6 +63,8 @@
   align-items: center;
   justify-content: center;
   background-color: var(--color-input);
+  font-size: 0.75rem;
+  font-weight: 500;
   width: 2.25rem;
   height: 2.25rem;
 }

@@ -7,6 +7,7 @@ import ProgressBar from "./ProgressBar";
 import Footer from "./Footer";
 
 import "./Home.css";
+import Faq from "./Faq";
 
 const Home = (): JSX.Element => (
   <div className="container">
@@ -45,6 +46,7 @@ const Home = (): JSX.Element => (
     <div className="column-right">
       <About />
       <Skills />
+      <Faq />
       <Contact />
     </div>
   </div>

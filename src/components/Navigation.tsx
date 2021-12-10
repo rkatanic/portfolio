@@ -18,7 +18,7 @@ const Navigation = (): JSX.Element => {
             offset={-30}
             className="nav-list"
             currentClassName="active"
-            items={["about", "skills", "contact"]}
+            items={["about", "skills", "faq", "contact"]}
           >
             <li className="nav-item" onClick={() => setShowMenu(false)}>
               <a href="#about" className="nav-link">
@@ -35,8 +35,15 @@ const Navigation = (): JSX.Element => {
               </a>
             </li>
             <li className="nav-item" onClick={() => setShowMenu(false)}>
-              <a href="#contact" className="nav-link">
+              <a href="#faq" className="nav-link">
                 <div className="number">03</div>
+                <div className="dash"></div>
+                <span>FAQ</span>
+              </a>
+            </li>
+            <li className="nav-item" onClick={() => setShowMenu(false)}>
+              <a href="#contact" className="nav-link">
+                <div className="number">04</div>
                 <div className="dash"></div>
                 <span>Contact</span>
               </a>

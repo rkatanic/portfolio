@@ -9,7 +9,7 @@ import "./Footer.css";
 const Footer = (): JSX.Element => (
   <div className="footer">
     <div className="footer-content">
-      <img className="footer-image" src={me1} />
+      <img className="footer-image" src={me1} alt="" />
       <div className="footer-links">
         <a
           className="footer-link"

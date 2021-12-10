@@ -18,6 +18,7 @@ textarea {
 
 input::placeholder,
 textarea::placeholder {
+  letter-spacing: 1px;
   color: var(--color-text-light);
 }
 

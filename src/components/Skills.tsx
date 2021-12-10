@@ -1,8 +1,6 @@
 import Section from "./Section";
 import { ReactComponent as VsCodeIcon } from "../assets/icons/vs-code.svg";
 import { ReactComponent as DockerIcon } from "../assets/icons/docker.svg";
-import { ReactComponent as StackOverflowIcon } from "../assets/icons/stack-overflow.svg";
-import { ReactComponent as NpmIcon } from "../assets/icons/npm.svg";
 import { ReactComponent as GitIcon } from "../assets/icons/git.svg";
 import { ReactComponent as GitHubIcon } from "../assets/icons/github.svg";
 import { ReactComponent as IntelliJIcon } from "../assets/icons/intellij.svg";
