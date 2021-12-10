@@ -8,6 +8,7 @@ import { ReactComponent as SandWatchIcon } from "../../assets/icons/sandwatch.sv
 import ContactFormModal from "./ContactFormModal";
 
 import "./ContactForm.css";
+import Loader from "../../Loader";
 
 const ContactForm = (): JSX.Element => {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
@@ -93,7 +94,7 @@ const ContactForm = (): JSX.Element => {
           <Button type="submit" disabled={!isValid || isSubmitting}>
             {isSubmitting ? (
               <>
-                <SandWatchIcon />
+                <Loader />
                 Sending...
               </>
             ) : (

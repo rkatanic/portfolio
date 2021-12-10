@@ -1,0 +1,36 @@
+.loader {
+  width: 3.5rem;
+  height: 1rem;
+  margin-right: 1rem;
+  position: relative;
+}
+
+.loader-square {
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--color-primary);
+  position: absolute;
+  animation: pulse 0.5s ease-in-out infinite alternate;
+}
+
+.square-1 {
+  left: 0;
+  transform-origin: 100% 50%;
+}
+
+.square-2 {
+  left: 50%;
+  transform: translateX(-50%) scale(1);
+  animation-delay: 0.25s;
+}
+
+.square-3 {
+  right: 0;
+  animation-delay: 0.5s;
+}
+
+@keyframes pulse {
+  to {
+    transform: translateX(-50%) scale(0);
+  }
+}

@@ -30,7 +30,7 @@
 }
 
 .accordion-item-text {
-  margin: 0;
+  margin: 0 2rem 0 0;
   max-height: 0;
   overflow: hidden;
   text-align: justify;

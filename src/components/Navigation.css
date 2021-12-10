@@ -55,7 +55,7 @@
   height: 2px;
   margin: 1rem;
   background-color: var(--color-title);
-  transition: 0.5s ease;
+  transition: 0.35s;
 }
 
 .number {
