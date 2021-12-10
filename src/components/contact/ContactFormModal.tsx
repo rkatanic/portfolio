@@ -36,7 +36,7 @@ const ContactFormModal = ({
               sent
             </h3>
           </div>
-          <span>Thanks for reaching out to me!</span>
+          <span>Thanks for reaching me out!</span>
           <span>I will respond as soon as possible.</span>
         </>
       ) : (

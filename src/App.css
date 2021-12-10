@@ -42,3 +42,22 @@
 .primary {
   color: var(--color-primary);
 }
+
+@keyframes day-shift {
+  from {
+    transform: translateY(2rem);
+  }
+
+  to {
+    transform: translateY(0rem);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

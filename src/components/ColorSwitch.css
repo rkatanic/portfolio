@@ -1,11 +1,17 @@
 .color-switch {
   transition: 0.35s ease;
   background: var(--color-input);
+  overflow: hidden;
+  animation: fade-in 1.5s ease;
 }
 
 .color-switch:hover {
   transform: scale(1.1);
   cursor: pointer;
+}
+
+.color-switch .icon {
+  animation: day-shift 0.5s ease;
 }
 
 .color-switch:hover .icon {

@@ -6,7 +6,9 @@
   justify-content: center;
   cursor: pointer;
   background: var(--color-input);
-  transition: 0.35s ease;
+  transition: 1s ease;
+  overflow: hidden;
+  animation: fade-in 1.5s ease;
 }
 
 .night-mode-switch:hover {
@@ -15,4 +17,8 @@
 
 .night-mode-switch:hover .icon {
   fill: var(--color-primary);
+}
+
+.night-mode-switch .icon {
+  animation: day-shift 0.5s ease;
 }
