@@ -17,6 +17,6 @@ export const FAQS = [
   {
     question: "How to pronounce your name correctly",
     answer:
-      "When pronounced correctly my first name sounds something like ra-dee-wou-ye.",
+      "When pronounced correctly my first name sounds something like ra-dee-woh-ye.",
   },
 ];

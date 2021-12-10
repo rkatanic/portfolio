@@ -3,7 +3,7 @@
   flex: 1;
   height: 100%;
   margin: 1rem 0;
-  padding: 1rem 2rem;
+  padding: 2rem;
   transition: 0.25s ease;
 }
 
@@ -17,31 +17,15 @@
   cursor: default;
 }
 
-.about .about-item:hover .about-item-title::before {
+.about-item:hover .card-title::before {
   width: 3.5rem;
-}
-
-.about-item-title {
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  position: relative;
-}
-
-.about-item-title::before {
-  position: absolute;
-  content: "";
-  bottom: 0;
-  width: 2rem;
-  height: 2px;
-  background-color: var(--color-primary);
-  transition: 0.5s ease;
 }
 
 .about-item-content {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  margin: 1rem 0;
+  margin: 1rem 0 0;
   font-weight: 600;
 }
 

@@ -5,12 +5,13 @@ import Contact from "./Contact";
 import Navigation from "./Navigation";
 import ProgressBar from "./ProgressBar";
 import Footer from "./Footer";
+import Faq from "./Faq";
 
 import "./Home.css";
-import Faq from "./Faq";
 
 const Home = (): JSX.Element => (
   <div className="container">
+    <div className="top-shadow"></div>
     <div className="column-left">
       <div>
         <ProgressBar />

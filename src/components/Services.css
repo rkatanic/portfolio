@@ -16,7 +16,7 @@
   background: var(--color-input);
 }
 
-.service-card-content:hover .service-card-content-title::before {
+.service-card:hover .card-title::before {
   width: 3.5rem;
 }
 

@@ -6,7 +6,7 @@ const Services = (): JSX.Element => (
     <div className="service-cards">
       <div className="service-card">
         <div className="service-card-content">
-          <h3 className="service-card-content-title">Front-End Development</h3>
+          <h3 className="card-title">Front-End Development</h3>
           <p className="service-card-content-desc">
             Using modern languages and frameworks, I can develop fast and
             responsive single-page client applications.
@@ -23,7 +23,7 @@ const Services = (): JSX.Element => (
       </div>
       <div className="service-card">
         <div className="service-card-content">
-          <h3 className="service-card-content-title">Back-End Development</h3>
+          <h3 className="card-title">Back-End Development</h3>
           <p className="service-card-content-desc">
             I can develop scalable and maintainable server applications in Java,
             using Spring Boot framework.
