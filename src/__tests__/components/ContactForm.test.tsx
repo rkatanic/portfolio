@@ -82,4 +82,12 @@ describe("ContactForm", (): void => {
     fireEvent.click(getByText("close.svg"));
     expect(queryByText("Oh no, something went wrong.")).not.toBeInTheDocument();
   });
+
+  it("should not send email when form is empty", (): void => {
+    const { getByText } = render(<ContactForm />);
+
+    fireEvent.click(getByText("Send email"));
+
+    expect(send).not.toHaveBeenCalled();
+  });
 });
