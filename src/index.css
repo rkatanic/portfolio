@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@400;500&display=swap");
 
 :root {
   --color-hue: 160;
@@ -12,7 +12,7 @@
   --color-body: hsl(var(--color-hue), 4%, 10%);
   --color-container: hsl(var(--color-hue), 15%, 20%);
 
-  --font-body: "Poppins";
+  --font-body: "Exo", sans-serif;
 
   --width-desktop: 1200px;
 }
