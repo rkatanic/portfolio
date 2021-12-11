@@ -4,11 +4,10 @@ import { Formik, Form } from "formik";
 import * as Yup from "yup";
 import FormField from "./FormField";
 import Button from "../Button";
-import { ReactComponent as SandWatchIcon } from "../../assets/icons/sandwatch.svg";
 import ContactFormModal from "./ContactFormModal";
+import Loader from "../../Loader";
 
 import "./ContactForm.css";
-import Loader from "../../Loader";
 
 const ContactForm = (): JSX.Element => {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
@@ -17,10 +16,16 @@ const ContactForm = (): JSX.Element => {
   const validationSchema = Yup.object({
     name: Yup.string()
       .min(2, "Must be atleast 2 chars long")
+      .max(40, "Must be less than 40 chars long")
       .required("Required"),
-    email: Yup.string().email("Invalid email format").required("Required"),
+    email: Yup.string()
+      .email("Invalid email format")
+      .min(8, "Must be atleast 8 chars long")
+      .max(100, "Must be less than 100 chars long")
+      .required("Required"),
     subject: Yup.string()
       .min(4, "Must be atleast 4 chars long")
+      .max(100, "Must be less than 100 chars long")
       .required("Required"),
     message: Yup.string()
       .min(10, "Must be atleast 10 chars long")

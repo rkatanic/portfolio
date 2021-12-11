@@ -40,8 +40,8 @@ const Home = (): JSX.Element => (
           just a regular person who likes doing some sports in free time,
           watching movies and reading all kinds of articles.
         </p>
-        <Navigation />
       </div>
+      <Navigation />
       <Footer />
     </div>
     <div className="column-right">
