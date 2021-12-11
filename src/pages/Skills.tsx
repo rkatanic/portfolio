@@ -54,7 +54,6 @@ const Skills = (): JSX.Element => {
             </div>
           ))}
         </div>
-
         <Services />
       </div>
     </Section>

@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AccordionItem should render 1`] = `
+<body>
+  <div>
+    <li
+      class="accordion-item "
+    >
+      <div
+        class="accordion-item-label"
+      >
+        <p
+          class="accordion-item-label-headline"
+        >
+          test label
+          <span
+            class="primary"
+          >
+            ?
+          </span>
+        </p>
+        <svg>
+          arrow-up.svg
+        </svg>
+      </div>
+      <p
+        class="accordion-item-text "
+      >
+        test text
+        <br />
+        <br />
+      </p>
+    </li>
+  </div>
+</body>
+`;
+
+exports[`AccordionItem should render open accordion item 1`] = `
+<body>
+  <div>
+    <li
+      class="accordion-item accordion-item-active"
+    >
+      <div
+        class="accordion-item-label"
+      >
+        <p
+          class="accordion-item-label-headline"
+        >
+          test label
+          <span
+            class="primary"
+          >
+            ?
+          </span>
+        </p>
+        <svg>
+          arrow-up.svg
+        </svg>
+      </div>
+      <p
+        class="accordion-item-text accordion-item-text-open"
+      >
+        test text
+        <br />
+        <br />
+      </p>
+    </li>
+  </div>
+</body>
+`;

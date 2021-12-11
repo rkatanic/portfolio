@@ -1,0 +1,158 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`About should render 1`] = `
+<body>
+  <div>
+    <section
+      class="section"
+      id="about"
+    >
+      <h3
+        class="headline"
+      >
+        My personal journey
+      </h3>
+      <div
+        class="about"
+      >
+        <div
+          class="about-item"
+        >
+          <h3
+            class="card-title"
+          >
+            Experience
+          </h3>
+          <div
+            class="about-item-content"
+          >
+            <p
+              class="about-item-content-date"
+            >
+              08/2019 - present
+            </p>
+            <div
+              class="about-item-content-wrapper"
+            >
+              <p
+                class="about-item-content-headline"
+              >
+                Software Developer
+              </p>
+              <p
+                class="about-item-content-description"
+              >
+                ProductDock
+              </p>
+              <p
+                class="about-item-content-location"
+              >
+                Doboj
+              </p>
+            </div>
+          </div>
+          <div
+            class="about-item-content"
+          >
+            <p
+              class="about-item-content-date"
+            >
+              03/2019 - 06/2019
+            </p>
+            <div
+              class="about-item-content-wrapper"
+            >
+              <p
+                class="about-item-content-headline"
+              >
+                Intern
+              </p>
+              <p
+                class="about-item-content-description"
+              >
+                ProductDock Rookie Boot Camp
+              </p>
+              <p
+                class="about-item-content-location"
+              >
+                Doboj
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="about-item"
+        >
+          <h3
+            class="card-title"
+          >
+            Education
+          </h3>
+          <div
+            class="about-item-content"
+          >
+            <p
+              class="about-item-content-date"
+            >
+              09/2015 - 09/2019
+            </p>
+            <div
+              class="about-item-content-wrapper"
+            >
+              <p
+                class="about-item-content-headline"
+              >
+                IT Engineer
+              </p>
+              <p
+                class="about-item-content-description"
+              >
+                Slobomir P University
+              </p>
+              <p
+                class="about-item-content-location"
+              >
+                Doboj
+              </p>
+            </div>
+          </div>
+          <div
+            class="about-item-content"
+          >
+            <p
+              class="about-item-content-date"
+            >
+              09/2011 - 05/2015
+            </p>
+            <div
+              class="about-item-content-wrapper"
+            >
+              <p
+                class="about-item-content-headline"
+              >
+                Computer Technician
+              </p>
+              <p
+                class="about-item-content-description"
+              >
+                Electro-tehnical High School
+              </p>
+              <p
+                class="about-item-content-location"
+              >
+                Doboj
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button
+        class="btn btn-outline"
+        type="button"
+      >
+        Download CV
+      </button>
+    </section>
+  </div>
+</body>
+`;

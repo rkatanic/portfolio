@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer should render 1`] = `
+<body>
+  <div>
+    <div
+      class="footer"
+    >
+      <div
+        class="footer-content"
+      >
+        <img
+          alt=""
+          class="footer-image"
+          src="me1.png"
+        />
+        <div
+          class="footer-links"
+        >
+          <a
+            class="footer-link"
+            href="https://www.linkedin.com/in/radivoje-katanic"
+          >
+            <div
+              class="footer-link-icon"
+            >
+              <svg>
+                linkedin.svg
+              </svg>
+            </div>
+            LinkedIn
+          </a>
+          <a
+            class="footer-link"
+            href="https://github.com/k-rade"
+          >
+            <div
+              class="footer-link-icon"
+            >
+              <svg>
+                github.svg
+              </svg>
+            </div>
+            GitHub
+          </a>
+        </div>
+      </div>
+      <div
+        class="footer-actions"
+      >
+        <div
+          class="color-switch"
+        >
+          <div
+            class="color-switch-header"
+          >
+            <svg>
+              pallete.svg
+            </svg>
+          </div>
+        </div>
+        <div
+          class="night-mode-switch"
+          tabindex="0"
+        >
+          <svg>
+            sun.svg
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="ReactModalPortal"
+  />
+</body>
+`;

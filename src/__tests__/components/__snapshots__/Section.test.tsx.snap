@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Section should render 1`] = `
+<body>
+  <div>
+    <section
+      class="section"
+      id="section-test"
+    >
+      <div>
+        test page
+      </div>
+    </section>
+  </div>
+</body>
+`;
