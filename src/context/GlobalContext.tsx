@@ -5,7 +5,7 @@ interface GlobalContextType {
   toggleDarkMode: () => void;
 }
 
-const GlobalContext = createContext<GlobalContextType>({
+export const GlobalContext = createContext<GlobalContextType>({
   isDarkMode: true,
 } as GlobalContextType);
 

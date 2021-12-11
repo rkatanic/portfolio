@@ -1,0 +1,134 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Contact should render 1`] = `
+<body>
+  <div>
+    <section
+      class="section"
+      id="contact"
+    >
+      <h3
+        class="headline"
+      >
+        Still have a question
+        <span
+          class="primary"
+        >
+          ?
+        </span>
+         Reach me out
+      </h3>
+      <form
+        action="#"
+        class="contact-form"
+      >
+        <div
+          class="form-field"
+        >
+          <div
+            class="form-field-label"
+          >
+            <label
+              for="name"
+            >
+              name
+              <span
+                class="primary"
+              >
+                *
+              </span>
+            </label>
+          </div>
+          <input
+            aria-label="name"
+            name="name"
+            placeholder="Enter your name"
+            value=""
+          />
+        </div>
+        <div
+          class="form-field"
+        >
+          <div
+            class="form-field-label"
+          >
+            <label
+              for="email"
+            >
+              email
+              <span
+                class="primary"
+              >
+                *
+              </span>
+            </label>
+          </div>
+          <input
+            aria-label="email"
+            name="email"
+            placeholder="Enter your email"
+            value=""
+          />
+        </div>
+        <div
+          class="form-field"
+        >
+          <div
+            class="form-field-label"
+          >
+            <label
+              for="subject"
+            >
+              subject
+              <span
+                class="primary"
+              >
+                *
+              </span>
+            </label>
+          </div>
+          <input
+            aria-label="subject"
+            name="subject"
+            placeholder="Enter your subject"
+            value=""
+          />
+        </div>
+        <div
+          class="form-field"
+        >
+          <div
+            class="form-field-label"
+          >
+            <label
+              for="message"
+            >
+              message
+              <span
+                class="primary"
+              >
+                *
+              </span>
+            </label>
+          </div>
+          <textarea
+            aria-label="message"
+            name="message"
+            placeholder="Enter your message"
+            rows="10"
+          />
+        </div>
+        <button
+          class="btn btn-primary"
+          type="submit"
+        >
+          Send email
+        </button>
+      </form>
+    </section>
+  </div>
+  <div
+    class="ReactModalPortal"
+  />
+</body>
+`;

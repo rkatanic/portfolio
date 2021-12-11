@@ -1,4 +1,4 @@
-import { fireEvent, render, waitFor } from "@testing-library/react";
+import { act, fireEvent, render, waitFor } from "@testing-library/react";
 import { send } from "emailjs-com";
 import ContactForm from "../../components/contact/ContactForm";
 
@@ -9,13 +9,13 @@ jest.mock("emailjs-com", (): { send: jest.Mock<any, any> } => ({
 describe("ContactForm", (): void => {
   const OLD_ENV = process.env;
   beforeEach((): void => {
-    jest.resetModules(); // Most important - it clears the cache
-    process.env = { ...OLD_ENV }; // Make a copy
+    jest.resetModules();
+    process.env = { ...OLD_ENV };
     jest.clearAllMocks();
   });
 
   afterAll((): void => {
-    process.env = OLD_ENV; // Restore old environment
+    process.env = OLD_ENV;
   });
 
   it("should handle sending email", async (): Promise<void> => {
@@ -77,16 +77,20 @@ describe("ContactForm", (): void => {
 
     await waitFor((): void => {
       expect(getByText("Oh no, something went wrong.")).toBeInTheDocument();
-    });
 
-    fireEvent.click(getByText("close.svg"));
-    expect(queryByText("Oh no, something went wrong.")).not.toBeInTheDocument();
+      fireEvent.click(getByText("close.svg"));
+      expect(
+        queryByText("Oh no, something went wrong.")
+      ).not.toBeInTheDocument();
+    });
   });
 
-  it("should not send email when form is empty", (): void => {
+  it("should not send email when form is empty", async (): Promise<void> => {
     const { getByText } = render(<ContactForm />);
 
-    fireEvent.click(getByText("Send email"));
+    await act(async (): Promise<void> => {
+      fireEvent.click(getByText("Send email"));
+    });
 
     expect(send).not.toHaveBeenCalled();
   });
