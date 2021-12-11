@@ -1,5 +1,5 @@
-import Section from "./Section";
-import Button from "./Button";
+import Section from "../components/Section";
+import Button from "../components/Button";
 
 import "./About.css";
 

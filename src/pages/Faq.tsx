@@ -1,6 +1,7 @@
-import Accordion from "./Accordion";
+import Accordion from "../components/Accordion";
+import Section from "../components/Section";
+
 import "./Faq.css";
-import Section from "./Section";
 
 const Faq = (): JSX.Element => (
   <Section id="faq">

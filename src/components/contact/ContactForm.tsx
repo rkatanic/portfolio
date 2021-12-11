@@ -5,7 +5,7 @@ import * as Yup from "yup";
 import FormField from "./FormField";
 import Button from "../Button";
 import ContactFormModal from "./ContactFormModal";
-import Loader from "../../Loader";
+import Loader from "../Loader";
 
 import "./ContactForm.css";
 

@@ -1,4 +1,5 @@
-import Section from "./Section";
+import Section from "../components/Section";
+import Services from "../components/Services";
 import { ReactComponent as VsCodeIcon } from "../assets/icons/vs-code.svg";
 import { ReactComponent as DockerIcon } from "../assets/icons/docker.svg";
 import { ReactComponent as GitIcon } from "../assets/icons/git.svg";
@@ -17,7 +18,6 @@ import { ReactComponent as JavaScriptIcon } from "../assets/icons/javascript.svg
 import { ReactComponent as SassIcon } from "../assets/icons/sass.svg";
 
 import "./Skills.css";
-import Services from "./Services";
 
 const Skills = (): JSX.Element => {
   const skills = [

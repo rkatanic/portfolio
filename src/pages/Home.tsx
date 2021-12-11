@@ -2,10 +2,10 @@ import Typewriter from "typewriter-effect";
 import About from "./About";
 import Skills from "./Skills";
 import Contact from "./Contact";
-import Navigation from "./Navigation";
-import ProgressBar from "./ProgressBar";
-import Footer from "./Footer";
 import Faq from "./Faq";
+import Navigation from "../components/Navigation";
+import ProgressBar from "../components/ProgressBar";
+import Footer from "../components/Footer";
 
 import "./Home.css";
 

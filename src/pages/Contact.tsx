@@ -1,5 +1,5 @@
-import Section from "./Section";
-import ContactForm from "./contact/ContactForm";
+import Section from "../components/Section";
+import ContactForm from "../components/contact/ContactForm";
 
 import "./Contact.css";
 
