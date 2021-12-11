@@ -20,6 +20,7 @@ exports[`Footer should render 1`] = `
           <a
             class="footer-link"
             href="https://www.linkedin.com/in/radivoje-katanic"
+            target="_blank"
           >
             <div
               class="footer-link-icon"
@@ -33,6 +34,7 @@ exports[`Footer should render 1`] = `
           <a
             class="footer-link"
             href="https://github.com/k-rade"
+            target="_blank"
           >
             <div
               class="footer-link-icon"

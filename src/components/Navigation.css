@@ -1,19 +1,10 @@
-.icon {
-  height: 1.5rem;
-  fill: var(--color-text);
-  cursor: pointer;
-}
-
-.icon:hover {
-  fill: var(--color-primary);
-}
-
 .nav {
   display: flex;
   font-size: 0.75rem;
   font-weight: 500;
   color: var(--color-title);
   height: 100%;
+  margin: 1.5rem 0;
 }
 
 .nav-left {

@@ -14,13 +14,18 @@ const Footer = (): JSX.Element => (
         <a
           className="footer-link"
           href="https://www.linkedin.com/in/radivoje-katanic"
+          target="_blank"
         >
           <div className="footer-link-icon">
             <LinkedinIcon />
           </div>
           LinkedIn
         </a>
-        <a className="footer-link" href="https://github.com/k-rade">
+        <a
+          className="footer-link"
+          href="https://github.com/k-rade"
+          target="_blank"
+        >
           <div className="footer-link-icon">
             <GithubIcon />
           </div>

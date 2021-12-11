@@ -3,8 +3,8 @@ import App from "./App";
 
 describe("App", () => {
   it("should render", () => {
-    const { queryByText } = render(<App />);
+    const { getByTestId } = render(<App />);
 
-    expect(queryByText("I'm Radivoje Katanic.")).toBeInTheDocument();
+    expect(getByTestId("app")).toBeInTheDocument();
   });
 });

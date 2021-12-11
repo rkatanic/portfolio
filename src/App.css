@@ -1,4 +1,4 @@
-.App {
+.app {
   max-width: var(--width-desktop);
   margin: auto;
   display: flex;
@@ -11,6 +11,50 @@
     linear-gradient(var(--color-input), var(--color-input)) calc(5 * 100% / 6);
   background-size: 1px 100%;
   background-repeat: no-repeat;
+}
+
+.app-main-container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: var(--width-desktop);
+}
+
+.app-main-container-column-left {
+  top: 0;
+  padding: 5vh 2rem;
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  max-height: 100vh;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.app-main-container-column-right {
+  flex: 1;
+  padding: 5vh 2rem;
+  position: relative;
+}
+
+.icon {
+  height: 1.5rem;
+  fill: var(--color-text);
+  cursor: pointer;
+}
+
+.icon:hover {
+  fill: var(--color-primary);
+}
+
+.top-shadow {
+  position: fixed;
+  left: 0;
+  height: 10vh;
+  z-index: 2;
+  width: 100%;
+  background: linear-gradient(var(--color-body), transparent);
 }
 
 .headline {
@@ -41,6 +85,16 @@
 
 .primary {
   color: var(--color-primary);
+}
+
+@media screen and (max-width: 954px) {
+  .app-main-container {
+    flex-direction: column;
+  }
+  .app-main-container-column-left {
+    position: relative;
+    max-height: none;
+  }
 }
 
 @keyframes day-shift {
