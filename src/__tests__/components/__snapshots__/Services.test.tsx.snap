@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Services should render 1`] = `
+<body>
+  <div>
+    <h3
+      class="headline"
+    >
+      Services I provide
+    </h3>
+    <div
+      class="service-cards"
+    >
+      <div
+        class="service-card"
+      >
+        <div
+          class="service-card-content"
+        >
+          <h3
+            class="card-title"
+          >
+            Front-End Development
+          </h3>
+          <p
+            class="service-card-content-desc"
+          >
+            Using modern languages and frameworks, I can develop fast and responsive single-page client applications.
+          </p>
+          <div
+            class="service-card-content-badges"
+          >
+            <b
+              class="service-card-content-badge"
+            >
+              HTML
+            </b>
+            <b
+              class="service-card-content-badge"
+            >
+              CSS
+            </b>
+            <b
+              class="service-card-content-badge"
+            >
+              JavaScript
+            </b>
+            <b
+              class="service-card-content-badge"
+            >
+              Sass
+            </b>
+            <b
+              class="service-card-content-badge"
+            >
+              React
+            </b>
+            <b
+              class="service-card-content-badge"
+            >
+              Angular
+            </b>
+          </div>
+        </div>
+      </div>
+      <div
+        class="service-card"
+      >
+        <div
+          class="service-card-content"
+        >
+          <h3
+            class="card-title"
+          >
+            Back-End Development
+          </h3>
+          <p
+            class="service-card-content-desc"
+          >
+            I can develop scalable and maintainable server applications in Java, using Spring Boot framework.
+          </p>
+          <div
+            class="service-card-content-badges"
+          >
+            <b
+              class="service-card-content-badge"
+            >
+              Java
+            </b>
+            <b
+              class="service-card-content-badge"
+            >
+              Spring Boot
+            </b>
+            <b
+              class="service-card-content-badge"
+            >
+              MySQL
+            </b>
+            <b
+              class="service-card-content-badge"
+            >
+              MongoDB
+            </b>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+`;

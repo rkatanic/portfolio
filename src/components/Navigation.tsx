@@ -12,7 +12,10 @@ const Navigation = (): JSX.Element => {
 
   return (
     <nav className="nav">
-      <div className={showMenu ? `nav-menu show-menu` : `nav-menu`}>
+      <div
+        className={showMenu ? `nav-menu show-menu` : `nav-menu`}
+        data-testid="nav-menu"
+      >
         <Scrollspy
           offset={-30}
           className="nav-list"
@@ -52,6 +55,7 @@ const Navigation = (): JSX.Element => {
       <div
         className={`nav-toggle ${showMenu ? "close" : ""}`}
         onClick={handleMenuToggle}
+        data-testid="nav-toggle"
       >
         <div className="nav-toggle-dash"></div>
       </div>

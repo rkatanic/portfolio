@@ -75,16 +75,19 @@ const ContactForm = (): JSX.Element => {
       {({ isValid, values, isSubmitting }): JSX.Element => (
         <Form className="contact-form">
           <FormField
+            aria-label="name"
             name="name"
             value={values.name}
             placeholder="Enter your name"
           />
           <FormField
+            aria-label="email"
             name="email"
             value={values.email}
             placeholder="Enter your email"
           />
           <FormField
+            aria-label="subject"
             name="subject"
             value={values.subject}
             placeholder="Enter your subject"
@@ -92,6 +95,7 @@ const ContactForm = (): JSX.Element => {
           <FormField
             as="textarea"
             rows={10}
+            aria-label="message"
             name="message"
             value={values.message}
             placeholder="Enter your message"

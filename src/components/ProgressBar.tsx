@@ -5,13 +5,13 @@ import "./ProgressBar.css";
 const ProgressBar = (): JSX.Element => {
   const [scroll, setScroll] = useState(0);
 
-  const onScroll = () => {
-    const Scrolled = document.documentElement.scrollTop;
-    const MaxHeight =
+  const onScroll = (): void => {
+    const scrolled = document.documentElement.scrollTop;
+    const maxHeight =
       document.documentElement.scrollHeight -
       document.documentElement.clientHeight;
-    const ScrollPercent = (Scrolled / MaxHeight) * 100;
-    setScroll(ScrollPercent);
+    const scrollPercent = (scrolled / maxHeight) * 100;
+    setScroll(scrollPercent);
   };
 
   window.addEventListener("scroll", onScroll);

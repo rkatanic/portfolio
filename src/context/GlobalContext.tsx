@@ -1,22 +1,26 @@
 import { createContext, useContext, useState } from "react";
 
-const GlobalContext = createContext({
-  isDarkMode: true,
-  toggleDarkMode: () => {},
-});
+interface GlobalContextType {
+  isDarkMode: boolean;
+  toggleDarkMode: () => void;
+}
 
-const GlobalContextProvider = (props: any) => {
+export const GlobalContext = createContext<GlobalContextType>({
+  isDarkMode: true,
+} as GlobalContextType);
+
+const GlobalContextProvider = ({ children }: any): JSX.Element => {
   const [isDarkMode, setIsDarkMode] = useState(
     window.localStorage.getItem("dark-mode") ? false : true
   );
 
   const toggleDarkMode = (): void => {
-    setIsDarkMode((prevState) => !prevState);
+    setIsDarkMode((prevState: boolean) => !prevState);
   };
 
   return (
     <GlobalContext.Provider value={{ isDarkMode, toggleDarkMode }}>
-      {props.children}
+      {children}
     </GlobalContext.Provider>
   );
 };
@@ -26,7 +30,7 @@ const useIsDarkMode = (): boolean => {
   return isDarkMode;
 };
 
-const useToggleDarkMode = () => {
+const useToggleDarkMode = (): (() => void) => {
   const { toggleDarkMode } = useContext(GlobalContext);
   return toggleDarkMode;
 };

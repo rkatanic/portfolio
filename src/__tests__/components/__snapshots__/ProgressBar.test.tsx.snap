@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProgressBar should render 1`] = `
+<body>
+  <div>
+    <div
+      class="progress-bar"
+    >
+      <div
+        class="progress-bar-pulse"
+      />
+      <div
+        class="progress-bar-percent"
+        style="height: 0%;"
+      />
+    </div>
+  </div>
+</body>
+`;

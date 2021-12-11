@@ -32,6 +32,7 @@ const ColorModal = ({
         {COLORS.map(
           ({ key, value }): JSX.Element => (
             <div
+              data-testid={`color-item-${value}`}
               onClick={() => switchColor(value)}
               key={key}
               className="color-item"
