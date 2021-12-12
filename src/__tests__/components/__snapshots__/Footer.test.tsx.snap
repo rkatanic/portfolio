@@ -59,7 +59,7 @@ exports[`Footer should render 1`] = `
             class="color-switch-header"
           >
             <svg>
-              pallete.svg
+              paint-brush.svg
             </svg>
           </div>
         </div>

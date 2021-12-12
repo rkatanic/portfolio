@@ -3,10 +3,6 @@
   background: var(--color-input);
   overflow: hidden;
   animation: fade-in 1.5s ease;
-}
-
-.color-switch:hover {
-  transform: scale(1.1);
   cursor: pointer;
 }
 

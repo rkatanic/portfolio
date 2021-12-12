@@ -11,10 +11,6 @@
   animation: fade-in 1.5s ease;
 }
 
-.night-mode-switch:hover {
-  transform: scale(1.1);
-}
-
 .night-mode-switch:hover .icon {
   fill: var(--color-primary);
 }

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import ColorModal from "./ColorModal";
-import { ReactComponent as PalleteIcon } from "../assets/icons/pallete.svg";
+import { ReactComponent as PaintBrushIcon } from "../assets/icons/paint-brush.svg";
 import { COLORS, DEFAULT_COLOR_HUE } from "../util/constants/colors";
 
 import "./ColorSwitch.css";
@@ -40,7 +40,7 @@ const ColorSwitch = (): JSX.Element => {
   return (
     <div className="color-switch">
       <div className="color-switch-header" onClick={handleColorModalToggle}>
-        <PalleteIcon />
+        <PaintBrushIcon />
       </div>
       <ColorModal
         isOpen={isColorModalOpen}

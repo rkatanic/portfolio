@@ -13,7 +13,7 @@ describe("ColorSwitch", (): void => {
       "160"
     );
 
-    fireEvent.click(getByText("pallete.svg"));
+    fireEvent.click(getByText("paint-brush.svg"));
     expect(getByText("Choose your favourite color")).toBeInTheDocument();
 
     fireEvent.click(getByTestId("color-item-100"));
@@ -43,7 +43,7 @@ describe("ColorSwitch", (): void => {
   it("should handle modal close", (): void => {
     const { getByText, queryByText } = render(<ColorSwitch />);
 
-    fireEvent.click(getByText("pallete.svg"));
+    fireEvent.click(getByText("paint-brush.svg"));
     expect(getByText("Choose your favourite color")).toBeInTheDocument();
 
     fireEvent.click(getByText("close.svg"));
