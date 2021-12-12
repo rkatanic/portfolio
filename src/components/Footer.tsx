@@ -3,6 +3,7 @@ import ColorSwitch from "./ColorSwitch";
 import DarkModeSwitch from "./DarkModeSwitch";
 import { ReactComponent as GithubIcon } from "../assets/icons/github.svg";
 import { ReactComponent as LinkedinIcon } from "../assets/icons/linkedin.svg";
+import { GITHUB_LINK, LINKEDIN_LINK } from "../util/constants/links";
 
 import "./Footer.css";
 
@@ -13,7 +14,7 @@ const Footer = (): JSX.Element => (
       <div className="footer-links">
         <a
           className="footer-link"
-          href="https://www.linkedin.com/in/radivoje-katanic"
+          href={LINKEDIN_LINK}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -24,7 +25,7 @@ const Footer = (): JSX.Element => (
         </a>
         <a
           className="footer-link"
-          href="https://github.com/k-rade"
+          href={GITHUB_LINK}
           target="_blank"
           rel="noopener noreferrer"
         >
