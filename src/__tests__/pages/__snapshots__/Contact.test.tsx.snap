@@ -41,10 +41,26 @@ exports[`Contact should render 1`] = `
           </div>
           <input
             aria-label="name"
+            class=""
+            maxlength="50"
             name="name"
             placeholder="Enter your name"
             value=""
           />
+          <div
+            class="form-field-length-indicator"
+          >
+            <span
+              class=""
+            >
+              0
+            </span>
+             
+            / 
+            <span>
+              50
+            </span>
+          </div>
         </div>
         <div
           class="form-field"
@@ -65,10 +81,26 @@ exports[`Contact should render 1`] = `
           </div>
           <input
             aria-label="email"
+            class=""
+            maxlength="100"
             name="email"
             placeholder="Enter your email"
             value=""
           />
+          <div
+            class="form-field-length-indicator"
+          >
+            <span
+              class=""
+            >
+              0
+            </span>
+             
+            / 
+            <span>
+              100
+            </span>
+          </div>
         </div>
         <div
           class="form-field"
@@ -89,10 +121,26 @@ exports[`Contact should render 1`] = `
           </div>
           <input
             aria-label="subject"
+            class=""
+            maxlength="100"
             name="subject"
             placeholder="Enter your subject"
             value=""
           />
+          <div
+            class="form-field-length-indicator"
+          >
+            <span
+              class=""
+            >
+              0
+            </span>
+             
+            / 
+            <span>
+              100
+            </span>
+          </div>
         </div>
         <div
           class="form-field"
@@ -113,10 +161,26 @@ exports[`Contact should render 1`] = `
           </div>
           <textarea
             aria-label="message"
+            class=""
+            maxlength="500"
             name="message"
             placeholder="Enter your message"
             rows="10"
           />
+          <div
+            class="form-field-length-indicator"
+          >
+            <span
+              class=""
+            >
+              0
+            </span>
+             
+            / 
+            <span>
+              500
+            </span>
+          </div>
         </div>
         <button
           class="btn btn-primary"

@@ -14,15 +14,23 @@ const FormField = (props: any): JSX.Element => {
         <ErrorMessage
           name={field.name}
           component="div"
-          className={
-            meta.touched && meta.error ? "input-error-message" : undefined
-          }
+          className={meta.touched && meta.error ? "input-error-message" : ""}
         />
       </div>
       <Field
         {...props}
-        className={meta.touched && meta.error ? "input-error-field" : undefined}
+        className={meta.touched && meta.error ? "input-error-field" : ""}
       />
+      <div className="form-field-length-indicator">
+        <span
+          className={`${
+            field.value.length == props.maxLength ? "primary" : ""
+          }`}
+        >
+          {field.value.length}
+        </span>{" "}
+        / <span>{props.maxLength}</span>
+      </div>
     </div>
   );
 };

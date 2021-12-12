@@ -51,24 +51,28 @@ const ContactForm = (): JSX.Element => {
       {({ isValid, values, isSubmitting }): JSX.Element => (
         <Form className="contact-form">
           <FormField
+            maxLength="50"
             aria-label="name"
             name="name"
             value={values.name}
             placeholder="Enter your name"
           />
           <FormField
+            maxLength="100"
             aria-label="email"
             name="email"
             value={values.email}
             placeholder="Enter your email"
           />
           <FormField
+            maxLength="100"
             aria-label="subject"
             name="subject"
             value={values.subject}
             placeholder="Enter your subject"
           />
           <FormField
+            maxLength="500"
             as="textarea"
             rows={10}
             aria-label="message"
