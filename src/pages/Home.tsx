@@ -33,6 +33,7 @@ const Home = (): JSX.Element => (
           className="home-link"
           href="https://productdock.com/"
           target="_blank"
+          rel="noopener noreferrer"
         >
           ProductDock
         </a>

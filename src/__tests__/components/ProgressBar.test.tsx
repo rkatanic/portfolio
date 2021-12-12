@@ -1,4 +1,4 @@
-import { fireEvent, render } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import ProgressBar from "../../components/ProgressBar";
 
 describe("ProgressBar", (): void => {

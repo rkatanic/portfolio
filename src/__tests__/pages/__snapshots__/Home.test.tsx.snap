@@ -65,6 +65,7 @@ exports[`Home should render 1`] = `
         <a
           class="home-link"
           href="https://productdock.com/"
+          rel="noopener noreferrer"
           target="_blank"
         >
           ProductDock
@@ -167,7 +168,7 @@ exports[`Home should render 1`] = `
         </ul>
       </div>
       <div
-        class="nav-toggle "
+        class="nav-toggle"
         data-testid="nav-toggle"
       >
         <div
@@ -192,6 +193,7 @@ exports[`Home should render 1`] = `
           <a
             class="footer-link"
             href="https://www.linkedin.com/in/radivoje-katanic"
+            rel="noopener noreferrer"
             target="_blank"
           >
             <div
@@ -206,6 +208,7 @@ exports[`Home should render 1`] = `
           <a
             class="footer-link"
             href="https://github.com/k-rade"
+            rel="noopener noreferrer"
             target="_blank"
           >
             <div
@@ -235,7 +238,6 @@ exports[`Home should render 1`] = `
         </div>
         <div
           class="night-mode-switch"
-          tabindex="0"
         >
           <svg>
             sun.svg

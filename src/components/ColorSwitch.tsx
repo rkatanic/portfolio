@@ -22,7 +22,7 @@ const ColorSwitch = (): JSX.Element => {
     setIsColorModalOpen(false);
   };
 
-  const setColorToLocalStorage = (value: number) =>
+  const setColorToLocalStorage = (value: number): void =>
     window.localStorage.setItem("color", value.toString());
 
   useEffect(() => {

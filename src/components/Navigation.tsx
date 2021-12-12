@@ -11,7 +11,7 @@ const Navigation = (): JSX.Element => {
   return (
     <nav className="nav">
       <div
-        className={showMenu ? `nav-menu show-menu` : `nav-menu`}
+        className={`nav-menu${showMenu ? " show-menu" : ""}`}
         data-testid="nav-menu"
       >
         <Scrollspy
@@ -20,29 +20,45 @@ const Navigation = (): JSX.Element => {
           currentClassName="active"
           items={["about", "skills", "faq", "contact"]}
         >
-          <li className="nav-item" onClick={() => setShowMenu(false)}>
-            <a href="#about" className="nav-link">
+          <li className="nav-item">
+            <a
+              href="#about"
+              className="nav-link"
+              onClick={() => setShowMenu(false)}
+            >
               <div className="number">01</div>
               <div className="dash"></div>
               <span>About</span>
             </a>
           </li>
-          <li className="nav-item" onClick={() => setShowMenu(false)}>
-            <a href="#skills" className="nav-link">
+          <li className="nav-item">
+            <a
+              href="#skills"
+              className="nav-link"
+              onClick={() => setShowMenu(false)}
+            >
               <div className="number">02</div>
               <div className="dash"></div>
               <span>Skills</span>
             </a>
           </li>
-          <li className="nav-item" onClick={() => setShowMenu(false)}>
-            <a href="#faq" className="nav-link">
+          <li className="nav-item">
+            <a
+              href="#faq"
+              className="nav-link"
+              onClick={() => setShowMenu(false)}
+            >
               <div className="number">03</div>
               <div className="dash"></div>
               <span>FAQ</span>
             </a>
           </li>
-          <li className="nav-item" onClick={() => setShowMenu(false)}>
-            <a href="#contact" className="nav-link">
+          <li className="nav-item">
+            <a
+              href="#contact"
+              className="nav-link"
+              onClick={() => setShowMenu(false)}
+            >
               <div className="number">04</div>
               <div className="dash"></div>
               <span>Contact</span>
@@ -51,7 +67,7 @@ const Navigation = (): JSX.Element => {
         </Scrollspy>
       </div>
       <div
-        className={`nav-toggle ${showMenu ? "close" : ""}`}
+        className={`nav-toggle${showMenu ? " close" : ""}`}
         onClick={handleMenuToggle}
         data-testid="nav-toggle"
       >

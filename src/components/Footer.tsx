@@ -15,6 +15,7 @@ const Footer = (): JSX.Element => (
           className="footer-link"
           href="https://www.linkedin.com/in/radivoje-katanic"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <div className="footer-link-icon">
             <LinkedinIcon />
@@ -25,6 +26,7 @@ const Footer = (): JSX.Element => (
           className="footer-link"
           href="https://github.com/k-rade"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <div className="footer-link-icon">
             <GithubIcon />

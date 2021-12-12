@@ -96,7 +96,7 @@ exports[`Navigation should render 1`] = `
         </ul>
       </div>
       <div
-        class="nav-toggle "
+        class="nav-toggle"
         data-testid="nav-toggle"
       >
         <div

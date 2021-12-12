@@ -89,6 +89,7 @@
   height: 3rem;
   background-color: var(--color-primary);
   z-index: 2;
+  box-shadow: 1px 0px 10px var(--color-body);
 }
 
 .nav-toggle-dash {

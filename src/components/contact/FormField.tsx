@@ -24,7 +24,7 @@ const FormField = (props: any): JSX.Element => {
       <div className="form-field-length-indicator">
         <span
           className={`${
-            field.value.length == props.maxLength ? "primary" : ""
+            field.value.length === props.maxLength ? "primary" : ""
           }`}
         >
           {field.value.length}
