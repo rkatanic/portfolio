@@ -80,7 +80,7 @@ exports[`FAQ page should render 1`] = `
             <p
               class="accordion-item-label-headline"
             >
-              I have project for you, are you available
+              I have a project for you, are you available
               <span
                 class="primary"
               >

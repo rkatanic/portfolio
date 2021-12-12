@@ -17,9 +17,6 @@
   cursor: default;
 }
 
-#about {
-  margin-top: -2.5rem;
-}
 .about-item:hover .card-title::before {
   width: 3.5rem;
 }

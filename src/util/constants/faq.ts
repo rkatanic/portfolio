@@ -10,7 +10,7 @@ export const FAQS = [
       "This website is built with React.js. If you are interested in source code, you can find it here.",
   },
   {
-    question: "I have project for you, are you available",
+    question: "I have a project for you, are you available",
     answer:
       "At this moment I'm full time employed. I could offer a few hours of my services per week , if this suits you.",
   },

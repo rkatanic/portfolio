@@ -1,44 +1,20 @@
 import { useState } from "react";
 import emailjs from "emailjs-com";
 import { Formik, Form } from "formik";
-import * as Yup from "yup";
 import FormField from "./FormField";
 import Button from "../Button";
 import ContactFormModal from "./ContactFormModal";
 import Loader from "../Loader";
+import {
+  FORM_INITIAL_VALUES,
+  FORM_VALIDATION_SCHEMA,
+} from "../../util/constants/form";
 
 import "./ContactForm.css";
 
 const ContactForm = (): JSX.Element => {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
-
-  const validationSchema = Yup.object({
-    name: Yup.string()
-      .min(2, "Must be atleast 2 chars long")
-      .max(40, "Must be less than 40 chars long")
-      .required("Required"),
-    email: Yup.string()
-      .email("Invalid email format")
-      .min(8, "Must be atleast 8 chars long")
-      .max(100, "Must be less than 100 chars long")
-      .required("Required"),
-    subject: Yup.string()
-      .min(4, "Must be atleast 4 chars long")
-      .max(100, "Must be less than 100 chars long")
-      .required("Required"),
-    message: Yup.string()
-      .min(10, "Must be atleast 10 chars long")
-      .max(500, "Must be less than 500 chars long")
-      .required("Required"),
-  });
-
-  const initialValues = {
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  };
 
   const handleModalClose = (): void => setIsContactModalOpen(false);
 
@@ -66,8 +42,8 @@ const ContactForm = (): JSX.Element => {
 
   return (
     <Formik
-      initialValues={initialValues}
-      validationSchema={validationSchema}
+      initialValues={FORM_INITIAL_VALUES}
+      validationSchema={FORM_VALIDATION_SCHEMA}
       onSubmit={(values, { setSubmitting }): Promise<void> =>
         handleEmailSend(values, setSubmitting)
       }

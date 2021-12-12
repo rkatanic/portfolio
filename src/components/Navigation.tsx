@@ -1,6 +1,4 @@
 import { useState } from "react";
-import { ReactComponent as MenuIcon } from "../assets/icons/menu.svg";
-import { ReactComponent as CloseIcon } from "../assets/icons/close.svg";
 import Scrollspy from "react-scrollspy";
 
 import "./Navigation.css";

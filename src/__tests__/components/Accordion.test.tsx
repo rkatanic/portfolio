@@ -2,12 +2,6 @@ import { fireEvent, render } from "@testing-library/react";
 import Accordion from "../../components/Accordion";
 
 describe("Accordion", (): void => {
-  it("should render", (): void => {
-    const { baseElement } = render(<Accordion />);
-
-    expect(baseElement).toMatchSnapshot();
-  });
-
   it("should open accordion item on click", (): void => {
     const { getByText } = render(<Accordion />);
 
