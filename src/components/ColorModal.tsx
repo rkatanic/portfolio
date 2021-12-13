@@ -20,7 +20,7 @@ const ColorModal = ({
   return (
     <Modal
       style={{ overlay: { zIndex: "100", background: "rgb(0,0,0,0.5)" } }}
-      className="color-modal"
+      className="modal color-modal"
       ariaHideApp={false}
       isOpen={isOpen}
       onRequestClose={closeModal}

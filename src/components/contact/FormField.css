@@ -10,6 +10,7 @@ textarea {
   font-family: var(--body-font);
   color: var(--color-title);
   background-color: var(--color-input);
+  box-shadow: 0 0 10px hsla(var(--color-hue), 10%, 10%, 0.08);
 }
 
 textarea {

@@ -5,6 +5,7 @@
   margin: 0 0 1rem;
   padding: 2rem;
   transition: 0.25s ease;
+  box-shadow: 0 0 10px hsla(var(--color-hue), 10%, 10%, 0.08);
 }
 
 .about:hover .about-item {

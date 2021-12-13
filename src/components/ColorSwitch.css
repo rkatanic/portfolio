@@ -4,6 +4,7 @@
   overflow: hidden;
   animation: fade-in 1.5s ease;
   cursor: pointer;
+  box-shadow: 0 0 10px hsla(var(--color-hue), 10%, 10%, 0.1);
 }
 
 .color-switch .icon {

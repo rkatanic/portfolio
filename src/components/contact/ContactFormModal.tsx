@@ -17,7 +17,7 @@ const ContactFormModal = ({
 }: Props): JSX.Element => (
   <Modal
     style={{ overlay: { zIndex: "100", background: "rgb(0,0,0,0.5)" } }}
-    className="contact-form-modal"
+    className=" modal contact-form-modal"
     ariaHideApp={false}
     isOpen={isOpen}
     onRequestClose={closeModal}

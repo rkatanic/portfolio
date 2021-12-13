@@ -33,9 +33,9 @@ body.day-mode {
   --color-primary-two: hsl(var(--color-hue), 55%, 55%);
   --color-title: hsl(var(--color-hue), 8%, 15%);
   --color-text: hsl(var(--color-hue), 8%, 45%);
-  --color-input: hsl(var(--color-hue), 30%, 92%);
-  --color-body: hsl(var(--color-hue), 30%, 98%);
-  --color-container: hsl(var(--color-hue), 50%, 99%);
+  --color-input: hsl(var(--color-hue), 30%, 99%);
+  --color-body: hsl(var(--color-hue), 10%, 96%);
+  --color-container: hsl(var(--color-hue), 30%, 95%);
 }
 
 h1,
