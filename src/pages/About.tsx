@@ -17,7 +17,9 @@ const About = (): JSX.Element => {
             <p className="about-item-content-date">08/2019 - present</p>
             <div className="about-item-content-wrapper">
               <p className="about-item-content-headline">Software Developer</p>
-              <p className="about-item-content-description">ProductDock</p>
+              <p className="about-item-content-description">
+                Codecentric Bosnia/ProductDock
+              </p>
               <p className="about-item-content-location">Doboj</p>
             </div>
           </div>

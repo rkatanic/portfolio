@@ -21,7 +21,6 @@ const CurvedBorderSwitch = (): JSX.Element => {
         window.localStorage.removeItem("curved-borders");
       }
     };
-
     shouldHaveCurvedBorders();
   }, [hasCurvedBorders]);
 

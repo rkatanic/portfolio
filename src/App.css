@@ -63,6 +63,7 @@
   letter-spacing: 3px;
   color: var(--color-title);
   text-transform: uppercase;
+  text-align: center;
   position: relative;
 }
 

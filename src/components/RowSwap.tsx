@@ -16,7 +16,6 @@ const RowSwap = (): JSX.Element => {
         window.localStorage.removeItem("row-swap");
       }
     };
-
     shouldSwapRows();
   }, [isRowSwap]);
 

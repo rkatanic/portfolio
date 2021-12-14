@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Exo:wght@400;500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&display=swap");
+
 :root {
   --color-hue: 160;
   --color-primary: hsl(var(--color-hue), 70%, 60%);
@@ -34,7 +34,7 @@ body.day-mode {
   --color-title: hsl(var(--color-hue), 8%, 15%);
   --color-text: hsl(var(--color-hue), 8%, 45%);
   --color-input: hsl(var(--color-hue), 5%, 100%);
-  --color-body: hsl(var(--color-hue), 10%, 97%);
+  --color-body: hsl(var(--color-hue), 10%, 98%);
   --color-container: hsl(var(--color-hue), 55%, 97%);
 }
 

@@ -42,7 +42,7 @@ exports[`About should render 1`] = `
               <p
                 class="about-item-content-description"
               >
-                ProductDock
+                Codecentric Bosnia/ProductDock
               </p>
               <p
                 class="about-item-content-location"

@@ -33,7 +33,7 @@
 
 .about-item-content-wrapper {
   flex: 1;
-  min-width: 10rem;
+  min-width: 12rem;
 }
 
 .about-item-content-date {
@@ -43,7 +43,7 @@
   font-size: 0.75rem;
   color: var(--color-text-light);
   letter-spacing: 1.25px;
-  min-width: 10rem;
+  min-width: 12rem;
 }
 
 .about-item-content-headline {
