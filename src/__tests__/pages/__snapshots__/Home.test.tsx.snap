@@ -226,21 +226,32 @@ exports[`Home should render 1`] = `
         class="footer-actions"
       >
         <div
-          class="color-switch"
+          class="footer-link-icon"
         >
-          <div
-            class="color-switch-header"
-          >
-            <svg>
-              paint-brush.svg
-            </svg>
-          </div>
+          <svg>
+            paint-brush.svg
+          </svg>
         </div>
         <div
-          class="night-mode-switch"
+          class="footer-link-icon"
         >
           <svg>
             sun.svg
+          </svg>
+        </div>
+        <div
+          class="footer-link-icon"
+        >
+          <svg>
+            corner-curved.svg
+          </svg>
+        </div>
+        <div
+          class="footer-link-icon"
+          id="row-swap-icon"
+        >
+          <svg>
+            row-swap.svg
           </svg>
         </div>
       </div>

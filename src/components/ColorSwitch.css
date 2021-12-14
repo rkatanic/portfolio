@@ -1,20 +1,3 @@
-.color-switch {
-  transition: 0.35s ease;
-  background: var(--color-input);
-  overflow: hidden;
-  animation: fade-in 1.5s ease;
-  cursor: pointer;
-  box-shadow: 0 0 10px hsla(var(--color-hue), 10%, 10%, 0.1);
-}
-
-.color-switch .icon {
-  animation: day-shift 0.5s ease;
-}
-
-.color-switch:hover .icon {
-  fill: var(--color-primary);
-}
-
 .color-switch-header {
   position: relative;
   width: 2.5rem;

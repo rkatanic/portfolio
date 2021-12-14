@@ -1,11 +1,43 @@
 import { fireEvent, render } from "@testing-library/react";
-import DarkModeSwitch from "../../components/DarkModeSwitch";
+import CurvedBorderSwitch from "../../components/CurvedBordersSwitch";
 import { GlobalContext } from "../../context/GlobalContext";
 
-describe("DarkModeSwitch", (): void => {
-  it("should display moon icon when dark mode is off ", (): void => {
+describe("CurvedBordersSwitch", (): void => {
+  it("should add curved borders class to body when curved borders feature is on", (): void => {
     Storage.prototype.setItem = jest.fn(() => {});
     jest.spyOn(document.body.classList, "add");
+
+    const { container } = render(
+      <GlobalContext.Provider
+        value={{
+          isDarkMode: false,
+          isRowSwap: false,
+          hasCurvedBorders: true,
+          toggleDarkMode: jest.fn(),
+          toggleCurvedBorders: jest.fn(),
+          toggleRowSwap: jest.fn(),
+        }}
+      >
+        <CurvedBorderSwitch />
+      </GlobalContext.Provider>
+    );
+
+    expect(window.localStorage.setItem).toHaveBeenNthCalledWith(
+      1,
+      "curved-borders",
+      "true"
+    );
+    expect(window.document.body.classList.add).toHaveBeenNthCalledWith(
+      1,
+      "curved-borders"
+    );
+    expect(container.querySelector(".icon-corner-sharp")).toBeInTheDocument();
+  });
+
+  it("should remove curved borders class to body when curved borders feature is off", (): void => {
+    Storage.prototype.removeItem = jest.fn(() => {});
+    jest.spyOn(document.body.classList, "remove");
+
     const { getByText } = render(
       <GlobalContext.Provider
         value={{
@@ -17,70 +49,40 @@ describe("DarkModeSwitch", (): void => {
           toggleRowSwap: jest.fn(),
         }}
       >
-        <DarkModeSwitch />
-      </GlobalContext.Provider>
-    );
-
-    expect(window.localStorage.setItem).toHaveBeenNthCalledWith(
-      1,
-      "dark-mode",
-      "false"
-    );
-    expect(window.document.body.classList.add).toHaveBeenNthCalledWith(
-      1,
-      "day-mode"
-    );
-    expect(getByText("moon.svg")).toBeInTheDocument();
-  });
-
-  it("should display sun icon when dark mode is on", (): void => {
-    Storage.prototype.removeItem = jest.fn(() => {});
-    jest.spyOn(document.body.classList, "remove");
-    const { getByText } = render(
-      <GlobalContext.Provider
-        value={{
-          isDarkMode: true,
-          isRowSwap: false,
-          hasCurvedBorders: false,
-          toggleDarkMode: jest.fn(),
-          toggleCurvedBorders: jest.fn(),
-          toggleRowSwap: jest.fn(),
-        }}
-      >
-        <DarkModeSwitch />
+        <CurvedBorderSwitch />
       </GlobalContext.Provider>
     );
 
     expect(window.localStorage.removeItem).toHaveBeenNthCalledWith(
       1,
-      "dark-mode"
+      "curved-borders"
     );
     expect(window.document.body.classList.remove).toHaveBeenNthCalledWith(
       1,
-      "day-mode"
+      "curved-borders"
     );
-    expect(getByText("sun.svg")).toBeInTheDocument();
+    expect(getByText("corner-curved.svg")).toBeInTheDocument();
   });
 
-  it("should handle dark mode toggling", (): void => {
-    const mockToggleDarkMode = jest.fn();
+  it("should handle curved borders toggle", (): void => {
+    const mockToggleCurvedBorders = jest.fn();
     const { getByText } = render(
       <GlobalContext.Provider
         value={{
-          isDarkMode: true,
+          isDarkMode: false,
           isRowSwap: false,
           hasCurvedBorders: false,
-          toggleDarkMode: mockToggleDarkMode,
-          toggleCurvedBorders: jest.fn(),
+          toggleDarkMode: jest.fn(),
+          toggleCurvedBorders: mockToggleCurvedBorders,
           toggleRowSwap: jest.fn(),
         }}
       >
-        <DarkModeSwitch />
+        <CurvedBorderSwitch />
       </GlobalContext.Provider>
     );
 
-    fireEvent.click(getByText("sun.svg"));
+    fireEvent.click(getByText("corner-curved.svg"));
 
-    expect(mockToggleDarkMode).toHaveBeenCalledTimes(1);
+    expect(mockToggleCurvedBorders).toHaveBeenCalledTimes(1);
   });
 });

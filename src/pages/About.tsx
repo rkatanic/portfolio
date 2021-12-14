@@ -26,7 +26,7 @@ const About = (): JSX.Element => {
             <div className="about-item-content-wrapper">
               <p className="about-item-content-headline">Intern</p>
               <p className="about-item-content-description">
-                codecentric bosnia rookie boot camp
+                Codecentric Bosnia Rookie Boot Camp
               </p>
               <p className="about-item-content-location">Doboj</p>
             </div>
@@ -49,7 +49,7 @@ const About = (): JSX.Element => {
             <div className="about-item-content-wrapper">
               <p className="about-item-content-headline">Computer Technician</p>
               <p className="about-item-content-description">
-                Electro-tehnical High School
+                Electro-Tehnical High School
               </p>
               <p className="about-item-content-location">Doboj</p>
             </div>

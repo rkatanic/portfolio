@@ -23,7 +23,7 @@ const DarkModeSwitch = (): JSX.Element => {
   }, [isDarkMode]);
 
   return (
-    <div className="night-mode-switch" onClick={toggleDarkMode}>
+    <div className="footer-link-icon" onClick={toggleDarkMode}>
       {isDarkMode ? <SunIcon /> : <MoonIcon />}
     </div>
   );
