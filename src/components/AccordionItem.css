@@ -4,6 +4,12 @@
   padding: 0 2rem;
   display: flex;
   flex-direction: column;
+  box-shadow: 0 1px 3px 0 hsla(0, 0%, 0%, 0.1),
+    0 1px 2px 0 hsla(0, 0%, 0%, 0.06);
+}
+
+.accordion-item:hover .icon {
+  fill: var(--color-primary);
 }
 
 .accordion-item-label {
@@ -12,16 +18,16 @@
   justify-content: space-between;
   transition: 0.25s ease;
   cursor: pointer;
+  font-weight: 500;
 }
 
 .accordion-item-label .icon {
   margin-left: 1rem;
   transform: rotate(180deg);
+  transition: 0.5s ease;
 }
 
 .accordion-item-active .icon {
-  transition: 0.5s ease;
-
   transform: rotate(0deg);
 }
 

@@ -94,6 +94,7 @@
   .app-main-container-column-left {
     position: relative;
     max-height: none;
+    order: initial !important;
   }
 }
 
@@ -114,4 +115,44 @@
   to {
     opacity: 1;
   }
+}
+
+.curved-borders .footer-link-icon,
+.curved-borders .footer-image,
+.curved-borders .color-switch,
+.curved-borders .night-mode-switch,
+.curved-borders .nav-toggle,
+.curved-borders .number,
+.curved-borders .progress-bar::before,
+.curved-borders .progress-bar-pulse,
+.curved-borders .color-item,
+.curved-borders .contact-form-modal-content-icon,
+.curved-borders .loader-square,
+.curved-borders .border-icon {
+  border-radius: 50%;
+}
+
+.curved-borders .btn,
+.curved-borders .btn::before {
+  border-radius: 100px;
+}
+
+.curved-borders input,
+.curved-borders textarea,
+.curved-borders .accordion-item,
+.curved-borders .about-item,
+.curved-borders .skill-card,
+.curved-borders .skill-card::before,
+.curved-borders .service-card,
+.curved-borders .service-card-content-badge,
+.curved-borders .modal {
+  border-radius: 10px;
+}
+
+.row-swap .app-main-container-column-left {
+  order: 2;
+}
+
+.row-swap .progress-bar {
+  left: 0;
 }

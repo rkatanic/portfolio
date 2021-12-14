@@ -1,6 +1,9 @@
 import me1 from "../assets/images/me1.png";
 import ColorSwitch from "./ColorSwitch";
 import DarkModeSwitch from "./DarkModeSwitch";
+import RowSwap from "./RowSwap";
+import CurvedBorderSwitch from "./CurvedBordersSwitch";
+import { GlobalContextProvider } from "../context/GlobalContext";
 import { ReactComponent as GithubIcon } from "../assets/icons/github.svg";
 import { ReactComponent as LinkedinIcon } from "../assets/icons/linkedin.svg";
 import { GITHUB_LINK, LINKEDIN_LINK } from "../util/constants/links";
@@ -37,8 +40,12 @@ const Footer = (): JSX.Element => (
       </div>
     </div>
     <div className="footer-actions">
-      <ColorSwitch />
-      <DarkModeSwitch />
+      <GlobalContextProvider>
+        <ColorSwitch />
+        <DarkModeSwitch />
+        <CurvedBorderSwitch />
+        <RowSwap />
+      </GlobalContextProvider>
     </div>
   </div>
 );

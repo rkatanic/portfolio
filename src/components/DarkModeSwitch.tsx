@@ -13,17 +13,17 @@ const DarkModeSwitch = (): JSX.Element => {
     const shouldShowDarkMode = (): void => {
       if (isDarkMode) {
         window.localStorage.removeItem("dark-mode");
-        window.document.body.removeAttribute("class");
+        window.document.body.classList.remove("day-mode");
       } else {
         window.localStorage.setItem("dark-mode", "false");
-        window.document.body.setAttribute("class", "day-mode");
+        window.document.body.classList.add("day-mode");
       }
     };
     shouldShowDarkMode();
   }, [isDarkMode]);
 
   return (
-    <div className="night-mode-switch" onClick={toggleDarkMode}>
+    <div className="footer-link-icon" onClick={toggleDarkMode}>
       {isDarkMode ? <SunIcon /> : <MoonIcon />}
     </div>
   );

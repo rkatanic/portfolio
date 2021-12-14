@@ -38,8 +38,8 @@ const ColorSwitch = (): JSX.Element => {
   }, []);
 
   return (
-    <div className="color-switch">
-      <div className="color-switch-header" onClick={handleColorModalToggle}>
+    <>
+      <div className="footer-link-icon" onClick={handleColorModalToggle}>
         <PaintBrushIcon />
       </div>
       <ColorModal
@@ -47,7 +47,7 @@ const ColorSwitch = (): JSX.Element => {
         closeModal={handleColorModalClose}
         switchColor={handleColorSwitch}
       />
-    </div>
+    </>
   );
 };
 

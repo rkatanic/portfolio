@@ -9,7 +9,7 @@ describe("Footer", (): void => {
   });
 
   it("should redirect to correct github link", (): void => {
-    const { baseElement, getByText } = render(<Footer />);
+    const { getByText } = render(<Footer />);
 
     expect(getByText("GitHub")).toHaveAttribute(
       "href",
@@ -18,7 +18,7 @@ describe("Footer", (): void => {
   });
 
   it("should redirect to correct linkedin link", (): void => {
-    const { baseElement, getByText } = render(<Footer />);
+    const { getByText } = render(<Footer />);
 
     expect(getByText("LinkedIn")).toHaveAttribute(
       "href",

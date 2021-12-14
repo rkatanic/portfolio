@@ -4,6 +4,7 @@ import ProgressBar from "../components/ProgressBar";
 import Footer from "../components/Footer";
 
 import "./Home.css";
+import { useEffect } from "react";
 
 const Home = (): JSX.Element => (
   <>
