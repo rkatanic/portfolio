@@ -11,7 +11,7 @@
 }
 
 .link-icon + .link-label {
-  margin-left: 0.25rem;
+  margin: 0 0.5rem;
   font-size: 0.825rem;
   color: var(--color-text);
 }
@@ -40,4 +40,14 @@
 
 .link-label:hover::before {
   width: 100%;
+}
+
+@media screen and (max-width: 414px) {
+  .link {
+    justify-content: end;
+  }
+
+  .link-icon {
+    order: 2;
+  }
 }

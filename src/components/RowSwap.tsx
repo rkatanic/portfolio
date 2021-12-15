@@ -1,6 +1,7 @@
 import { useIsRowSwap, useToggleRowSwap } from "../context/GlobalContext";
 import { ReactComponent as RowSwapIcon } from "../assets/icons/row-swap.svg";
 import { useEffect } from "react";
+import IconButton from "./IconButton";
 
 const RowSwap = (): JSX.Element => {
   const isRowSwap = useIsRowSwap();
@@ -20,13 +21,11 @@ const RowSwap = (): JSX.Element => {
   }, [isRowSwap]);
 
   return (
-    <div
-      id="row-swap-icon"
-      className="footer-link-icon"
+    <IconButton
+      icon={<RowSwapIcon />}
       onClick={toggleRowSwap}
-    >
-      <RowSwapIcon />
-    </div>
+      {...{ id: "row-swap-icon" }}
+    />
   );
 };
 

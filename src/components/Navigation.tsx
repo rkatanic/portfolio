@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Scrollspy from "react-scrollspy";
+import Settings from "./Settings";
 
 import "./Navigation.css";
 
@@ -65,6 +66,13 @@ const Navigation = (): JSX.Element => {
             </a>
           </li>
         </Scrollspy>
+        <div
+          data-testid="nav-settings"
+          className="nav-settings"
+          onClick={(): void => setShowMenu(false)}
+        >
+          <Settings />
+        </div>
       </div>
       <div
         className={`nav-toggle${showMenu ? " close" : ""}`}

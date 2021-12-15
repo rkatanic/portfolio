@@ -94,6 +94,48 @@ exports[`Navigation should render 1`] = `
             </a>
           </li>
         </ul>
+        <div
+          class="nav-settings"
+          data-testid="nav-settings"
+        >
+          <div
+            class="settings"
+          >
+            <button
+              class="icon-button"
+              type="button"
+            >
+              <svg>
+                paint-brush.svg
+              </svg>
+            </button>
+            <button
+              class="icon-button"
+              type="button"
+            >
+              <svg>
+                sun.svg
+              </svg>
+            </button>
+            <button
+              class="icon-button"
+              type="button"
+            >
+              <svg>
+                corner-curved.svg
+              </svg>
+            </button>
+            <button
+              class="icon-button"
+              id="row-swap-icon"
+              type="button"
+            >
+              <svg>
+                row-swap.svg
+              </svg>
+            </button>
+          </div>
+        </div>
       </div>
       <div
         class="nav-toggle"
@@ -105,5 +147,8 @@ exports[`Navigation should render 1`] = `
       </div>
     </nav>
   </div>
+  <div
+    class="ReactModalPortal"
+  />
 </body>
 `;

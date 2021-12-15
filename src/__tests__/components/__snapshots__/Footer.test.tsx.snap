@@ -26,13 +26,14 @@ exports[`Footer should render 1`] = `
             <div
               class="link-icon"
             >
-              <div
-                class="footer-link-icon"
+              <button
+                class="icon-button"
+                type="button"
               >
                 <svg>
                   linkedin.svg
                 </svg>
-              </div>
+              </button>
             </div>
             <span
               class="link-label"
@@ -49,13 +50,14 @@ exports[`Footer should render 1`] = `
             <div
               class="link-icon"
             >
-              <div
-                class="footer-link-icon"
+              <button
+                class="icon-button"
+                type="button"
               >
                 <svg>
                   github.svg
                 </svg>
-              </div>
+              </button>
             </div>
             <span
               class="link-label"
@@ -66,36 +68,44 @@ exports[`Footer should render 1`] = `
         </div>
       </div>
       <div
-        class="footer-actions"
+        class="footer-settings"
       >
         <div
-          class="footer-link-icon"
+          class="settings"
         >
-          <svg>
-            paint-brush.svg
-          </svg>
-        </div>
-        <div
-          class="footer-link-icon"
-        >
-          <svg>
-            sun.svg
-          </svg>
-        </div>
-        <div
-          class="footer-link-icon"
-        >
-          <svg>
-            corner-curved.svg
-          </svg>
-        </div>
-        <div
-          class="footer-link-icon"
-          id="row-swap-icon"
-        >
-          <svg>
-            row-swap.svg
-          </svg>
+          <button
+            class="icon-button"
+            type="button"
+          >
+            <svg>
+              paint-brush.svg
+            </svg>
+          </button>
+          <button
+            class="icon-button"
+            type="button"
+          >
+            <svg>
+              sun.svg
+            </svg>
+          </button>
+          <button
+            class="icon-button"
+            type="button"
+          >
+            <svg>
+              corner-curved.svg
+            </svg>
+          </button>
+          <button
+            class="icon-button"
+            id="row-swap-icon"
+            type="button"
+          >
+            <svg>
+              row-swap.svg
+            </svg>
+          </button>
         </div>
       </div>
     </div>

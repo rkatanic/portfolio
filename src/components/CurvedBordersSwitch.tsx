@@ -3,6 +3,7 @@ import {
   useHasCurvedBorders,
   useToggleCurvedBorders,
 } from "../context/GlobalContext";
+import IconButton from "./IconButton";
 import { ReactComponent as CornerCurvedIcon } from "../assets/icons/corner-curved.svg";
 
 import "./CurvedBordersSwitch.css";
@@ -25,13 +26,16 @@ const CurvedBorderSwitch = (): JSX.Element => {
   }, [hasCurvedBorders]);
 
   return (
-    <div className="footer-link-icon" onClick={toggleCurvedBorders}>
-      {hasCurvedBorders ? (
-        <div className="icon-corner-sharp"></div>
-      ) : (
-        <CornerCurvedIcon />
-      )}
-    </div>
+    <IconButton
+      icon={
+        hasCurvedBorders ? (
+          <div className="icon-corner-sharp"></div>
+        ) : (
+          <CornerCurvedIcon />
+        )
+      }
+      onClick={toggleCurvedBorders}
+    />
   );
 };
 

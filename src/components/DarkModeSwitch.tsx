@@ -1,9 +1,8 @@
 import { useEffect } from "react";
+import IconButton from "./IconButton";
 import { useIsDarkMode, useToggleDarkMode } from "../context/GlobalContext";
 import { ReactComponent as SunIcon } from "../assets/icons/sun.svg";
 import { ReactComponent as MoonIcon } from "../assets/icons/moon.svg";
-
-import "./DarkModeSwitch.css";
 
 const DarkModeSwitch = (): JSX.Element => {
   const isDarkMode = useIsDarkMode();
@@ -23,9 +22,10 @@ const DarkModeSwitch = (): JSX.Element => {
   }, [isDarkMode]);
 
   return (
-    <div className="footer-link-icon" onClick={toggleDarkMode}>
-      {isDarkMode ? <SunIcon /> : <MoonIcon />}
-    </div>
+    <IconButton
+      icon={isDarkMode ? <SunIcon /> : <MoonIcon />}
+      onClick={toggleDarkMode}
+    />
   );
 };
 

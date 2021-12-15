@@ -19,6 +19,17 @@ describe("Navigation", (): void => {
     expect(navMenu).toHaveClass("show-menu");
   });
 
+  it("should close menu when clicked on settings", (): void => {
+    const { getByTestId } = render(<Navigation />);
+    const navToggle = getByTestId("nav-toggle");
+    const navMenu = getByTestId("nav-menu");
+
+    fireEvent.click(getByTestId("nav-settings"));
+
+    expect(navToggle).not.toHaveClass("close");
+    expect(navMenu).not.toHaveClass("show-menu");
+  });
+
   it.each(["About", "Skills", "FAQ", "Contact"])(
     "should close menu when clicked on %s navigation link",
     (navLinkText: string): void => {

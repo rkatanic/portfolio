@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
 import ColorModal from "./ColorModal";
+import IconButton from "./IconButton";
 import { ReactComponent as PaintBrushIcon } from "../assets/icons/paint-brush.svg";
 import { COLORS, DEFAULT_COLOR_HUE } from "../util/constants/colors";
-
-import "./ColorSwitch.css";
 
 const ColorSwitch = (): JSX.Element => {
   const [isColorModalOpen, setIsColorModalOpen] = useState(false);
@@ -39,9 +38,7 @@ const ColorSwitch = (): JSX.Element => {
 
   return (
     <>
-      <div className="footer-link-icon" onClick={handleColorModalToggle}>
-        <PaintBrushIcon />
-      </div>
+      <IconButton icon={<PaintBrushIcon />} onClick={handleColorModalToggle} />
       <ColorModal
         isOpen={isColorModalOpen}
         closeModal={handleColorModalClose}
