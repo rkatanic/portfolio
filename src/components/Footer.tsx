@@ -9,34 +9,32 @@ import { ReactComponent as LinkedinIcon } from "../assets/icons/linkedin.svg";
 import { GITHUB_LINK, LINKEDIN_LINK } from "../util/constants/links";
 
 import "./Footer.css";
+import Link from "./Link";
 
 const Footer = (): JSX.Element => (
   <div className="footer">
     <div className="footer-content">
       <img className="footer-image" src={me1} alt="" />
       <div className="footer-links">
-        <a
-          className="footer-link"
+        <Link
+          icon={
+            <div className="footer-link-icon">
+              <LinkedinIcon />
+            </div>
+          }
+          label="LinkedIn"
           href={LINKEDIN_LINK}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div className="footer-link-icon">
-            <LinkedinIcon />
-          </div>
-          LinkedIn
-        </a>
-        <a
-          className="footer-link"
+        />
+
+        <Link
+          icon={
+            <div className="footer-link-icon">
+              <GithubIcon />
+            </div>
+          }
+          label="GitHub"
           href={GITHUB_LINK}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div className="footer-link-icon">
-            <GithubIcon />
-          </div>
-          GitHub
-        </a>
+        />
       </div>
     </div>
     <div className="footer-actions">

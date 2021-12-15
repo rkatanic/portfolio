@@ -20,31 +20,6 @@
   transform: rotate(35deg);
 }
 
-.home-link {
-  color: var(--color-primary);
-  font-weight: 500;
-  position: relative;
-}
-
-.home-link::before {
-  position: absolute;
-  content: "";
-  background: var(--color-primary);
-  width: 0;
-  height: 1px;
-  bottom: 0;
-  left: 0;
-  transition: 0.5s ease;
-}
-
-.home-link:hover {
-  opacity: 0.8;
-}
-
-.home-link:hover::before {
-  width: 6rem;
-}
-
 .desc {
   text-align: justify;
   line-height: 2;

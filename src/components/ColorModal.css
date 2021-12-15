@@ -43,7 +43,8 @@
   transform: scale(1.5);
 }
 
-.color-item .icon {
+.color-item .icon,
+.color-item .icon:hover {
   fill: black;
   width: 1rem;
   height: 1rem;

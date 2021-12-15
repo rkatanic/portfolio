@@ -66,7 +66,21 @@ exports[`FAQ page should render 1`] = `
           <p
             class="accordion-item-text "
           >
-            This website is built with React.js. If you are interested in source code, you can find it here.
+            This website is built with React.js. If you are interested in source code, you can find it
+             
+            <a
+              class="link"
+              href="https://github.com/k-rade/portfolio"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <span
+                class="link-label"
+              >
+                here
+              </span>
+            </a>
+            .
             <br />
             <br />
           </p>
@@ -94,7 +108,7 @@ exports[`FAQ page should render 1`] = `
           <p
             class="accordion-item-text "
           >
-            At this moment I'm full time employed. I could offer a few hours of my services per week , if this suits you.
+            At this moment I'm full time employed. What I could offer is a few hours of my services per week , if this suits you.
             <br />
             <br />
           </p>

@@ -4,7 +4,7 @@ import ProgressBar from "../components/ProgressBar";
 import Footer from "../components/Footer";
 
 import "./Home.css";
-import { useEffect } from "react";
+import Link from "../components/Link";
 
 const Home = (): JSX.Element => (
   <>
@@ -30,14 +30,7 @@ const Home = (): JSX.Element => (
       <p className="desc">
         I am a full stack developer located in Doboj, Bosnia & Herzegovina.
         Currently I'm crafting software products at{" "}
-        <a
-          className="home-link"
-          href="https://productdock.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          ProductDock
-        </a>
+        <Link label="ProductDock" href="https://productdock.com/" />
         .
         <br />I do what coders do. I like what coders like. In the end of the
         day, I'm just a regular person who likes doing some sports in free time,

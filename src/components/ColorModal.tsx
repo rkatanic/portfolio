@@ -37,7 +37,7 @@ const ColorModal = ({
               key={key}
               className="color-item"
               style={{
-                background: `hsl(${value},70%,60%)`,
+                background: `hsl(${value},72%,67%)`,
               }}
             >
               {selectedColor === value && <CheckIcon />}

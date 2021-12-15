@@ -1,3 +1,5 @@
+import Link from "../../components/Link";
+
 export const FAQS = [
   {
     question: "What is current tech stack you are working with",
@@ -6,13 +8,18 @@ export const FAQS = [
   },
   {
     question: "What did you use to build your website",
-    answer:
-      "This website is built with React.js. If you are interested in source code, you can find it here.",
+    answer: (
+      <>
+        This website is built with React.js. If you are interested in source
+        code, you can find it{" "}
+        <Link label="here" href="https://github.com/k-rade/portfolio" />.
+      </>
+    ),
   },
   {
     question: "I have a project for you, are you available",
     answer:
-      "At this moment I'm full time employed. I could offer a few hours of my services per week , if this suits you.",
+      "At this moment I'm full time employed. What I could offer is a few hours of my services per week , if this suits you.",
   },
   {
     question: "How to pronounce your name correctly",

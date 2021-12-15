@@ -18,34 +18,50 @@ exports[`Footer should render 1`] = `
           class="footer-links"
         >
           <a
-            class="footer-link"
+            class="link"
             href="https://www.linkedin.com/in/radivoje-katanic"
             rel="noopener noreferrer"
             target="_blank"
           >
             <div
-              class="footer-link-icon"
+              class="link-icon"
             >
-              <svg>
-                linkedin.svg
-              </svg>
+              <div
+                class="footer-link-icon"
+              >
+                <svg>
+                  linkedin.svg
+                </svg>
+              </div>
             </div>
-            LinkedIn
+            <span
+              class="link-label"
+            >
+              LinkedIn
+            </span>
           </a>
           <a
-            class="footer-link"
+            class="link"
             href="https://github.com/k-rade"
             rel="noopener noreferrer"
             target="_blank"
           >
             <div
-              class="footer-link-icon"
+              class="link-icon"
             >
-              <svg>
-                github.svg
-              </svg>
+              <div
+                class="footer-link-icon"
+              >
+                <svg>
+                  github.svg
+                </svg>
+              </div>
             </div>
-            GitHub
+            <span
+              class="link-label"
+            >
+              GitHub
+            </span>
           </a>
         </div>
       </div>

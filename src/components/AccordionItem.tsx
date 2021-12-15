@@ -4,7 +4,7 @@ import "./AccordionItem.css";
 
 interface Props {
   label: string;
-  text: string;
+  text: string | JSX.Element;
   active: boolean;
   onToggle: () => void;
 }

@@ -8,9 +8,6 @@ const Accordion = (): JSX.Element => {
   const [isClicked, setIsClicked] = useState(0);
 
   const handleAccordionToggle = (index: number): void => {
-    if (isClicked === index) {
-      return setIsClicked(0);
-    }
     setIsClicked(index);
   };
 
