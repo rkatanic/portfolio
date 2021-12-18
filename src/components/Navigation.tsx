@@ -27,8 +27,6 @@ const Navigation = (): JSX.Element => {
               className="nav-link"
               onClick={() => setShowMenu(false)}
             >
-              <div className="number">01</div>
-              <div className="dash"></div>
               <span>About</span>
             </a>
           </li>
@@ -38,8 +36,6 @@ const Navigation = (): JSX.Element => {
               className="nav-link"
               onClick={() => setShowMenu(false)}
             >
-              <div className="number">02</div>
-              <div className="dash"></div>
               <span>Skills</span>
             </a>
           </li>
@@ -49,8 +45,6 @@ const Navigation = (): JSX.Element => {
               className="nav-link"
               onClick={() => setShowMenu(false)}
             >
-              <div className="number">03</div>
-              <div className="dash"></div>
               <span>FAQ</span>
             </a>
           </li>
@@ -60,8 +54,6 @@ const Navigation = (): JSX.Element => {
               className="nav-link"
               onClick={() => setShowMenu(false)}
             >
-              <div className="number">04</div>
-              <div className="dash"></div>
               <span>Contact</span>
             </a>
           </li>

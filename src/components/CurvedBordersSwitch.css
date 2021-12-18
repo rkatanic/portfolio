@@ -1,12 +1,7 @@
 .icon-corner-sharp {
   width: 0.825rem;
   height: 0.825rem;
-  border-left: 3px solid var(--color-text);
-  border-bottom: 3px solid var(--color-text);
+  border-left: 3px solid hsl(var(--color-hue), 10%, 20%);
+  border-bottom: 3px solid hsl(var(--color-hue), 10%, 20%);
   cursor: pointer;
-}
-
-.icon-corner-sharp:hover {
-  border-left: 3px solid var(--color-primary);
-  border-bottom: 3px solid var(--color-primary);
 }

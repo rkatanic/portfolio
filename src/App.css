@@ -51,7 +51,7 @@
 .top-shadow {
   position: fixed;
   left: 0;
-  height: 10vh;
+  height: 5vh;
   z-index: 2;
   width: 100%;
   background: linear-gradient(var(--color-body), transparent);
@@ -130,12 +130,12 @@
 .curved-borders .contact-form-modal-content-icon,
 .curved-borders .loader-square,
 .curved-borders .border-icon {
-  border-radius: 50%;
+  border-radius: 10px;
 }
 
 .curved-borders .btn,
 .curved-borders .btn::before {
-  border-radius: 100px;
+  border-radius: 10px;
 }
 
 .curved-borders input,

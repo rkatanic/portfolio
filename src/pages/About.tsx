@@ -1,6 +1,10 @@
 import Section from "../components/Section";
 import Button from "../components/Button";
 import { CV_LINK } from "../util/constants/links";
+import { ReactComponent as CalendarIcon } from "../assets/icons/calendar.svg";
+import { ReactComponent as WorkIcon } from "../assets/icons/work.svg";
+import { ReactComponent as LocationIcon } from "../assets/icons/location.svg";
+import { ReactComponent as EducationIcon } from "../assets/icons/education.svg";
 
 import "./About.css";
 
@@ -9,51 +13,126 @@ const About = (): JSX.Element => {
 
   return (
     <Section id="about">
-      <h3 className="headline">My personal journey</h3>
       <div className="about">
-        <div className="about-item">
-          <h3 className="card-title">Experience</h3>
-          <div className="about-item-content">
-            <p className="about-item-content-date">08/2019 - present</p>
-            <div className="about-item-content-wrapper">
-              <p className="about-item-content-headline">Software Developer</p>
-              <p className="about-item-content-description">
-                Codecentric Bosnia/ProductDock
-              </p>
-              <p className="about-item-content-location">Doboj</p>
+        <div className="about-section">
+          <h3 className="section-headline">Experience</h3>
+
+          <div className="card">
+            <div className="card-row">
+              <div className="card-icon">
+                <WorkIcon />
+              </div>
+              <div className="card-content">
+                <div className="card-header">
+                  <div className="card-col">
+                    <div className="card-heading">Software developer</div>
+                    <div className="card-subtitle">ProductDock</div>
+                  </div>
+                  <div className="card-col card-col-2">
+                    <div className="card-location">
+                      <LocationIcon />
+                      <span className="card-location-text">Doboj</span>
+                    </div>
+                    <div className="card-subtitle">
+                      <CalendarIcon />
+                      Aug 2019 - Present
+                    </div>
+                  </div>
+                </div>
+                <div className="card-desc">
+                  Started working full time as a full stack developer, crafting
+                  web products for various clients using Java and JavaScript
+                  frameworks.
+                </div>
+              </div>
             </div>
           </div>
-          <div className="about-item-content">
-            <p className="about-item-content-date">02/2019 - 05/2019</p>
-            <div className="about-item-content-wrapper">
-              <p className="about-item-content-headline">Intern</p>
-              <p className="about-item-content-description">
-                Codecentric Bosnia Rookie Boot Camp
-              </p>
-              <p className="about-item-content-location">Doboj</p>
+          <hr />
+          <div className="card">
+            <div className="card-row">
+              <div className="card-icon">
+                <WorkIcon />
+              </div>
+              <div className="card-content">
+                <div className="card-header">
+                  <div className="card-col">
+                    <div className="card-heading">Intern</div>
+                    <div className="card-subtitle">Codecentric Bosnia</div>
+                  </div>
+                  <div className="card-col card-col-2">
+                    <div className="card-location">
+                      <LocationIcon />
+                      <span className="card-location-text">Doboj</span>
+                    </div>
+                    <div className="card-subtitle">
+                      <CalendarIcon />
+                      Feb 2019 - May 2019
+                    </div>
+                  </div>
+                </div>
+                <div className="card-desc">
+                  Attended 3 months rookie boot camp where I worked on building
+                  internal employee management application using Angular, Spring
+                  Boot and MySQL.
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div className="about-item">
-          <h3 className="card-title">Education</h3>
-          <div className="about-item-content">
-            <p className="about-item-content-date">09/2015 - 09/2019</p>
-            <div className="about-item-content-wrapper">
-              <p className="about-item-content-headline">IT Engineer</p>
-              <p className="about-item-content-description">
-                Slobomir P University
-              </p>
-              <p className="about-item-content-location">Doboj</p>
+
+        <div className="about-section">
+          <h3 className="section-headline">Education</h3>
+          <div className="card">
+            <div className="card-row">
+              <div className="card-icon">
+                <EducationIcon />
+              </div>
+              <div className="card-content">
+                <div className="card-header">
+                  <div className="card-col">
+                    <div className="card-heading">IT Engineer</div>
+                    <div className="card-subtitle">Slobomir P University</div>
+                  </div>
+                  <div className="card-col card-col-2">
+                    <div className="card-location">
+                      <LocationIcon />
+                      <span className="card-location-text">Doboj</span>
+                    </div>
+                    <div className="card-subtitle">
+                      <CalendarIcon />
+                      Sep 2011 - Sep 2015
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div className="about-item-content">
-            <p className="about-item-content-date">09/2011 - 05/2015</p>
-            <div className="about-item-content-wrapper">
-              <p className="about-item-content-headline">Computer Technician</p>
-              <p className="about-item-content-description">
-                Electro-Tehnical High School
-              </p>
-              <p className="about-item-content-location">Doboj</p>
+          <hr />
+          <div className="card">
+            <div className="card-row">
+              <div className="card-icon">
+                <EducationIcon />
+              </div>
+              <div className="card-content">
+                <div className="card-header">
+                  <div className="card-col">
+                    <div className="card-heading">Computer Technician</div>
+                    <div className="card-subtitle">
+                      Electro-technical High School
+                    </div>
+                  </div>
+                  <div className="card-col card-col-2">
+                    <div className="card-location">
+                      <LocationIcon />
+                      <span className="card-location-text">Doboj</span>
+                    </div>
+                    <div className="card-subtitle">
+                      <CalendarIcon />
+                      Sep 2011 - May 2015
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

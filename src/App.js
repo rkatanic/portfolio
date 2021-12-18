@@ -5,14 +5,17 @@ import Faq from "./pages/Faq";
 import Contact from "./pages/Contact";
 
 import "./App.css";
+import Footer from "./components/Footer";
 
 const App = () => (
   <div data-testid="app" className="app">
     <div className="app-main-container">
       <div className="top-shadow"></div>
+
       <div className="app-main-container-column-left">
         <Home />
       </div>
+
       <div className="app-main-container-column-right">
         <About />
         <Skills />

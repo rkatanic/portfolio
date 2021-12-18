@@ -1,7 +1,4 @@
 .footer {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
 }
 
 .footer-image {
@@ -22,10 +19,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-
-.footer-settings {
-  display: inherit;
 }
 
 @media screen and (max-width: 414px) {

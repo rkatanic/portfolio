@@ -10,21 +10,6 @@ import "./Footer.css";
 
 const Footer = (): JSX.Element => (
   <div className="footer">
-    <div className="footer-content">
-      <img className="footer-image" src={me1} alt="" />
-      <div className="footer-links">
-        <Link
-          icon={<IconButton icon={<LinkedinIcon />} />}
-          label="LinkedIn"
-          href={LINKEDIN_LINK}
-        />
-        <Link
-          icon={<IconButton icon={<GithubIcon />} />}
-          label="GitHub"
-          href={GITHUB_LINK}
-        />
-      </div>
-    </div>
     <div className="footer-settings">
       <Settings />
     </div>
