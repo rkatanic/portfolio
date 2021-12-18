@@ -3,14 +3,14 @@
   margin: auto;
   display: flex;
   min-height: 100%;
-  background: linear-gradient(var(--color-input), var(--color-input))
+  /* background: linear-gradient(var(--color-input), var(--color-input))
       calc(1 * 100% / 6),
     linear-gradient(var(--color-input), var(--color-input)) calc(2 * 100% / 6),
     linear-gradient(var(--color-input), var(--color-input)) calc(3 * 100% / 6),
     linear-gradient(var(--color-input), var(--color-input)) calc(4 * 100% / 6),
     linear-gradient(var(--color-input), var(--color-input)) calc(5 * 100% / 6);
   background-size: 1px 100%;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
 }
 
 .app-main-container {
@@ -22,10 +22,9 @@
 
 .app-main-container-column-left {
   top: 0;
-  padding: 5vh 2rem;
+  padding: 5vh 2rem 0;
   position: sticky;
   display: flex;
-  justify-content: space-between;
   flex: 1;
   max-height: 100vh;
   flex-direction: column;
@@ -34,18 +33,26 @@
 
 .app-main-container-column-right {
   flex: 1;
-  padding: 5vh 2rem;
+  padding: 5vh 2rem 0;
   position: relative;
+}
+
+.app-main-container-settings {
+  order: 3;
+  top: 0;
+  padding: 5vh 1rem 0 0;
+  margin-left: -0.75rem;
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  max-height: 100vh;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .icon {
   height: 1.25rem;
-  fill: var(--color-text);
-  cursor: pointer;
-}
-
-.icon:hover {
-  fill: var(--color-primary);
+  fill: hsl(var(--color-hue), 10%, 20%);
 }
 
 .top-shadow {
@@ -144,7 +151,6 @@
 .curved-borders .about-item,
 .curved-borders .skill-card,
 .curved-borders .skill-card::before,
-.curved-borders .service-card,
 .curved-borders .service-card-content-badge,
 .curved-borders .modal {
   border-radius: 10px;

@@ -100,7 +100,7 @@ const About = (): JSX.Element => {
                     </div>
                     <div className="card-subtitle">
                       <CalendarIcon />
-                      Sep 2011 - Sep 2015
+                      2015 - 2019
                     </div>
                   </div>
                 </div>
@@ -128,7 +128,7 @@ const About = (): JSX.Element => {
                     </div>
                     <div className="card-subtitle">
                       <CalendarIcon />
-                      Sep 2011 - May 2015
+                      2011 - 2015
                     </div>
                   </div>
                 </div>

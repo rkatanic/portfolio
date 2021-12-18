@@ -42,20 +42,20 @@ const Skills = (): JSX.Element => {
   return (
     <Section id="skills">
       <div className="skills">
-        <h3 className="headline">
+        <h3 className="section-headline">
           Languages <span className="primary">&</span> tools i use
         </h3>
         <div className="skill-list">
           {skills.map(({ name, icon }) => (
             <div key={name} className="skill-card">
               <div className="highlight"></div>
-              {icon}
+              <div className="skill-card-icon">{icon}</div>
               <p className="skill-card-label">{name}</p>
             </div>
           ))}
         </div>
-        <Services />
       </div>
+      <Services />
     </Section>
   );
 };

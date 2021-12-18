@@ -6,12 +6,12 @@ import Contact from "./pages/Contact";
 
 import "./App.css";
 import Footer from "./components/Footer";
+import Settings from "./components/Settings";
 
 const App = () => (
   <div data-testid="app" className="app">
     <div className="app-main-container">
       <div className="top-shadow"></div>
-
       <div className="app-main-container-column-left">
         <Home />
       </div>
@@ -21,6 +21,9 @@ const App = () => (
         <Skills />
         <Faq />
         <Contact />
+      </div>
+      <div className="app-main-container-settings">
+        <Settings />
       </div>
     </div>
   </div>

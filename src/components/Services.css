@@ -1,25 +1,21 @@
-.service-cards:hover .service-card {
-  opacity: 0.5;
-}
-
-.service-cards .service-card:hover {
-  opacity: 1;
-  transform: scale(1.1);
+.service-cards {
+  border-radius: 10px;
+  background: var(--color-input);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06) !important;
 }
 
 .service-card {
-  position: relative;
-  cursor: default;
+  display: flex;
   transition: 0.25s;
-  margin: 1rem 0;
   padding: 2rem;
-  background: var(--color-input);
-  box-shadow: 0 1px 3px 0 hsla(0, 0%, 0%, 0.1),
-    0 1px 2px 0 hsla(0, 0%, 0%, 0.06);
 }
 
-.service-card:hover .card-title::before {
-  width: 3.5rem;
+.card-headline {
+  display: flex;
+}
+
+.service-cards hr {
+  margin: 0 1.5rem 0 6rem;
 }
 
 .service-card-icon {
@@ -36,12 +32,14 @@
   fill: var(--color-primary);
 }
 
-.service-card-content-badge {
+.badge {
+  border-radius: 4px;
+  margin-right: 0.25rem;
   text-align: center;
-  padding: 0.25rem 0.5rem;
+  padding: 0.125rem 0.5rem;
   background: var(--color-container);
-  color: var(--color-primary);
-  font-size: 0.75rem;
+  color: var(--color-text);
+  font-size: 0.625rem;
   font-weight: 500;
   letter-spacing: 1px;
   text-transform: uppercase;

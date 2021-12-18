@@ -9,32 +9,35 @@ import Button from "../components/Button";
 
 const Home = (): JSX.Element => (
   <>
-    <div className="home-section">
-      <div className="home-section-col">
+    <div className="home-section first">
+      <div className="home-section-header">
         <img className="home-section-img" src={myimg} alt="" />
         <h3 className="home-section-title">Radivoje Katanic</h3>
         <h2 className="home-section-subtitle">Software Developer</h2>
+      </div>
 
-        <div className="home-section-info">
-          <div className="home-section-info-item">
-            <span>Age</span>
-            <span>26</span>
-          </div>
+      <div className="home-section-info">
+        <div className="home-section-info-item">
+          <span>Age</span>
+          <span>26</span>
+        </div>
 
-          <div className="home-section-info-item">
-            <span>Location</span>
-            <span>Doboj</span>
-          </div>
-          <div className="home-section-info-item">
-            <span>Languages</span>
-            <span>Serbian, English</span>
-          </div>
-          <div className="home-section-info-item">
-            <span>E-mail</span>
-            <span>k.rade313@gmail.com</span>
-          </div>
+        <div className="home-section-info-item">
+          <span>Location</span>
+          <span>Doboj</span>
+        </div>
+        <div className="home-section-info-item">
+          <span>Languages</span>
+          <span>Serbian, English</span>
+        </div>
+        <div className="home-section-info-item">
+          <span>E-mail</span>
+          <span>
+            k.rade313<b className="primary">@</b>gmail.com
+          </span>
         </div>
       </div>
+
       <hr />
       <Navigation />
     </div>
