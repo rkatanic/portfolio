@@ -17,10 +17,13 @@ const FormField = (props: any): JSX.Element => {
           className={meta.touched && meta.error ? "input-error-message" : ""}
         />
       </div>
-      <Field
-        {...props}
-        className={meta.touched && meta.error ? "input-error-field" : ""}
-      />
+      <div className="form-field-input">
+        <Field
+          {...props}
+          className={meta.touched && meta.error ? "input-error-field" : ""}
+        />
+        {props.icon && <div className="form-field-icon">{props.icon}</div>}
+      </div>
       <div className="form-field-length-indicator">
         <span
           className={`${

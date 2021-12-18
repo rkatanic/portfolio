@@ -9,6 +9,9 @@ import {
   FORM_INITIAL_VALUES,
   FORM_VALIDATION_SCHEMA,
 } from "../../util/constants/form";
+import { ReactComponent as UserIcon } from "../../assets/icons/user.svg";
+import { ReactComponent as AtIcon } from "../../assets/icons/at.svg";
+import { ReactComponent as EmailSubjectIcon } from "../../assets/icons/email-subject.svg";
 
 import "./ContactForm.css";
 
@@ -56,6 +59,7 @@ const ContactForm = (): JSX.Element => {
             name="name"
             value={values.name}
             placeholder="Enter your name"
+            icon={<UserIcon />}
           />
           <FormField
             maxLength={100}
@@ -63,6 +67,7 @@ const ContactForm = (): JSX.Element => {
             name="email"
             value={values.email}
             placeholder="Enter your email"
+            icon={<AtIcon />}
           />
           <FormField
             maxLength={100}
@@ -70,6 +75,7 @@ const ContactForm = (): JSX.Element => {
             name="subject"
             value={values.subject}
             placeholder="Enter your subject"
+            icon={<EmailSubjectIcon />}
           />
           <FormField
             maxLength={500}
