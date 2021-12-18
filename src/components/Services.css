@@ -1,80 +1,12 @@
-.service-cards {
-  border-radius: 10px;
-  background: var(--color-input);
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06) !important;
-}
-
-.service-card {
-  display: flex;
-  transition: 0.25s;
-  padding: 2rem;
-}
-
-.card-headline {
-  display: flex;
-}
-
-.service-cards hr {
-  margin: 0 1.5rem 0 6rem;
-}
-
-.service-card-icon {
-  display: none;
-  top: -0.75rem;
-  left: 2rem;
-  padding: 0 1rem;
-  background-color: var(--color-body);
-  position: absolute;
-  z-index: 1;
-}
-
-.service-card-icon .icon {
-  fill: var(--color-primary);
-}
-
 .badge {
   border-radius: 4px;
   margin-right: 0.25rem;
   text-align: center;
   padding: 0.125rem 0.5rem;
-  background: var(--color-container);
-  color: var(--color-text);
+  background: hsla(var(--color-hue), 70%, 75%, 0.15);
+  color: var(--color-title);
   font-size: 0.625rem;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 1px;
   text-transform: uppercase;
-}
-
-.service-card-content-badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.service-card-content-badge-title {
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: 600;
-  font-size: 0.925rem;
-  color: var(--color-title);
-}
-
-.service-card-content-title {
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  position: relative;
-}
-
-.service-card-content-title::before {
-  position: absolute;
-  content: "";
-  bottom: 0;
-  width: 2rem;
-  height: 2px;
-  background-color: var(--color-primary);
-  transition: 0.5s ease;
-}
-
-.service-card-content-desc {
-  text-align: justify;
 }

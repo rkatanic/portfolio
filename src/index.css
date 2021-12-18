@@ -55,6 +55,15 @@ a {
   text-decoration: none;
 }
 
+hr {
+  margin: 0;
+  border: none;
+  outline: none;
+  height: 1px;
+  background: var(--color-text);
+  opacity: 0.175;
+}
+
 html {
   scroll-behavior: smooth !important;
 }

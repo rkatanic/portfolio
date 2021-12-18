@@ -18,6 +18,7 @@ import { ReactComponent as JavaScriptIcon } from "../assets/icons/javascript.svg
 import { ReactComponent as SassIcon } from "../assets/icons/sass.svg";
 
 import "./Skills.css";
+import Card from "../components/Card";
 
 const Skills = (): JSX.Element => {
   const skills = [
@@ -41,10 +42,7 @@ const Skills = (): JSX.Element => {
 
   return (
     <Section id="skills">
-      <div className="skills">
-        <h3 className="section-headline">
-          Languages <span className="primary">&</span> tools i use
-        </h3>
+      <Card title="Languages and tools I use">
         <div className="skill-list">
           {skills.map(({ name, icon }) => (
             <div key={name} className="skill-card">
@@ -54,7 +52,7 @@ const Skills = (): JSX.Element => {
             </div>
           ))}
         </div>
-      </div>
+      </Card>
       <Services />
     </Section>
   );

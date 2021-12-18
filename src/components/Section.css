@@ -1,6 +1,11 @@
 .section {
-  display: flex;
-  flex-direction: column;
   padding: 2rem 0;
-  max-width: var(--width-desktop);
+}
+
+.section:first-child {
+  padding-top: 0;
+}
+
+.section:last-child {
+  padding-bottom: 0;
 }

@@ -1,17 +1,7 @@
-.skills {
-  border-radius: 10px;
-  background: var(--color-input);
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06) !important;
-  margin-bottom: 1rem;
-}
-
 .skill-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
   grid-template-rows: auto;
-  flex-wrap: wrap;
-  gap: 0.35rem;
-  padding: 1rem;
 }
 
 .skill-card {

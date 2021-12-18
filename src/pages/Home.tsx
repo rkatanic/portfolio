@@ -1,15 +1,14 @@
-import Typewriter from "typewriter-effect";
 import Navigation from "../components/Navigation";
 import ProgressBar from "../components/ProgressBar";
-import Footer from "../components/Footer";
-import myimg from "../assets/images/me1.png";
-import "./Home.css";
 import Link from "../components/Link";
-import Button from "../components/Button";
+import Card from "../components/Card";
+import myimg from "../assets/images/me1.png";
+
+import "./Home.css";
 
 const Home = (): JSX.Element => (
   <>
-    <div className="home-section first">
+    <div className="home-section">
       <div className="home-section-header">
         <img className="home-section-img" src={myimg} alt="" />
         <h3 className="home-section-title">Radivoje Katanic</h3>
@@ -37,13 +36,11 @@ const Home = (): JSX.Element => (
           </span>
         </div>
       </div>
-
       <hr />
       <Navigation />
     </div>
 
-    <div className="home-section">
-      <h3 className="home-headline">Little bit about me</h3>
+    <Card title="Few words about me">
       <p className="desc">
         I am a full stack developer located in Doboj, Bosnia & Herzegovina.
         Currently I'm crafting software products at{" "}
@@ -53,7 +50,8 @@ const Home = (): JSX.Element => (
         day, I'm just a regular person who likes doing some sports in free time,
         watching movies and reading all kinds of articles.
       </p>
-    </div>
+    </Card>
+
     <ProgressBar />
   </>
 );

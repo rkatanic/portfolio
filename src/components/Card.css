@@ -1,0 +1,117 @@
+.card {
+  margin: 0 0 1rem;
+  padding: 2rem;
+  border-radius: 10px;
+  background: var(--color-input);
+  box-shadow: 0 1px 3px 0 hsla(0, 0%, 0%, 0.1),
+    0 1px 2px 0 hsla(0, 0%, 0%, 0.06);
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  margin: 0 0 1.25rem;
+  letter-spacing: 1px;
+  font-size: 1.25rem;
+  position: relative;
+}
+
+.card-title::before {
+  position: absolute;
+  content: "";
+  bottom: 2px;
+  width: 1.25rem;
+  height: 2px;
+  border-radius: 0.5px;
+  background-color: var(--color-primary);
+  transition: 0.5s ease;
+  z-index: 0;
+}
+
+.card-content {
+  flex: 1;
+}
+
+.card-content-desc {
+  padding: 1rem 0 0;
+  font-size: 0.925rem;
+  text-align: justify;
+}
+
+.card-content-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.card-content-header-title {
+  color: var(--color-title);
+  font-weight: 500;
+  font-size: 1.125rem;
+}
+
+.card-content-header-subtitle {
+  font-size: 0.925rem;
+  font-weight: 500;
+  color: var(--color-text-light);
+  display: flex;
+  align-items: center;
+  margin: 0.25rem 0;
+}
+
+.card-content-header-location {
+  display: flex;
+  align-items: center;
+}
+
+.card-content-header-location-text {
+  text-align: center;
+  padding: 0.125rem 0.25rem;
+  width: 3.5rem;
+  font-size: 0.825rem;
+  font-weight: 500;
+  color: var(--color-text);
+  background: hsla(var(--color-hue), 70%, 75%, 0.15);
+  border-radius: 6px;
+}
+
+.card-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-col-2 {
+  align-items: flex-end;
+}
+
+.card-row {
+  display: flex;
+  flex: 1;
+}
+
+.card hr {
+  margin: 1rem 0rem 2rem 4rem;
+}
+
+.card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.25rem;
+  height: 3.25rem;
+  border-radius: 0.5rem;
+  margin-right: 1rem;
+  background: var(--color-primary);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06) !important;
+}
+
+.card-icon .icon {
+  height: 1.5rem;
+  margin: 0;
+  stroke: hsl(var(--color-hue), 10%, 20%);
+}
+
+.card-content-header .icon {
+  margin-right: 0.25rem;
+  height: 0.925rem;
+}
