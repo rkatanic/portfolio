@@ -2,18 +2,20 @@ import "./Button.css";
 
 interface Props {
   onClick?: () => void;
-  children: string | JSX.Element | JSX.Element[];
   disabled?: boolean;
   type?: "button" | "submit";
   variant?: "btn-primary" | "btn-outline";
+  label: string | JSX.Element;
+  icon?: JSX.Element;
 }
 
 const Button = ({
   onClick,
-  children,
   disabled,
   type = "button",
   variant = "btn-primary",
+  label,
+  icon,
 }: Props): JSX.Element => (
   <button
     disabled={disabled}
@@ -21,7 +23,8 @@ const Button = ({
     onClick={onClick}
     type={type}
   >
-    {children}
+    <span className="btn-content btn-label">{label}</span>
+    {icon && <div className="btn-content btn-icon">{icon}</div>}
   </button>
 );
 

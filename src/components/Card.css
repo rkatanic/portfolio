@@ -112,7 +112,7 @@
 .card-icon .icon {
   height: 1.5rem;
   margin: 0;
-  stroke: hsl(var(--color-hue), 10%, 20%);
+  stroke: var(--color-black);
 }
 
 .card-content-header .icon {

@@ -18,7 +18,7 @@ const Home = (): JSX.Element => (
       <div className="home-section-info">
         <div className="home-section-info-item">
           <span>Age</span>
-          <span>26</span>
+          <span>{new Date().getFullYear() - 1996}</span>
         </div>
 
         <div className="home-section-info-item">

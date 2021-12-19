@@ -65,7 +65,7 @@ textarea::placeholder {
 }
 
 .form-field-length-indicator {
-  margin-right: 0.25rem;
+  margin: 0.25rem 0.25rem 0;
   text-align: end;
   color: var(--color-text-light);
   font-size: 0.75rem;

@@ -29,7 +29,7 @@
 }
 
 .skill-card-icon .icon {
-  fill: hsl(var(--color-hue), 10%, 20%);
+  fill: var(--color-black);
   z-index: 1;
   cursor: initial;
 }

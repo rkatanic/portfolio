@@ -12,6 +12,7 @@ import {
 import { ReactComponent as UserIcon } from "../../assets/icons/user.svg";
 import { ReactComponent as AtIcon } from "../../assets/icons/at.svg";
 import { ReactComponent as EmailSubjectIcon } from "../../assets/icons/email-subject.svg";
+import { ReactComponent as EmailSendIcon } from "../../assets/icons/email-send.svg";
 
 import "./ContactForm.css";
 
@@ -86,16 +87,21 @@ const ContactForm = (): JSX.Element => {
             value={values.message}
             placeholder="Enter your message"
           />
-          <Button type="submit" disabled={!isValid || isSubmitting}>
-            {isSubmitting ? (
-              <>
-                <Loader />
-                Sending...
-              </>
-            ) : (
-              "Send email"
-            )}
-          </Button>
+          <Button
+            type="submit"
+            disabled={!isValid || isSubmitting}
+            label={
+              isSubmitting ? (
+                <>
+                  <Loader />
+                  Sending...
+                </>
+              ) : (
+                "Send email"
+              )
+            }
+            icon={<EmailSendIcon />}
+          />
           <ContactFormModal
             isSuccess={isSuccess}
             isOpen={isContactModalOpen}

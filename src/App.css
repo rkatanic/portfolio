@@ -52,7 +52,7 @@
 
 .icon {
   height: 1.25rem;
-  fill: hsl(var(--color-hue), 10%, 20%);
+  fill: var(--color-black);
 }
 
 .top-shadow {
@@ -113,33 +113,17 @@
   }
 }
 
+.curved-borders .card-icon,
+.curved-borders .skill-card-icon,
 .curved-borders .icon-button,
-.curved-borders .footer-image,
-.curved-borders .color-switch,
-.curved-borders .night-mode-switch,
+.curved-borders .home-section-img,
 .curved-borders .nav-toggle,
-.curved-borders .number,
 .curved-borders .progress-bar::before,
 .curved-borders .progress-bar-pulse,
 .curved-borders .color-item,
 .curved-borders .contact-form-modal-content-icon,
-.curved-borders .loader-square,
-.curved-borders .border-icon {
-  border-radius: 10px;
-}
-
-.curved-borders .btn,
-.curved-borders .btn::before {
-  border-radius: 10px;
-}
-
-.curved-borders .accordion-item,
-.curved-borders .about-item,
-.curved-borders .skill-card,
-.curved-borders .skill-card::before,
-.curved-borders .service-card-content-badge,
-.curved-borders .modal {
-  border-radius: 10px;
+.curved-borders .loader-square {
+  border-radius: 50%;
 }
 
 .row-swap .app-main-container-column-left {
