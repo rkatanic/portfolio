@@ -3,7 +3,7 @@
 :root {
   --color-hue: 160;
   --color-primary: hsl(var(--color-hue), 72%, 67%);
-  --color-primary-two: hsl(var(--color-hue), 30%, 5%);
+  --color-primary-two: hsl(var(--color-hue), 55%, 55%);
   --color-primary-light: hsl(var(--color-hue), 90%, 85%);
   --color-title: hsl(var(--color-hue), 8%, 96%);
   --color-text: hsl(var(--color-hue), 8%, 70%);
@@ -31,7 +31,6 @@ body {
 }
 
 body.day-mode {
-  --color-primary-two: hsl(var(--color-hue), 55%, 55%);
   --color-title: hsl(var(--color-hue), 8%, 15%);
   --color-text: hsl(var(--color-hue), 8%, 30%);
   --color-text-light: hsl(var(--color-hue), 8%, 65%);

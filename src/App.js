@@ -3,10 +3,9 @@ import About from "./pages/About";
 import Skills from "./pages/Skills";
 import Faq from "./pages/Faq";
 import Contact from "./pages/Contact";
+import Settings from "./components/Settings";
 
 import "./App.css";
-import Footer from "./components/Footer";
-import Settings from "./components/Settings";
 
 const App = () => (
   <div data-testid="app" className="app">

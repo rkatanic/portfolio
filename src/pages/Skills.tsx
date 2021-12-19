@@ -1,5 +1,6 @@
 import Section from "../components/Section";
 import Services from "../components/Services";
+import Card from "../components/Card";
 import { ReactComponent as VsCodeIcon } from "../assets/icons/vs-code.svg";
 import { ReactComponent as DockerIcon } from "../assets/icons/docker.svg";
 import { ReactComponent as GitIcon } from "../assets/icons/git.svg";
@@ -16,9 +17,9 @@ import { ReactComponent as MongoDbIcon } from "../assets/icons/mongodb.svg";
 import { ReactComponent as JavaIcon } from "../assets/icons/java.svg";
 import { ReactComponent as JavaScriptIcon } from "../assets/icons/javascript.svg";
 import { ReactComponent as SassIcon } from "../assets/icons/sass.svg";
+import Tilt from "react-parallax-tilt";
 
 import "./Skills.css";
-import Card from "../components/Card";
 
 const Skills = (): JSX.Element => {
   const skills = [
@@ -42,17 +43,24 @@ const Skills = (): JSX.Element => {
 
   return (
     <Section id="skills">
-      <Card title="Languages and tools I use">
-        <div className="skill-list">
-          {skills.map(({ name, icon }) => (
-            <div key={name} className="skill-card">
-              <div className="highlight"></div>
-              <div className="skill-card-icon">{icon}</div>
-              <p className="skill-card-label">{name}</p>
-            </div>
-          ))}
-        </div>
-      </Card>
+      <Tilt tiltReverse tiltAxis="y">
+        <Card
+          title={
+            <>
+              Languages <b className="primary">&</b> tools I use
+            </>
+          }
+        >
+          <div className="skill-list">
+            {skills.map(({ name, icon }) => (
+              <div key={name} className="skill-card">
+                <div className="skill-card-icon">{icon}</div>
+                <p className="skill-card-label">{name}</p>
+              </div>
+            ))}
+          </div>
+        </Card>
+      </Tilt>
       <Services />
     </Section>
   );
