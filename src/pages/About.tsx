@@ -25,15 +25,15 @@ const About = (): JSX.Element => {
                 <div className="card-content-header-title">
                   Software developer
                 </div>
-                <div className="card-content-header-subtitle">ProductDock</div>
-              </div>
-              <div className="card-col card-col-2">
                 <div className="card-content-header-location">
                   <LocationIcon />
                   <span className="card-content-header-location-text">
                     Doboj
                   </span>
                 </div>
+              </div>
+              <div className="card-col">
+                <div className="card-content-header-subtitle">ProductDock</div>
                 <div className="card-content-header-subtitle">
                   <CalendarIcon />
                   Aug 2019 - Present
@@ -55,16 +55,17 @@ const About = (): JSX.Element => {
             <div className="card-content-header">
               <div className="card-col">
                 <div className="card-content-header-title">Intern</div>
-                <div className="card-content-header-subtitle">
-                  Codecentric Bosnia
-                </div>
-              </div>
-              <div className="card-col card-col-2">
+
                 <div className="card-content-header-location">
                   <LocationIcon />
                   <span className="card-content-header-location-text">
                     Doboj
                   </span>
+                </div>
+              </div>
+              <div className="card-col">
+                <div className="card-content-header-subtitle">
+                  Codecentric Bosnia
                 </div>
                 <div className="card-content-header-subtitle">
                   <CalendarIcon />
@@ -90,20 +91,20 @@ const About = (): JSX.Element => {
             <div className="card-content-header">
               <div className="card-col">
                 <div className="card-content-header-title">IT Engineer</div>
-                <div className="card-content-header-subtitle">
-                  Slobomir P University
-                </div>
-              </div>
-              <div className="card-col card-col-2">
                 <div className="card-content-header-location">
                   <LocationIcon />
                   <span className="card-content-header-location-text">
                     Doboj
                   </span>
                 </div>
+              </div>
+              <div className="card-col">
+                <div className="card-content-header-subtitle">
+                  Slobomir P University
+                </div>
                 <div className="card-content-header-subtitle">
                   <CalendarIcon />
-                  2015 - 2019
+                  Sep 2015 - Sep 2019
                 </div>
               </div>
             </div>
@@ -120,20 +121,21 @@ const About = (): JSX.Element => {
                 <div className="card-content-header-title">
                   Computer Technician
                 </div>
-                <div className="card-content-header-subtitle">
-                  Electro-technical High School
-                </div>
-              </div>
-              <div className="card-col card-col-2">
                 <div className="card-content-header-location">
                   <LocationIcon />
                   <span className="card-content-header-location-text">
                     Doboj
                   </span>
                 </div>
+              </div>
+              <div className="card-col">
+                <div className="card-content-header-subtitle">
+                  Electro-technical High School
+                </div>
+
                 <div className="card-content-header-subtitle">
                   <CalendarIcon />
-                  2011 - 2015
+                  Sep 2011 - May 2015
                 </div>
               </div>
             </div>

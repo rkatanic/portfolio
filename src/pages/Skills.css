@@ -1,6 +1,6 @@
 .skill-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
   grid-template-rows: auto;
 }
 
@@ -10,7 +10,7 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  min-height: 7rem;
+  min-height: 6rem;
   margin: 0 auto;
   position: relative;
   overflow: hidden;

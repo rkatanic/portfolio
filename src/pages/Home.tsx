@@ -8,7 +8,7 @@ import "./Home.css";
 
 const Home = (): JSX.Element => (
   <>
-    <div className="home-section">
+    <div className="home-section gradient-dot">
       <div className="home-section-header">
         <img className="home-section-img" src={myimg} alt="" />
         <h3 className="home-section-title">Radivoje Katanic</h3>

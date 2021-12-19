@@ -4,7 +4,7 @@ import Card from "./Card";
 import "./Services.css";
 
 const Services = (): JSX.Element => (
-  <>
+  <div className="services">
     <Card title="Services I provide">
       <div className="card-row">
         <div className="card-icon">
@@ -43,7 +43,7 @@ const Services = (): JSX.Element => (
         </div>
       </div>
     </Card>
-  </>
+  </div>
 );
 
 export default Services;

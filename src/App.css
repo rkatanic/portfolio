@@ -82,10 +82,15 @@
   .app-main-container {
     flex-direction: column;
   }
+
   .app-main-container-column-left {
     position: relative;
     max-height: none;
     order: initial !important;
+  }
+
+  .app-main-container-settings {
+    display: none;
   }
 }
 

@@ -1,6 +1,5 @@
 .badge {
   border-radius: 4px;
-  margin-right: 0.25rem;
   text-align: center;
   padding: 0.125rem 0.5rem;
   background: hsla(var(--color-hue), 70%, 75%, 0.15);
@@ -9,4 +8,10 @@
   font-weight: 400;
   letter-spacing: 1px;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 420px) {
+  .services .card-icon {
+    display: none;
+  }
 }
