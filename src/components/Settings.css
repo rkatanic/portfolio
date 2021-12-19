@@ -9,10 +9,7 @@
   #row-swap-icon {
     display: none;
   }
-}
-
-@media screen and (max-width: 414px) {
   .settings {
-    display: flex;
+    flex-direction: row;
   }
 }

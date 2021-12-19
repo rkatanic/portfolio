@@ -29,9 +29,9 @@ const CurvedBorderSwitch = (): JSX.Element => {
     <IconButton
       icon={
         hasCurvedBorders ? (
-          <div className="icon-corner-sharp"></div>
-        ) : (
           <CornerCurvedIcon />
+        ) : (
+          <div className="icon-cirle"></div>
         )
       }
       onClick={toggleCurvedBorders}

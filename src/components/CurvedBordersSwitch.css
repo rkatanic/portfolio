@@ -1,7 +1,7 @@
-.icon-corner-sharp {
-  width: 0.825rem;
-  height: 0.825rem;
-  border-left: 3px solid hsl(var(--color-hue), 10%, 20%);
-  border-bottom: 3px solid hsl(var(--color-hue), 10%, 20%);
+.icon-cirle {
+  width: 1.125rem;
+  height: 1.125rem;
+  border-radius: 50%;
+  border: 2px solid var(--color-black);
   cursor: pointer;
 }
