@@ -8,6 +8,7 @@ import { ReactComponent as PatternIcon } from "../assets/icons/pattern.svg";
 
 import "./Home.css";
 import { useState } from "react";
+import Footer from "../components/Footer";
 
 const Home = (): JSX.Element => {
   const gradients = [
@@ -72,14 +73,13 @@ const Home = (): JSX.Element => {
         <p className="desc">
           I am a full stack developer located in Doboj, Bosnia & Herzegovina.
           Currently crafting web solutions at{" "}
-          <Link label="ProductDock" href="https://productdock.com/" />
-          .
-          <br />I do what coders do. I like what coders like. In the end of the
-          day, I'm just a regular person who likes doing some sports in free
-          time, watching movies and reading all kinds of articles.
+          <Link label="ProductDock" href="https://productdock.com/" />. I do
+          what coders do. I like what coders like. In the end of the day, I'm
+          just a regular person who likes doing some sports in free time,
+          watching movies and reading all kinds of articles.
         </p>
       </Card>
-
+      <Footer />
       <ProgressBar />
     </>
   );

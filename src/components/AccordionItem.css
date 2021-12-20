@@ -1,12 +1,17 @@
 .accordion-item {
-  background: var(--color-input);
-  margin: 0 0 1rem;
-  padding: 0 2rem;
   display: flex;
   flex-direction: column;
-  border-radius: 10px;
-  box-shadow: 0 1px 3px 0 hsla(0, 0%, 0%, 0.1),
-    0 1px 2px 0 hsla(0, 0%, 0%, 0.06);
+  position: relative;
+}
+
+.accordion-item:not(:first-child)::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  height: 1px;
+  width: 92%;
+  background: var(--color-text);
+  opacity: 0.2;
 }
 
 .accordion-item:hover .icon {
@@ -26,6 +31,7 @@
   margin-left: 1rem;
   transform: rotate(180deg);
   transition: 0.5s ease;
+  fill: var(--color-text-light);
 }
 
 .accordion-item-active .icon {

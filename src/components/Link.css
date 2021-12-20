@@ -13,10 +13,16 @@
 .link-icon + .link-label {
   margin: 0 0.5rem;
   font-size: 0.825rem;
-  color: var(--color-text);
+  color: var(--color-text-light);
+}
+
+.link-icon .icon {
+  fill: var(--color-text);
+  height: 1rem;
 }
 
 .link-label {
+  font-size: 0.825rem;
   color: var(--color-primary);
   font-weight: 500;
   position: relative;
@@ -40,14 +46,4 @@
 
 .link-label:hover::before {
   width: 100%;
-}
-
-@media screen and (max-width: 414px) {
-  .link {
-    justify-content: end;
-  }
-
-  .link-icon {
-    order: 2;
-  }
 }
