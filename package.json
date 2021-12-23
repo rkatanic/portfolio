@@ -15,6 +15,7 @@
     "react-dom": "^17.0.2",
     "react-modal": "^3.14.4",
     "react-parallax-tilt": "^1.5.83",
+    "react-router-dom": "^6.2.1",
     "react-scripts": "4.0.3",
     "react-scrollspy": "^3.4.3",
     "react-scrollspy-nav": "^1.2.4",

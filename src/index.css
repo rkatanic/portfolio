@@ -2,9 +2,9 @@
 
 :root {
   --color-hue: 160;
-  --color-primary: hsl(var(--color-hue), 72%, 67%);
+  --color-primary: hsl(var(--color-hue), 80%, 74%);
   --color-primary-two: hsl(var(--color-hue), 55%, 55%);
-  --color-primary-light: hsl(var(--color-hue), 90%, 85%);
+  --color-primary-light: hsl(var(--color-hue), 90%, 90%);
   --color-title: hsl(var(--color-hue), 8%, 96%);
   --color-text: hsl(var(--color-hue), 8%, 70%);
   --color-text-light: hsl(var(--color-hue), 8%, 82%);
@@ -24,7 +24,7 @@
 
 body {
   color: var(--color-text);
-  background-color: var(--color-body);
+  background-color: var(--color-input);
   font-size: 1rem;
   font-family: var(--font-body);
   margin: 0;

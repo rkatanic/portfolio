@@ -6,15 +6,8 @@ import Card from "../components/Card";
 
 const Contact = (): JSX.Element => (
   <Section id="contact">
-    <Card
-      title={
-        <>
-          Still have a question<b className="primary">?</b> Reach me out
-        </>
-      }
-    >
-      <ContactForm />
-    </Card>
+    <div className="bubble">placeholder</div>
+    <ContactForm />
   </Section>
 );
 

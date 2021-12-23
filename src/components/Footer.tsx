@@ -11,11 +11,8 @@ import "./Footer.css";
 const Footer = (): JSX.Element => (
   <div className="footer">
     <div className="footer-links">
-      <Link label="LinkedIn" href={LINKEDIN_LINK} icon={<LinkedinIcon />} />
-      <Link label="GitHub" href={GITHUB_LINK} icon={<GithubIcon />} />
-    </div>
-    <div className="footer-copyright">
-      © {new Date().getFullYear()} Radivoje Katanić
+      <Link label="LinkedIn" href={LINKEDIN_LINK} />
+      <Link label="GitHub" href={GITHUB_LINK} />
     </div>
   </div>
 );

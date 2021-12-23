@@ -1,18 +1,19 @@
 .footer {
+  transform: rotate(-90deg);
+  position: fixed;
+  top: 50%;
+  margin-left: -6rem;
   display: flex;
   align-items: baseline;
   justify-content: space-between;
   font-size: 0.825rem;
-  width: 100%;
-  padding: 0 0.5rem;
   color: var(--color-text-light);
-  margin-top: -0.5rem;
 }
 
 .footer-links {
   flex: 1;
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .footer-copyright {

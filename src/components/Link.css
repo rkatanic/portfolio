@@ -4,12 +4,6 @@
   outline: none;
 }
 
-.link:hover .link-icon .icon,
-.link:hover .link-label {
-  fill: var(--color-primary);
-  color: var(--color-primary);
-}
-
 .link-icon + .link-label {
   margin: 0 0.5rem;
   font-size: 0.825rem;
@@ -23,27 +17,11 @@
 
 .link-label {
   font-size: 0.825rem;
-  color: var(--color-primary);
+  color: var(--color-text-light);
   font-weight: 500;
   position: relative;
-  line-height: 1.5;
-}
-
-.link-label::before {
-  position: absolute;
-  content: "";
-  background: var(--color-primary);
-  width: 0;
-  height: 1px;
-  bottom: 0;
-  left: 0;
-  transition: 0.5s ease;
 }
 
 .link-label:hover {
   opacity: 0.8;
-}
-
-.link-label:hover::before {
-  width: 100%;
 }

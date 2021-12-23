@@ -1,0 +1,95 @@
+.list {
+  position: relative;
+  background: var(--color-input);
+  padding: 2rem 0;
+}
+
+.desc {
+  color: var(--color-text-light);
+  font-size: 1rem;
+}
+
+.list-item-desc {
+  margin-top: 2rem;
+  padding: 1rem;
+  gap: 2rem;
+  display: flex;
+  align-items: center;
+  width: 50%;
+  cursor: default;
+  position: relative;
+  transition: 0.5s ease;
+  border-bottom: 2px solid var(--color-body);
+}
+
+.list-item-desc:hover .list-item-link {
+  opacity: 1;
+}
+
+.list-item-link {
+  position: absolute;
+  top: -1.25rem;
+  right: 0;
+  color: var(--color-text-light);
+  opacity: 0;
+  font-size: 0.825rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: 0.5s ease-in;
+}
+
+.list-item-desc::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-body);
+  transition: 1s ease-in-out;
+}
+
+.list-item-number {
+  font-size: 0.825rem;
+  color: var(--color-text-light);
+  letter-spacing: 1px;
+}
+
+.list-item-name {
+  color: var(--color-title);
+  font-weight: 500;
+  font-size: 3rem;
+}
+
+.list-item-desc:hover {
+  cursor: pointer;
+  background: var(--color-body);
+}
+
+.list-item-desc:hover::before {
+  width: 100%;
+  background: var(--color-primary-light);
+}
+
+.list-item {
+  opacity: 0;
+  display: flex;
+}
+
+.list-item-img-wrapper {
+  flex: 1;
+}
+
+.list-item-img {
+  max-height: 0;
+  position: absolute;
+  top: 20%;
+  left: 55%;
+  transition: 0.5s ease;
+  width: 30rem;
+  height: 24rem;
+}
+
+.list-item:hover .list-item-img {
+  max-height: 24rem;
+}

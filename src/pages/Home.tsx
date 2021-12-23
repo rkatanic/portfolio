@@ -1,87 +1,81 @@
-import Navigation from "../components/Navigation";
-import ProgressBar from "../components/ProgressBar";
-import Link from "../components/Link";
-import Card from "../components/Card";
-import IconButton from "../components/IconButton";
-import myimg from "../assets/images/me1.png";
-import { ReactComponent as PatternIcon } from "../assets/icons/pattern.svg";
-
 import "./Home.css";
-import { useState } from "react";
-import Footer from "../components/Footer";
+import human from "../assets/images/human.png";
+import planet from "../assets/images/planet.png";
+import laptop from "../assets/images/laptop.png";
+import board from "../assets/images/board.png";
+import picture from "../assets/images/picture.png";
+import couch from "../assets/images/couch.png";
+import message from "../assets/images/message.png";
+import message2 from "../assets/images/message2.png";
 
 const Home = (): JSX.Element => {
-  const gradients = [
-    "diagonal",
-    "dot",
-    "marakesh",
-    "cube",
-    "zig-zag",
-    "tartan",
-    "seigaiha",
-    "waves",
-    "stripes",
-    "aztec",
-  ];
-  const [gradient, setGradient] = useState(gradients[0]);
+  const handleMainDescDisplay = () => {
+    document.getElementById("main-desc")!.style.opacity = "1";
+    document.getElementById("main-desc")!.style.transform = "translateY(0px)";
+  };
 
-  const handleGradientSwitch = (): void => {
-    let currentIndex = gradients.indexOf(gradient);
-    const nextIndex = ++currentIndex % gradients.length;
-    setGradient(gradients[nextIndex]);
+  const handleMainDescHide = () => {
+    document.getElementById("main-desc")!.style.opacity = "0";
+    document.getElementById("main-desc")!.style.transform = "translateY(-15px)";
   };
   return (
-    <>
-      <div className={`home-section gradient-${gradient}`}>
-        <div className="home-section-header">
-          <div className="gradient-button">
-            <IconButton icon={<PatternIcon />} onClick={handleGradientSwitch} />
-          </div>
-
-          <img className="home-section-img" src={myimg} alt="" />
-
-          <h3 className="home-section-title">Radivoje Katanić</h3>
-          <h2 className="home-section-subtitle">Software Developer</h2>
+    <div className="home">
+      <div className="home-content">
+        <div id="main-desc" className="main-headline">
+          Hello, I'm Radivoje Katanić, a software developer located in Doboj,
+          Bosnia & Herzegovina.
         </div>
-
-        <div className="home-section-info">
-          <div className="home-section-info-item">
-            <span>Age</span>
-            <span>{new Date().getFullYear() - 1996}</span>
+        <div className="bubble">
+          <img id="human" src={human} alt="" />
+          <img id="planet" src={planet} alt="" />
+          <img id="laptop" src={laptop} alt="" />
+          <img id="board" src={board} alt="" />
+          <img id="picture" src={picture} alt="" />
+          <img id="couch" src={couch} alt="" />
+          <img id="message" src={message} alt="" />
+          <img id="message2" src={message2} alt="" />
+          <img id="message3" src={message2} alt="" />
+          <div
+            onMouseEnter={handleMainDescHide}
+            onMouseLeave={handleMainDescDisplay}
+            className="pinpoint"
+            id="pinpoint-1"
+          ></div>
+          <div className="item" id="text-1">
+            This is first pinpoint text.
           </div>
-
-          <div className="home-section-info-item">
-            <span>Location</span>
-            <span>Doboj</span>
+          <div
+            onMouseEnter={handleMainDescHide}
+            onMouseLeave={handleMainDescDisplay}
+            className="pinpoint"
+            id="pinpoint-2"
+          ></div>
+          <div className="item" id="text-2">
+            This is second pinpoint text.
           </div>
-          <div className="home-section-info-item">
-            <span>Languages</span>
-            <span>Serbian, English</span>
+          <div
+            onMouseEnter={handleMainDescHide}
+            onMouseLeave={handleMainDescDisplay}
+            className="pinpoint"
+            id="pinpoint-3"
+          ></div>
+          <div className="item" id="text-3">
+            This is third pinpoint text.
           </div>
-          <div className="home-section-info-item">
-            <span>E-mail</span>
-            <span>
-              k.rade313<b className="primary">@</b>gmail.com
-            </span>
+          <div
+            onMouseEnter={handleMainDescHide}
+            onMouseLeave={handleMainDescDisplay}
+            className="pinpoint"
+            id="pinpoint-4"
+          ></div>
+          <div className="item" id="text-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
+            eaque aperiam doloremque quam laudantium velit voluptate officiis
+            hic.
           </div>
         </div>
-        <hr />
-        <Navigation />
       </div>
-
-      <Card title="Few words about me">
-        <p className="desc">
-          I am a full stack developer located in Doboj, Bosnia & Herzegovina.
-          Currently crafting web solutions at{" "}
-          <Link label="ProductDock" href="https://productdock.com/" />. I do
-          what coders do. I like what coders like. In the end of the day, I'm
-          just a regular person who likes doing some sports in free time,
-          watching movies and reading all kinds of articles.
-        </p>
-      </Card>
-      <Footer />
-      <ProgressBar />
-    </>
+    </div>
   );
 };
 

@@ -1,3 +1,7 @@
 .contact-form button {
   margin-top: 1.5rem;
 }
+
+.contact-form {
+  flex: 1;
+}
