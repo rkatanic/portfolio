@@ -25,9 +25,11 @@ const Navigation = (): JSX.Element => {
             <a
               href="#about"
               className="nav-link"
-              onClick={() => setShowMenu(false)}
+              onClick={() => {
+                setShowMenu(false);
+              }}
             >
-              <span>About</span>
+              About
             </a>
           </li>
           <li className="nav-item">
@@ -36,7 +38,7 @@ const Navigation = (): JSX.Element => {
               className="nav-link"
               onClick={() => setShowMenu(false)}
             >
-              <span>Skills</span>
+              Skills
             </a>
           </li>
           <li className="nav-item">
@@ -45,7 +47,7 @@ const Navigation = (): JSX.Element => {
               className="nav-link"
               onClick={() => setShowMenu(false)}
             >
-              <span>FAQ</span>
+              FAQ
             </a>
           </li>
           <li className="nav-item">
@@ -54,7 +56,7 @@ const Navigation = (): JSX.Element => {
               className="nav-link"
               onClick={() => setShowMenu(false)}
             >
-              <span>Contact</span>
+              Contact
             </a>
           </li>
         </Scrollspy>

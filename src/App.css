@@ -4,7 +4,6 @@
   transform: translateX(-50%);
   height: 100%;
   width: 100%;
-  pointer-events: none;
   max-width: var(--width-desktop);
 }
 
@@ -39,6 +38,10 @@ h2 {
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: white;
+}
+
+.txt-title {
+  font-size: 8vw;
 }
 
 .section-title {

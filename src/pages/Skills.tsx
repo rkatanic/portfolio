@@ -42,7 +42,7 @@ const Skills = (): JSX.Element => {
   ];
 
   return (
-    <div>
+    <div id="skills">
       <div className="side-section">
         <h3 className="side-section-title">My Personal Journey</h3>
       </div>
@@ -52,6 +52,12 @@ const Skills = (): JSX.Element => {
         <h2>SU</h2>
         <h2>ME</h2>
       </div>
+      <h2>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
+        rerum accusantium aliquam magni distinctio quisquam dolore! Incidunt
+        delectus iste dolorum recusandae magnam similique unde aspernatur.
+        Reprehenderit placeat expedita similique dolores!
+      </h2>
     </div>
   );
 };
