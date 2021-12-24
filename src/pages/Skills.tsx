@@ -42,27 +42,17 @@ const Skills = (): JSX.Element => {
   ];
 
   return (
-    <Section id="skills">
-      <Tilt tiltReverse tiltAxis="y">
-        <Card
-          title={
-            <>
-              Languages <b className="primary">&</b> tools I use
-            </>
-          }
-        >
-          <div className="skill-list">
-            {skills.map(({ name, icon }) => (
-              <div key={name} className="skill-card">
-                <div className="skill-card-icon">{icon}</div>
-                <p className="skill-card-label">{name}</p>
-              </div>
-            ))}
-          </div>
-        </Card>
-      </Tilt>
-      <Services />
-    </Section>
+    <div>
+      <div className="side-section">
+        <h3 className="side-section-title">My Personal Journey</h3>
+      </div>
+      <h3 className="number txt-outlined section-title">02</h3>
+      <div className="heading">
+        <h2>RE</h2>
+        <h2>SU</h2>
+        <h2>ME</h2>
+      </div>
+    </div>
   );
 };
 

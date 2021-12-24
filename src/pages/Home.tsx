@@ -1,80 +1,99 @@
 import "./Home.css";
-import human from "../assets/images/human.png";
-import planet from "../assets/images/planet.png";
-import laptop from "../assets/images/laptop.png";
-import board from "../assets/images/board.png";
-import picture from "../assets/images/picture.png";
-import couch from "../assets/images/couch.png";
-import message from "../assets/images/message.png";
-import message2 from "../assets/images/message2.png";
+import { Controller, Scene } from "react-scrollmagic";
+import { Tween, Timeline } from "react-gsap";
+import ProgressBar from "../components/ProgressBar";
+import { useEffect, useRef, useState } from "react";
+import About from "./About";
+import Skills from "./Skills";
 
 const Home = (): JSX.Element => {
-  const handleMainDescDisplay = () => {
-    document.getElementById("main-desc")!.style.opacity = "1";
-    document.getElementById("main-desc")!.style.transform = "translateY(0px)";
+  const images = [
+    "https://images.unsplash.com/photo-1551392505-f4056032826e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1497&q=80",
+    "https://images.unsplash.com/photo-1594312180721-3b5217cfc65f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
+    "https://images.unsplash.com/photo-1593806812862-1dc510b769a8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2851&q=80",
+    "https://images.unsplash.com/photo-1558507652-2d9626c4e67a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
+    "https://images.unsplash.com/photo-1484517186945-df8151a1a871?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=987&q=80",
+    "https://images.unsplash.com/photo-1520813792240-56fc4a3765a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
+  ];
+  function useWindowSize() {
+    function getSize() {
+      return {
+        width: window.innerWidth,
+        height: window.innerHeight,
+      };
+    }
+
+    const [windowSize, setWindowSize] = useState(getSize);
+
+    useEffect(() => {
+      function handleResize() {
+        setWindowSize(getSize());
+      }
+
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
+    return windowSize;
+  }
+
+  //Hook to grab window size
+  const size = useWindowSize();
+
+  // Ref for parent div and scrolling div
+  const scrollContainer = useRef<HTMLInputElement>(null);
+
+  // Configs
+  const data = {
+    ease: 0.05,
+    current: 0,
+    previous: 0,
+    rounded: 0,
   };
 
-  const handleMainDescHide = () => {
-    document.getElementById("main-desc")!.style.opacity = "0";
-    document.getElementById("main-desc")!.style.transform = "translateY(-15px)";
+  // Run scrollrender once page is loaded.
+  useEffect(() => {
+    requestAnimationFrame(() => skewScrolling());
+  }, []);
+
+  //set the height of the body.
+  useEffect(() => {
+    setBodyHeight();
+  }, [size.height]);
+
+  //Set the height of the body to the height of the scrolling div
+  const setBodyHeight = () => {
+    document.body.style.height = `${
+      scrollContainer?.current?.getBoundingClientRect().height
+    }px`;
   };
+
+  // Scrolling
+  const skewScrolling = () => {
+    //Set Current to the scroll position amount
+    data.current = window.scrollY;
+    // Set Previous to the scroll previous position
+    data.previous += (data.current - data.previous) * data.ease;
+    // Set rounded to
+    data.rounded = Math.round(data.previous * 100) / 100;
+
+    // Difference between
+    const difference = data.current - data.rounded;
+    const acceleration = difference / size.width;
+    const velocity = +acceleration;
+    const skew = velocity * 15;
+
+    //Assign skew and smooth scrolling to the scroll container
+    scrollContainer!.current!.style!.transform = `translate3d(0, -${data.rounded}px, 0) skewY(${skew}deg)`;
+
+    //loop vai raf
+    requestAnimationFrame(() => skewScrolling());
+  };
+
   return (
-    <div className="home">
-      <div className="home-content">
-        <div id="main-desc" className="main-headline">
-          Hello, I'm Radivoje Katanić, a software developer located in Doboj,
-          Bosnia & Herzegovina.
-        </div>
-        <div className="bubble">
-          <img id="human" src={human} alt="" />
-          <img id="planet" src={planet} alt="" />
-          <img id="laptop" src={laptop} alt="" />
-          <img id="board" src={board} alt="" />
-          <img id="picture" src={picture} alt="" />
-          <img id="couch" src={couch} alt="" />
-          <img id="message" src={message} alt="" />
-          <img id="message2" src={message2} alt="" />
-          <img id="message3" src={message2} alt="" />
-          <div
-            onMouseEnter={handleMainDescHide}
-            onMouseLeave={handleMainDescDisplay}
-            className="pinpoint"
-            id="pinpoint-1"
-          ></div>
-          <div className="item" id="text-1">
-            This is first pinpoint text.
-          </div>
-          <div
-            onMouseEnter={handleMainDescHide}
-            onMouseLeave={handleMainDescDisplay}
-            className="pinpoint"
-            id="pinpoint-2"
-          ></div>
-          <div className="item" id="text-2">
-            This is second pinpoint text.
-          </div>
-          <div
-            onMouseEnter={handleMainDescHide}
-            onMouseLeave={handleMainDescDisplay}
-            className="pinpoint"
-            id="pinpoint-3"
-          ></div>
-          <div className="item" id="text-3">
-            This is third pinpoint text.
-          </div>
-          <div
-            onMouseEnter={handleMainDescHide}
-            onMouseLeave={handleMainDescDisplay}
-            className="pinpoint"
-            id="pinpoint-4"
-          ></div>
-          <div className="item" id="text-4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
-            eaque aperiam doloremque quam laudantium velit voluptate officiis
-            hic.
-          </div>
-        </div>
-      </div>
+    <div ref={scrollContainer} className="main">
+      <About />
+      <Skills />
     </div>
   );
 };

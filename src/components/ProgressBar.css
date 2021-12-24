@@ -1,11 +1,11 @@
 .progress-bar {
-  position: absolute;
+  position: fixed;
+  margin: auto;
   content: "";
   top: 50%;
-  right: 0;
   width: 2px;
-  height: 50%;
-  background: linear-gradient(60deg, var(--color-body), var(--color-primary));
+  height: 45%;
+  background: linear-gradient(60deg, var(--color-input), var(--color-primary));
 }
 
 .progress-bar::before {
@@ -43,7 +43,7 @@
   background: linear-gradient(
     60deg,
     var(--color-primary-light),
-    var(--color-body)
+    var(--color-input)
   );
   position: absolute;
   bottom: 100%;

@@ -15,7 +15,7 @@
 
   --font-body: "Poppins", sans-serif;
 
-  --width-desktop: 1200px;
+  --width-desktop: 60vw;
 }
 
 * {
@@ -24,7 +24,7 @@
 
 body {
   color: var(--color-text);
-  background-color: var(--color-input);
+  background-color: black;
   font-size: 1rem;
   font-family: var(--font-body);
   margin: 0;

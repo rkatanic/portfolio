@@ -11,151 +11,21 @@ import Tilt from "react-parallax-tilt";
 import "./About.css";
 
 const About = (): JSX.Element => {
-  const handleCvLinkOpen = () => window.open(CV_LINK, "_blank");
-
   return (
-    <Section id="about">
-      <Tilt tiltReverse tiltAxis="y">
-        <Card title="Experience">
-          <div className="card-row">
-            <div className="card-icon">
-              <WorkIcon />
-            </div>
-            <div className="card-content">
-              <div className="card-content-header">
-                <div className="card-col">
-                  <div className="card-content-header-title">
-                    Software developer
-                  </div>
-                  <div className="card-content-header-location">
-                    <LocationIcon />
-                    <span className="card-content-header-location-text">
-                      Doboj
-                    </span>
-                  </div>
-                </div>
-                <div className="card-col">
-                  <div className="card-content-header-subtitle">
-                    ProductDock
-                  </div>
-                  <div className="card-content-header-subtitle">
-                    <CalendarIcon />
-                    Aug 2019 - Present
-                  </div>
-                </div>
-              </div>
-              <div className="card-content-desc">
-                Started working full time as a full stack developer, crafting
-                web products for various clients using Java and JavaScript
-                frameworks.
-              </div>
-            </div>
-          </div>
-          <hr />
-          <div className="card-row">
-            <div className="card-icon">
-              <WorkIcon />
-            </div>
-            <div className="card-content">
-              <div className="card-content-header">
-                <div className="card-col">
-                  <div className="card-content-header-title">Intern</div>
-
-                  <div className="card-content-header-location">
-                    <LocationIcon />
-                    <span className="card-content-header-location-text">
-                      Doboj
-                    </span>
-                  </div>
-                </div>
-                <div className="card-col">
-                  <div className="card-content-header-subtitle">
-                    Codecentric Bosnia
-                  </div>
-                  <div className="card-content-header-subtitle">
-                    <CalendarIcon />
-                    Feb 2019 - May 2019
-                  </div>
-                </div>
-              </div>
-              <div className="card-content-desc">
-                Attended 3 months rookie boot camp where I worked on building
-                internal employee management application using Angular, Spring
-                Boot and MySQL.
-              </div>
-            </div>
-          </div>
-        </Card>
-      </Tilt>
-
-      <Tilt tiltReverse tiltAxis="y">
-        <Card title="Education">
-          <div className="card-row">
-            <div className="card-icon">
-              <EducationIcon />
-            </div>
-            <div className="card-content">
-              <div className="card-content-header">
-                <div className="card-col">
-                  <div className="card-content-header-title">IT Engineer</div>
-                  <div className="card-content-header-location">
-                    <LocationIcon />
-                    <span className="card-content-header-location-text">
-                      Doboj
-                    </span>
-                  </div>
-                </div>
-                <div className="card-col">
-                  <div className="card-content-header-subtitle">
-                    Slobomir P University
-                  </div>
-                  <div className="card-content-header-subtitle">
-                    <CalendarIcon />
-                    Sep 2015 - Sep 2019
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <hr />
-          <div className="card-row">
-            <div className="card-icon">
-              <EducationIcon />
-            </div>
-            <div className="card-content">
-              <div className="card-content-header">
-                <div className="card-col">
-                  <div className="card-content-header-title">
-                    Computer Technician
-                  </div>
-                  <div className="card-content-header-location">
-                    <LocationIcon />
-                    <span className="card-content-header-location-text">
-                      Doboj
-                    </span>
-                  </div>
-                </div>
-                <div className="card-col">
-                  <div className="card-content-header-subtitle">
-                    Electro-technical High School
-                  </div>
-
-                  <div className="card-content-header-subtitle">
-                    <CalendarIcon />
-                    Sep 2011 - May 2015
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </Card>
-      </Tilt>
-      <Button
-        onClick={handleCvLinkOpen}
-        label="Download CV"
-        icon={<LinkIcon />}
-      />
-    </Section>
+    <div className="about">
+      <div className="side-section">
+        <h3 className="side-section-title">Few Words About Me</h3>
+      </div>
+      <h3 className="number txt-outlined section-title">01</h3>
+      <h2 className="content-text">
+        Hey there, <br />
+        My name is <br />
+        <h2 className="txt-title txt-outlined">Radivoje Katanić.</h2> Lorem
+        ipsum dolor sit amet consectetur adipisicing elit. Dolorem, explicabo.
+        Soluta autem vero, aliquam, iste odit nostrum quae nulla, nisi ad ipsa
+        natus hic cupiditate sit adipisci neque voluptatem magnam?
+      </h2>
+    </div>
   );
 };
 
