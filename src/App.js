@@ -24,15 +24,16 @@ import Navigation from "./components/Navigation";
 
 const App = () => {
   return (
-    <div data-testid="app" className="App">
-      <div className="grid-wrapper">
-        <div className="grid-line"></div>
-        <div className="grid-line"></div>
-        <div className="grid-line"></div>
+    <>
+      <div data-testid="app" className="App">
+        <div className="grid-wrapper">
+          <div className="grid-line"></div>
+          <div className="grid-line"></div>
+          <div className="grid-line"></div>
+        </div>
+        <Home /> <Navigation />
       </div>
-      <Home />
-      <Navigation />
-    </div>
+    </>
   );
 };
 

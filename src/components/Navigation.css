@@ -1,7 +1,7 @@
 .nav {
   position: fixed;
   top: 50%;
-  left: 100%;
+  left: calc(var(--width-desktop) + 20vw);
   transform: translateY(-50%);
   width: 4rem;
 }
@@ -38,15 +38,14 @@
   align-items: center;
   justify-content: center;
   position: fixed;
-  bottom: 0;
-  right: 0;
+  top: calc(100vh - 4.75rem);
+  left: calc(var(--width-desktop) - 1.75rem);
   width: 3rem;
   height: 3rem;
-  background-color: transparent;
+  background-color: black;
   z-index: 2;
   border: 1px solid white;
   border-radius: 50%;
-  transition: 0.5s ease-in-out;
 }
 
 .nav-toggle-dash {
@@ -95,18 +94,18 @@
   left: 2rem;
 }
 
-@media screen and (max-width: 954px) {
+@media screen and (max-width: 768px) {
   .nav {
-    top: unset;
-    bottom: 1rem;
+    top: 0;
+    left: 0;
   }
 
   .nav-menu {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     position: fixed;
+    left: 100vw;
     top: 0;
-    left: 100%;
     padding: 3rem;
     transition: 0.5s ease-in-out;
     z-index: 2;
@@ -120,6 +119,7 @@
   }
 
   .nav-item {
+    transform: rotate(0deg);
     margin: 1rem;
   }
 
@@ -129,7 +129,7 @@
   }
 }
 
-@media screen and (min-width: 954px) {
+@media screen and (min-width: 769px) {
   .nav-toggle,
   .nav-close {
     display: none;

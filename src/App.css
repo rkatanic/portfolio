@@ -1,8 +1,6 @@
 .App {
-  position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 100%;
+  position: relative;
+  margin: auto;
   width: 100%;
   max-width: var(--width-desktop);
 }
@@ -68,4 +66,18 @@ h2 {
   text-align: end;
   font-weight: 400;
   margin: 2rem 0 0;
+}
+
+@media screen and (max-width: 768px) {
+  .App {
+    --width-desktop: 90vw;
+  }
+
+  .txt-outlined {
+    -webkit-text-stroke-width: 0.35px;
+  }
+
+  .section-title {
+    margin-right: 12vw;
+  }
 }
