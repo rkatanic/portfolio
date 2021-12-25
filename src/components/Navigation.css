@@ -29,7 +29,8 @@
   font-size: 0.825rem;
   z-index: 1;
 }
-.active .nav-link {
+
+.active {
   color: var(--color-primary);
 }
 

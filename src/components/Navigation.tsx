@@ -3,6 +3,7 @@ import Scrollspy from "react-scrollspy";
 import Settings from "./Settings";
 
 import "./Navigation.css";
+import { NavLink } from "react-router-dom";
 
 const Navigation = (): JSX.Element => {
   const [showMenu, setShowMenu] = useState(false);
@@ -15,49 +16,49 @@ const Navigation = (): JSX.Element => {
         className={`nav-menu${showMenu ? " show-menu" : ""}`}
         data-testid="nav-menu"
       >
-        <Scrollspy
-          offset={-30}
-          className="nav-list"
-          currentClassName="active"
-          items={["about", "skills", "faq", "contact"]}
-        >
-          <li className="nav-item">
-            <a
-              href="#about"
-              className="nav-link"
-              onClick={() => setShowMenu(false)}
-            >
-              About
-            </a>
-          </li>
-          <li className="nav-item">
-            <a
-              href="#skills"
-              className="nav-link"
-              onClick={() => setShowMenu(false)}
-            >
-              Skills
-            </a>
-          </li>
-          <li className="nav-item">
-            <a
-              href="#faq"
-              className="nav-link"
-              onClick={() => setShowMenu(false)}
-            >
-              FAQ
-            </a>
-          </li>
-          <li className="nav-item">
-            <a
-              href="#contact"
-              className="nav-link"
-              onClick={() => setShowMenu(false)}
-            >
-              Contact
-            </a>
-          </li>
-        </Scrollspy>
+        <li className="nav-item">
+          <NavLink
+            to="/about"
+            className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}
+            onClick={() => setShowMenu(false)}
+          >
+            About
+          </NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink
+            to="/skills"
+            className={({ isActive }) =>
+              "nav-link" + (isActive ? " active" : "")
+            }
+            onClick={() => setShowMenu(false)}
+          >
+            Skills
+          </NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink
+            to="/faq"
+            className={({ isActive }) =>
+              "nav-link" + (isActive ? " active" : "")
+            }
+            onClick={() => setShowMenu(false)}
+          >
+            FAQ
+          </NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink
+            to="/contact"
+            className={({ isActive }) =>
+              "nav-link" + (isActive ? " active" : "")
+            }
+            onClick={() => setShowMenu(false)}
+          >
+            Contact
+          </NavLink>
+        </li>
+
         <div
           data-testid="nav-settings"
           className="nav-settings"

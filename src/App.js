@@ -54,7 +54,7 @@ const App = () => {
 
   // Configs
   const data = {
-    ease: 0.05,
+    ease: 0.025,
     current: 0,
     previous: 0,
     rounded: 0,
@@ -107,10 +107,19 @@ const App = () => {
           <div className="grid-line"></div>
         </div>
       </div>
-      <Navigation />
-      <div ref={scrollContainer} className="scroll">
-        <Home />
-      </div>
+      <Router>
+        <Navigation />
+        <div ref={scrollContainer} className="scroll">
+          <div className="main">
+            <Routes>
+              <Route path="/" element={<Home />} exact />
+              <Route path="/about" element={<About />} />
+              <Route path="/skills" element={<Skills />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </div>
+        </div>
+      </Router>
     </div>
   );
 };
