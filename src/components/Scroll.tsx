@@ -1,52 +1,68 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import Scrollbar from "smooth-scrollbar";
+import useWindowSize from "../hooks/useWindowSize";
 
 const Scroll = (props: any) => {
-  const options = {
-    damping: 0.04,
+  //Hook to grab window size
+  const size = useWindowSize();
+
+  // Ref for parent div and scrolling div
+  const app = useRef();
+  const scrollContainer = useRef<any>();
+
+  // Configs
+  const data = {
+    ease: 0.025,
+    current: 0,
+    previous: 0,
+    rounded: 0,
   };
-  // For newly opened link (e.g in new tab)
-  const hash = window.location.hash;
-  const scrollbar = Scrollbar.init(document.body, {
-    continuousScrolling: false,
-    alwaysShowTracks: true,
-    plugins: {},
-  });
-  if (hash) {
-    const target = document.getElementById(hash.substring(1));
-    if (target) {
-      scrollbar.scrollIntoView(target, {
-        offsetTop: -scrollbar.containerEl.scrollTop,
-      });
-    }
-  }
 
-  // For opening link in the same page
-  window.addEventListener(
-    "hashchange",
-    function () {
-      const hash = window.location.hash;
-      if (hash) {
-        const target = document.getElementById(hash.substring(1));
-        if (target) {
-          scrollbar.scrollIntoView(target, {
-            offsetTop: -scrollbar.containerEl.scrollTop,
-          });
-        }
-      }
-    },
-    false
-  );
-
+  // Run scrollrender once page is loaded.
   useEffect(() => {
-    Scrollbar.init(document.body, options);
-
-    return () => {
-      if (Scrollbar) Scrollbar.destroy(document.body);
-    };
+    requestAnimationFrame(() => skewScrolling());
   }, []);
 
-  return props.children;
+  //set the height of the body.
+  useEffect(() => {
+    setBodyHeight();
+  }, [size.height]);
+
+  //Set the height of the body to the height of the scrolling div
+  const setBodyHeight = () => {
+    document.body.style.height = `${
+      scrollContainer.current.getBoundingClientRect().height
+    }px`;
+  };
+
+  // Scrolling
+  const skewScrolling = () => {
+    //Set Current to the scroll position amount
+    data!.current = window.scrollY;
+    // Set Previous to the scroll previous position
+    data!.previous += (data.current - data.previous) * data.ease;
+    // Set rounded to
+    data!.rounded = Math.round(data.previous * 100) / 100;
+
+    // Difference between
+    const difference = data.current - data.rounded;
+    const acceleration = difference / size.width;
+    const velocity = +acceleration;
+    const skew = velocity * 5;
+
+    //Assign skew and smooth scrolling to the scroll container
+    if (scrollContainer && scrollContainer.current) {
+      scrollContainer!.current!.style!.transform = `translate3d(0, -${data.rounded}px, 0) skewY(${skew}deg)`;
+
+      //loop vai raf
+      requestAnimationFrame(() => skewScrolling());
+    }
+  };
+  return (
+    <div ref={scrollContainer} className="scroll">
+      <div className="main">{props.children}</div>
+    </div>
+  );
 };
 
 export default Scroll;

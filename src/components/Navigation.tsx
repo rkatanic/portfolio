@@ -10,6 +10,11 @@ const Navigation = (): JSX.Element => {
 
   const handleMenuToggle = (): void => setShowMenu((prevState) => !prevState);
 
+  const handleLinkClick = (): void => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+    setShowMenu(false);
+  };
   return (
     <nav className="nav">
       <div
@@ -20,7 +25,7 @@ const Navigation = (): JSX.Element => {
           <NavLink
             to="/about"
             className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}
-            onClick={() => setShowMenu(false)}
+            onClick={handleLinkClick}
           >
             About
           </NavLink>
@@ -31,7 +36,7 @@ const Navigation = (): JSX.Element => {
             className={({ isActive }) =>
               "nav-link" + (isActive ? " active" : "")
             }
-            onClick={() => setShowMenu(false)}
+            onClick={handleLinkClick}
           >
             Skills
           </NavLink>
@@ -42,7 +47,7 @@ const Navigation = (): JSX.Element => {
             className={({ isActive }) =>
               "nav-link" + (isActive ? " active" : "")
             }
-            onClick={() => setShowMenu(false)}
+            onClick={handleLinkClick}
           >
             FAQ
           </NavLink>
@@ -53,7 +58,7 @@ const Navigation = (): JSX.Element => {
             className={({ isActive }) =>
               "nav-link" + (isActive ? " active" : "")
             }
-            onClick={() => setShowMenu(false)}
+            onClick={handleLinkClick}
           >
             Contact
           </NavLink>

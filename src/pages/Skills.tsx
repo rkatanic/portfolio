@@ -20,6 +20,7 @@ import { ReactComponent as SassIcon } from "../assets/icons/sass.svg";
 import Tilt from "react-parallax-tilt";
 
 import "./Skills.css";
+import Scroll from "../components/Scroll";
 
 const Skills = (): JSX.Element => {
   const skills = [
@@ -42,23 +43,25 @@ const Skills = (): JSX.Element => {
   ];
 
   return (
-    <div id="skills">
-      <div className="side-section">
-        <h3 className="side-section-title">My Personal Journey</h3>
+    <Scroll>
+      <div id="skills">
+        <div className="side-section">
+          <h3 className="side-section-title">My Personal Journey</h3>
+        </div>
+        <h3 className="number txt-outlined section-title">02</h3>
+        <div className="heading">
+          <h2>RE</h2>
+          <h2>SU</h2>
+          <h2>ME</h2>
+        </div>
+        <h2>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
+          rerum accusantium aliquam magni distinctio quisquam dolore! Incidunt
+          delectus iste dolorum recusandae magnam similique unde aspernatur.
+          Reprehenderit placeat expedita similique dolores!
+        </h2>
       </div>
-      <h3 className="number txt-outlined section-title">02</h3>
-      <div className="heading">
-        <h2>RE</h2>
-        <h2>SU</h2>
-        <h2>ME</h2>
-      </div>
-      <h2>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
-        rerum accusantium aliquam magni distinctio quisquam dolore! Incidunt
-        delectus iste dolorum recusandae magnam similique unde aspernatur.
-        Reprehenderit placeat expedita similique dolores!
-      </h2>
-    </div>
+    </Scroll>
   );
 };
 
