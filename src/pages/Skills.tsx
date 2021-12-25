@@ -45,16 +45,25 @@ const Skills = (): JSX.Element => {
   return (
     <Scroll>
       <div id="skills">
-        <div className="side-section">
-          <h3 className="side-section-title">My Personal Journey</h3>
-        </div>
-        <h3 className="number txt-outlined section-title">02</h3>
+        <h1 className="section-title">
+          <span className="txt-outlined">0</span>2
+        </h1>
+
+        <h3 className="side-section-title">My Personal Journey</h3>
         <div className="heading">
-          <h2>RE</h2>
-          <h2>SU</h2>
-          <h2>ME</h2>
+          <h2>
+            <span className="txt-outlined">MY</span>
+            <span>
+              {" "}
+              RE<span className="txt-outlined">-</span>
+            </span>
+          </h2>
+          <h2>
+            <span className="txt-outlined">-</span>SU
+            <span className="txt-outlined">ME</span>
+          </h2>
         </div>
-        <h2>
+        <h2 className="txt-content">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
           rerum accusantium aliquam magni distinctio quisquam dolore! Incidunt
           delectus iste dolorum recusandae magnam similique unde aspernatur.

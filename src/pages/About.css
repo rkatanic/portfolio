@@ -2,13 +2,3 @@
   display: flex;
   align-items: center;
 }
-
-.number {
-  letter-spacing: 2px;
-  font-weight: 400;
-  font-size: 0.825rem;
-}
-
-.content-text {
-  font-weight: 400;
-}

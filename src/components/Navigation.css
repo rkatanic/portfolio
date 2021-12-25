@@ -1,6 +1,6 @@
 .nav {
   position: fixed;
-  top: 50%;
+  top: 55%;
   left: calc(var(--width-desktop) + 20vw);
   transform: translateY(-50%);
   width: 4rem;
@@ -15,7 +15,7 @@
 }
 
 .nav-item {
-  margin: 6rem 0;
+  margin: 4rem 0;
   transition: 0.5s;
   display: flex;
   transform: rotate(90deg);

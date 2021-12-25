@@ -3,6 +3,10 @@ body {
   height: 100%;
 }
 
+::-webkit-scrollbar {
+  width: 0;
+}
+
 body {
   overscroll-behavior-y: none;
 }
@@ -11,6 +15,7 @@ body {
   -webkit-text-stroke: 1px black;
   -webkit-text-fill-color: white;
 }
+
 .scroll {
   padding: 2vh 0;
   pointer-events: none;
@@ -20,7 +25,6 @@ body {
   position: fixed;
   top: 0;
   left: 20vw;
-
   width: 100%;
   overflow: hidden;
 }
@@ -41,7 +45,7 @@ h2 {
 .grid-line {
   width: 1px;
   height: 100vh;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.125);
 }
 
 .grid-line:nth-child(2) {
@@ -62,11 +66,32 @@ h2 {
   font-size: 8vw;
 }
 
+.txt-content {
+  font-weight: 400;
+  font-size: 5vw;
+  color: var(--color-text);
+}
+
+.txt-lg {
+  font-size: 8vw;
+}
+
+.txt-md {
+  font-size: 6vw;
+}
+
+.txt-bold {
+  font-weight: 600;
+}
+
 .section-title {
+  letter-spacing: 2px;
   font-size: 8vw;
   font-weight: 600;
   margin: 0;
   padding: 0;
+  width: 12vw;
+  margin-left: calc(var(--width-desktop) - 14vw);
   text-transform: uppercase;
   text-align: end;
   position: relative;
@@ -75,22 +100,24 @@ h2 {
 .section-title::before {
   content: "";
   position: absolute;
-  width: 8vw;
+  width: 4.25vw;
   height: 0.5vw;
   bottom: 1.5vw;
-  right: 0.5vw;
+  right: 0.25vw;
   background: white;
 }
 
 .side-section-title {
   text-align: end;
+  font-size: 0.825rem;
   font-weight: 400;
-  margin: 2rem 0 0;
+  margin: 0 12vw 0 0;
+  letter-spacing: 1px;
 }
 
 @media screen and (max-width: 768px) {
   .App {
-    left: 0;
+    left: 5vw;
     --width-desktop: 90vw;
   }
 

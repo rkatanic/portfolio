@@ -1,14 +1,19 @@
+.heading {
+  margin-bottom: 2vh;
+}
+
 .heading h2 {
-  font-size: 16vw;
+  font-size: 14vw;
   font-weight: 800;
   line-height: 1;
-  text-align: center;
 }
 
 .heading h2:nth-child(2) {
-  margin-left: 16vw;
+  text-align: end;
 }
 
-.heading h2:nth-child(3) {
-  text-align: start;
+@media screen and (max-width: 768px) {
+  .heading h2 {
+    margin: 0 12vw;
+  }
 }

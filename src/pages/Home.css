@@ -1,18 +1,11 @@
 .main {
-  max-width: calc(var(--width-desktop) - 12vw);
+  max-width: calc(var(--width-desktop));
   padding: 0.5rem;
 }
 
 .side-section {
-  margin-left: calc(var(--width-desktop) - 12vw);
-  width: 10vw;
+  margin-left: calc(var(--width-desktop) - 11.5vw);
 }
 
-@media screen and (max-width: 768px) {
-  .side-section {
-    width: 100%;
-    position: relative;
-    left: 12vw;
-    margin-left: 0;
-  }
+@media screen and (max-width: 600px) {
 }

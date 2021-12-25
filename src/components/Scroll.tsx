@@ -51,12 +51,11 @@ const Scroll = (props: any) => {
     const skew = velocity * 5;
 
     //Assign skew and smooth scrolling to the scroll container
-    if (scrollContainer && scrollContainer.current) {
+    if (scrollContainer && scrollContainer.current)
       scrollContainer!.current!.style!.transform = `translate3d(0, -${data.rounded}px, 0) skewY(${skew}deg)`;
 
-      //loop vai raf
-      requestAnimationFrame(() => skewScrolling());
-    }
+    //loop vai raf
+    requestAnimationFrame(() => skewScrolling());
   };
   return (
     <div ref={scrollContainer} className="scroll">

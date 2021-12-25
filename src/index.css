@@ -6,8 +6,8 @@
   --color-primary-two: hsl(var(--color-hue), 55%, 55%);
   --color-primary-light: hsl(var(--color-hue), 90%, 90%);
   --color-title: hsl(var(--color-hue), 0%, 100%);
-  --color-text: hsl(var(--color-hue), 8%, 70%);
-  --color-text-light: hsl(var(--color-hue), 8%, 82%);
+  --color-text: hsl(var(--color-hue), 8%, 100%);
+  --color-text-light: hsl(var(--color-hue), 8%, 100%);
   --color-input: hsl(var(--color-hue), 6%, 15%);
   --color-body: hsl(var(--color-hue), 4%, 10%);
   --color-container: hsl(var(--color-hue), 25%, 20%);

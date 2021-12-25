@@ -15,17 +15,21 @@ const About = (): JSX.Element => {
   return (
     <Scroll>
       <div id="about" className="about">
-        <div className="side-section">
-          <h3 className="side-section-title">Few Words About Me</h3>
-        </div>
-        <h3 className="number txt-outlined section-title">01</h3>
-        <h2 className="content-text">
+        <h1 className="section-title">
+          <span className="txt-outlined">0</span>1
+        </h1>
+
+        <h3 className="side-section-title">Few Words About Me</h3>
+        <h2 className="txt-content">
           Hey there, <br />
-          My name is <br />
-          <h2 className="txt-outlined">Radivoje Katanić.</h2> Lorem ipsum dolor
-          sit amet consectetur adipisicing elit. Dolorem, explicabo. Soluta
-          autem vero, aliquam, iste odit nostrum quae nulla, nisi ad ipsa natus
-          hic cupiditate sit adipisci neque voluptatem magnam?
+          my name is <br />
+          <h2 className="txt-outlined txt-md txt-bold">
+            Radivoje Katanić.
+          </h2>{" "}
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem,
+          explicabo. Soluta autem vero, aliquam, iste odit nostrum quae nulla,
+          nisi ad ipsa natus hic cupiditate sit adipisci neque voluptatem
+          magnam?
         </h2>
       </div>
     </Scroll>
