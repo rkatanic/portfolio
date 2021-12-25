@@ -5,7 +5,13 @@
 .cursor-dot,
 .cursor-dot-outline {
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   border-radius: 50%;
+  mix-blend-mode: difference;
+  pointer-events: none;
+  z-index: 1;
 }
 
 .cursor-dot {
@@ -15,13 +21,10 @@
 }
 
 .cursor-dot-outline {
-  margin-top: -20px;
-  margin-left: -20px;
   transition: 0.125s ease;
   width: 40px;
   height: 40px;
   border: 1px solid white;
-  animation: cursor-pulse 2s ease-in-out infinite;
 }
 
 @media screen and (max-width: 1024px) {
