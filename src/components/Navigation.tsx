@@ -25,9 +25,7 @@ const Navigation = (): JSX.Element => {
             <a
               href="#about"
               className="nav-link"
-              onClick={() => {
-                setShowMenu(false);
-              }}
+              onClick={() => setShowMenu(false)}
             >
               About
             </a>

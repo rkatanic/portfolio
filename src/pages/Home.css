@@ -9,12 +9,10 @@
 }
 
 @media screen and (max-width: 768px) {
-  .main {
-    max-width: initial;
-  }
-
   .side-section {
+    width: 100%;
+    position: relative;
+    left: 12vw;
     margin-left: 0;
-    width: unset;
   }
 }
