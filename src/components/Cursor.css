@@ -1,0 +1,44 @@
+* {
+  cursor: none;
+}
+
+.cursor-dot,
+.cursor-dot-outline {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.cursor-dot {
+  width: 10px;
+  height: 10px;
+  background-color: white;
+}
+
+.cursor-dot-outline {
+  margin-top: -20px;
+  margin-left: -20px;
+  transition: 0.125s ease;
+  width: 40px;
+  height: 40px;
+  border: 1px solid white;
+  animation: cursor-pulse 2s ease-in-out infinite;
+}
+
+@media screen and (max-width: 1024px) {
+  .cursor-dot,
+  .cursor-dot-outline {
+    display: none;
+  }
+}
+
+@keyframes cursor-pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
