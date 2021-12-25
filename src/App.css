@@ -51,9 +51,13 @@ h2 {
   margin-left: 12vw;
 }
 
+.primary {
+  color: var(--color-primary);
+}
+
 .txt-outlined {
   -webkit-text-fill-color: black;
-  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-width: 0.1vw;
   -webkit-text-stroke-color: white;
 }
 
@@ -67,12 +71,40 @@ h2 {
   color: var(--color-text);
 }
 
+.txt-400 {
+  font-weight: 400;
+}
+
+.txt-600 {
+  font-weight: 600;
+}
+
+.txt-800 {
+  font-weight: 800;
+}
+
+.txt-xl {
+  font-size: 10vw;
+}
+
 .txt-lg {
-  font-size: 8vw;
+  font-size: 6vw;
 }
 
 .txt-md {
-  font-size: 6vw;
+  font-size: 4vw;
+}
+
+.txt-sm {
+  font-size: 2.5vw;
+}
+
+.txt-xs {
+  font-size: 1.75vw;
+}
+
+.txt-xxs {
+  font-size: 1.25vw;
 }
 
 .txt-bold {
@@ -81,12 +113,10 @@ h2 {
 
 .section-title {
   letter-spacing: 2px;
-  font-size: 8vw;
-  font-weight: 600;
   margin: 0;
   padding: 0;
   width: 12vw;
-  margin-left: calc(var(--width-desktop) - 14vw);
+  margin-left: calc(var(--width-desktop) - 13.5vw);
   text-transform: uppercase;
   text-align: end;
   position: relative;
@@ -97,15 +127,13 @@ h2 {
   position: absolute;
   width: 4.25vw;
   height: 0.5vw;
-  bottom: 1.5vw;
+  bottom: 0.25vw;
   right: 0.25vw;
   background: white;
 }
 
 .side-section-title {
   text-align: end;
-  font-size: 0.825rem;
-  font-weight: 400;
   margin: 0 12vw 0 0;
   letter-spacing: 1px;
 }
@@ -116,7 +144,23 @@ h2 {
     --width-desktop: 90vw;
   }
 
-  .txt-outlined {
-    -webkit-text-stroke-width: 0.35px;
+  .txt-xl {
+    font-size: 3.75rem;
+  }
+
+  .txt-lg {
+    font-size: 2rem;
+  }
+
+  .txt-sm {
+    font-size: 1.5rem;
+  }
+
+  .txt-xs {
+    font-size: 0.925rem;
+  }
+
+  .txt-xxs {
+    font-size: 0.825rem;
   }
 }

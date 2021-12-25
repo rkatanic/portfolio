@@ -7,12 +7,14 @@ import Scroll from "../components/Scroll";
 
 const Contact = (): JSX.Element => (
   <Scroll>
-    <div className="txt-content">
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda
-      corrupti animi dolor itaque, reprehenderit, illo magni architecto
-      necessitatibus quos labore similique repellendus asperiores earum aperiam,
-      numquam vel a recusandae ut.
-    </div>
+    <h1 className="section-title txt-lg txt-800">
+      <span className="txt-outlined">0</span>4
+    </h1>
+
+    <h3 className="side-section-title txt-xxs txt-400">
+      Have A Question? Reach Me Out.
+    </h3>
+
     <ContactForm />
   </Scroll>
 );

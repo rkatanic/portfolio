@@ -45,30 +45,66 @@ const Skills = (): JSX.Element => {
   return (
     <Scroll>
       <div id="skills">
-        <h1 className="section-title">
+        <h1 className="section-title txt-lg txt-800">
           <span className="txt-outlined">0</span>2
         </h1>
 
-        <h3 className="side-section-title">My Personal Journey</h3>
+        <h3 className="side-section-title txt-xxs txt-400">
+          My Personal Journey
+        </h3>
         <div className="heading">
-          <h2>
+          <h2 className="txt-xl txt-800">
             <span className="txt-outlined">MY</span>
             <span>
               {" "}
-              RE<span className="txt-outlined">-</span>
+              RE
+              <span className="txt-outlined"> -</span>
             </span>
           </h2>
-          <h2>
-            <span className="txt-outlined">-</span>SU
+          <h2 className="txt-xl txt-800">
+            <span className="txt-outlined">- </span>SU
             <span className="txt-outlined">ME</span>
           </h2>
         </div>
-        <h2 className="txt-content">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
-          rerum accusantium aliquam magni distinctio quisquam dolore! Incidunt
-          delectus iste dolorum recusandae magnam similique unde aspernatur.
-          Reprehenderit placeat expedita similique dolores!
-        </h2>
+
+        <div className="resume-content">
+          <h2 className="txt-lg txt-600">
+            <span className="txt-outlined ">EXP</span>ERIENCE
+          </h2>
+          <div className="resume-content-item">
+            <div className="resume-content-item-desc">
+              <h2 className="txt-sm txt-600">Software Developer</h2>
+              <h2 className="txt-xs txt-400">ProductDock</h2>
+            </div>
+            <h2 className="txt-xs txt-date txt-400">08/2019 - present</h2>
+          </div>
+          <div className="resume-content-item">
+            <div className="resume-content-item-desc">
+              <h2 className="txt-sm txt-600">Intern</h2>
+              <h2 className="txt-xs txt-400">ProductDock Rookie Boot Camp</h2>
+            </div>
+            <h2 className="txt-xs txt-date txt-400">02/2019 - 05/2019</h2>
+          </div>
+        </div>
+        <div className="resume-content">
+          <h2 className="txt-lg txt-600">
+            <span className="txt-outlined">EDU</span>CATION
+          </h2>
+          <div className="resume-content-item">
+            <div className="resume-content-item-desc">
+              <h2 className="txt-sm txt-600">IT Engineer</h2>
+              <h2 className="txt-xs txt-400">Slobomir P University</h2>
+            </div>
+            <h2 className="txt-xs txt-date txt-400">2015 - 2019</h2>
+          </div>
+          <div className="resume-content-item">
+            <div className="resume-content-item-desc">
+              <h2 className="txt-sm txt-600">Computer Technician</h2>
+              <h2 className="txt-xs txt-400">Electro-technical High School</h2>
+            </div>
+            <h2 className="txt-xs txt-date txt-400">2011 - 2015</h2>
+          </div>
+        </div>
       </div>
     </Scroll>
   );

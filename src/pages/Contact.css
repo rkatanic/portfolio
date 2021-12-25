@@ -1,0 +1,12 @@
+.txt-email {
+  width: 12vw;
+  transform: rotate(90deg);
+  text-transform: uppercase;
+
+  color: white;
+}
+
+.contact-container {
+  display: flex;
+  align-items: flex-start;
+}

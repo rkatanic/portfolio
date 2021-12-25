@@ -15,15 +15,17 @@ const About = (): JSX.Element => {
   return (
     <Scroll>
       <div id="about" className="about">
-        <h1 className="section-title">
+        <h1 className="section-title txt-lg txt-800">
           <span className="txt-outlined">0</span>1
         </h1>
+        <h3 className="side-section-title txt-xxs txt-400">
+          Few Words About Me
+        </h3>
 
-        <h3 className="side-section-title">Few Words About Me</h3>
         <h2 className="txt-content">
           Hey there, <br />
           my name is <br />
-          <h2 className="txt-outlined txt-md txt-bold">
+          <h2 className="txt-outlined txt-lg txt-bold">
             Radivoje Katanić.
           </h2>{" "}
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem,

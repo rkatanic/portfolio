@@ -1,10 +1,12 @@
+.txt-date {
+  text-transform: uppercase;
+}
+
 .heading {
-  margin-bottom: 2vh;
+  margin: 20vh 0;
 }
 
 .heading h2 {
-  font-size: 14vw;
-  font-weight: 800;
   line-height: 1;
 }
 
@@ -12,8 +14,29 @@
   text-align: end;
 }
 
+.resume-content {
+  margin-bottom: 1.25rem;
+}
+
+.resume-content-item {
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.resume-content-item-desc {
+  flex: 1;
+}
+.resume-content-item-desc h2:first-child {
+  letter-spacing: 1px;
+}
+
 @media screen and (max-width: 768px) {
-  .heading h2 {
-    margin: 0 12vw;
+  .heading {
+    text-align: center;
+  }
+
+  .heading h2:nth-child(2) {
+    text-align: center;
   }
 }

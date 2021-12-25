@@ -33,9 +33,7 @@ const Navigation = (): JSX.Element => {
         <li className="nav-item">
           <NavLink
             to="/skills"
-            className={({ isActive }) =>
-              "nav-link" + (isActive ? " active" : "")
-            }
+            className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}
             onClick={handleLinkClick}
           >
             Skills
@@ -44,9 +42,7 @@ const Navigation = (): JSX.Element => {
         <li className="nav-item">
           <NavLink
             to="/faq"
-            className={({ isActive }) =>
-              "nav-link" + (isActive ? " active" : "")
-            }
+            className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}
             onClick={handleLinkClick}
           >
             FAQ
@@ -55,9 +51,7 @@ const Navigation = (): JSX.Element => {
         <li className="nav-item">
           <NavLink
             to="/contact"
-            className={({ isActive }) =>
-              "nav-link" + (isActive ? " active" : "")
-            }
+            className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}
             onClick={handleLinkClick}
           >
             Contact

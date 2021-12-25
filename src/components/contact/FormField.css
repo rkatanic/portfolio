@@ -23,16 +23,19 @@ textarea::placeholder {
 }
 
 .form-field-label {
-  align-items: baseline;
+  text-align: end;
+  align-items: flex-end;
+  justify-content: space-between;
   display: inline-flex;
   position: relative;
-  background: red;
+  display: flex;
 }
 
 .form-field-label label {
-  bottom: 1rem;
+  top: 1.125rem;
   left: 1rem;
-  position: absolute;
+  position: relative;
+  padding: 0 1rem;
   background: black;
   text-transform: capitalize;
   font-size: 1rem;

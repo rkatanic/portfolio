@@ -15,7 +15,7 @@
 }
 
 .nav-item {
-  margin: 4rem 0;
+  margin: 5vw 0;
   transition: 0.5s;
   display: flex;
   transform: rotate(90deg);
@@ -26,7 +26,7 @@
   letter-spacing: 1px;
   text-align: center;
   position: relative;
-  font-size: 0.825rem;
+  font-size: 1.125vw;
 }
 
 .active {
