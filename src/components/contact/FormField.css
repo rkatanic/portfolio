@@ -1,32 +1,14 @@
-.form-field-input {
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
-}
-
-.form-field-icon {
-  top: 0;
-  width: 2rem;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  background: var(--color-primary);
-}
-
 input,
 textarea {
-  border-radius: 10px;
   resize: none;
-  border: 1px solid transparent;
+  border: 1px solid white;
   box-sizing: border-box;
   outline: none;
   width: 100%;
   padding: 1rem 1rem 1rem 2.5rem;
   font-family: var(--body-font);
   color: var(--color-title);
-  background-color: var(--color-body);
+  background-color: black;
 }
 
 textarea {
@@ -43,11 +25,17 @@ textarea::placeholder {
 .form-field-label {
   align-items: baseline;
   display: inline-flex;
+  position: relative;
+  background: red;
 }
 
 .form-field-label label {
+  bottom: 1rem;
+  left: 1rem;
+  position: absolute;
+  background: black;
   text-transform: capitalize;
-  font-size: 0.925rem;
+  font-size: 1rem;
   font-weight: 600;
   margin: 0 0.5rem 0.25rem 0;
   color: var(--color-title);

@@ -3,5 +3,7 @@
 }
 
 .contact-form {
+  pointer-events: initial;
   flex: 1;
+  margin-right: 12vw;
 }

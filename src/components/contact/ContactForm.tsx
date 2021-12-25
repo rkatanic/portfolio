@@ -60,7 +60,6 @@ const ContactForm = (): JSX.Element => {
             name="name"
             value={values.name}
             placeholder="Enter your name"
-            icon={<UserIcon />}
           />
           <FormField
             maxLength={100}
@@ -68,7 +67,6 @@ const ContactForm = (): JSX.Element => {
             name="email"
             value={values.email}
             placeholder="Enter your email"
-            icon={<AtIcon />}
           />
           <FormField
             maxLength={100}
@@ -76,7 +74,6 @@ const ContactForm = (): JSX.Element => {
             name="subject"
             value={values.subject}
             placeholder="Enter your subject"
-            icon={<EmailSubjectIcon />}
           />
           <FormField
             maxLength={500}

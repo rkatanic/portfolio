@@ -3,12 +3,18 @@ import ContactForm from "../components/contact/ContactForm";
 
 import "./Contact.css";
 import Card from "../components/Card";
+import Scroll from "../components/Scroll";
 
 const Contact = (): JSX.Element => (
-  <Section id="contact">
-    <div className="bubble">placeholder</div>
+  <Scroll>
+    <div className="txt-content">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda
+      corrupti animi dolor itaque, reprehenderit, illo magni architecto
+      necessitatibus quos labore similique repellendus asperiores earum aperiam,
+      numquam vel a recusandae ut.
+    </div>
     <ContactForm />
-  </Section>
+  </Scroll>
 );
 
 export default Contact;
