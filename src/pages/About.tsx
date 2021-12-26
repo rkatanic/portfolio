@@ -25,13 +25,9 @@ const About = (): JSX.Element => {
         <h2 className="txt-content">
           Hey there, <br />
           my name is <br />
-          <h2 className="txt-outlined txt-lg txt-bold">
-            Radivoje Katanić.
-          </h2>{" "}
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem,
-          explicabo. Soluta autem vero, aliquam, iste odit nostrum quae nulla,
-          nisi ad ipsa natus hic cupiditate sit adipisci neque voluptatem
-          magnam?
+          <h2 className="txt-outlined txt-lg txt-600">Radivoje Katanić.</h2> I
+          am a software developer located in Doboj, Bosnia{" "}
+          <span className="txt-outlined txt-600">&</span> Herzegovina.
         </h2>
       </div>
     </Scroll>

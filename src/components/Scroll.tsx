@@ -1,5 +1,4 @@
 import { useEffect, useRef } from "react";
-import Scrollbar from "smooth-scrollbar";
 import useWindowSize from "../hooks/useWindowSize";
 
 const Scroll = (props: any) => {

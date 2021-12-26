@@ -13,7 +13,6 @@ body {
 
 .scroll {
   padding: 2vh 0;
-  pointer-events: none;
 }
 
 .App {
@@ -105,10 +104,6 @@ h2 {
 
 .txt-xxs {
   font-size: 1.25vw;
-}
-
-.txt-bold {
-  font-weight: 600;
 }
 
 .section-title {

@@ -4,14 +4,14 @@ import About from "./pages/About";
 import Skills from "./pages/Skills";
 import Contact from "./pages/Contact";
 import Navigation from "./components/Navigation";
+import Cursor from "./components/Cursor";
 
 import "./App.css";
-import Cursor from "./components/Cursor";
 
 const App = () => {
   return (
     <>
-      <Cursor />
+      {/* <Cursor /> */}
       <div className="App">
         <div data-testid="app" className="App">
           <div className="grid-wrapper">

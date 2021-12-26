@@ -4,6 +4,7 @@
   left: calc(var(--width-desktop) + 20vw);
   transform: translateY(-50%);
   width: 4rem;
+  z-index: 1;
 }
 
 .night-mode-switch {

@@ -1,6 +1,6 @@
-import Section from "../components/Section";
-import Services from "../components/Services";
-import Card from "../components/Card";
+import { Suspense, useRef } from "react";
+import { Canvas, useFrame } from "@react-three/fiber";
+import Scroll from "../components/Scroll";
 import { ReactComponent as VsCodeIcon } from "../assets/icons/vs-code.svg";
 import { ReactComponent as DockerIcon } from "../assets/icons/docker.svg";
 import { ReactComponent as GitIcon } from "../assets/icons/git.svg";
@@ -17,10 +17,8 @@ import { ReactComponent as MongoDbIcon } from "../assets/icons/mongodb.svg";
 import { ReactComponent as JavaIcon } from "../assets/icons/java.svg";
 import { ReactComponent as JavaScriptIcon } from "../assets/icons/javascript.svg";
 import { ReactComponent as SassIcon } from "../assets/icons/sass.svg";
-import Tilt from "react-parallax-tilt";
 
 import "./Skills.css";
-import Scroll from "../components/Scroll";
 
 const Skills = (): JSX.Element => {
   const skills = [
@@ -42,6 +40,25 @@ const Skills = (): JSX.Element => {
     { name: "IntelliJ", icon: <IntelliJIcon /> },
   ];
 
+  const Box = () => {
+    const boxRef = useRef<any>();
+
+    useFrame(() => {
+      boxRef.current.rotation.y += 0.01;
+    });
+
+    return (
+      <mesh
+        ref={boxRef}
+        rotation-x={Math.PI * 0.25}
+        rotation-y={Math.PI * 0.25}
+      >
+        <tetrahedronBufferGeometry args={[1.85]} />
+        <meshBasicMaterial wireframe color={"hsl(0,0%,30%)"} />
+      </mesh>
+    );
+  };
+
   return (
     <Scroll>
       <div id="skills">
@@ -52,19 +69,30 @@ const Skills = (): JSX.Element => {
         <h3 className="side-section-title txt-xxs txt-400">
           My Personal Journey
         </h3>
-        <div className="heading">
-          <h2 className="txt-xl txt-800">
-            <span className="txt-outlined">MY</span>
-            <span>
-              {" "}
-              RE
-              <span className="txt-outlined"> -</span>
-            </span>
-          </h2>
-          <h2 className="txt-xl txt-800">
-            <span className="txt-outlined">- </span>SU
-            <span className="txt-outlined">ME</span>
-          </h2>
+
+        <div className="div-parent">
+          <Canvas className="child-shape">
+            <Suspense fallback={null}>
+              <pointLight position={[5, 5, 5]} />
+              <Box />
+            </Suspense>
+          </Canvas>
+          <div className="child-txt">
+            <div className="heading">
+              <h2 className="txt-xl txt-800">
+                <span className="txt-outlined">MY</span>
+                <span>
+                  {" "}
+                  RE
+                  <span className="txt-outlined"> -</span>
+                </span>
+              </h2>
+              <h2 className="txt-xl txt-800">
+                <span className="txt-outlined">- </span>SU
+                <span className="txt-outlined">ME</span>
+              </h2>
+            </div>
+          </div>
         </div>
 
         <div className="resume-content">
