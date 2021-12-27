@@ -1,4 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;800;800;&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap");
+
+@font-face {
+  font-family: rustyColaPen;
+  src: url("./assets/fonts/Slash\ Revolver.otf") format("opentype");
+}
+
+@font-face {
+  font-family: rustyColaPen;
+  font-weight: bold;
+  src: url("./assets/fonts/Slash\ Revolver.otf") format("opentype");
+}
 
 :root {
   --color-hue: 160;
@@ -13,7 +24,8 @@
   --color-container: hsl(var(--color-hue), 25%, 20%);
   --color-black: hsl(var(--color-hue), 10%, 17%);
 
-  --font-body: "Poppins", sans-serif;
+  --font-body: "Montserrat", sans-serif;
+  --font-txt: rustyColaPen, sans-serif;
 
   --width-desktop: 60vw;
 }

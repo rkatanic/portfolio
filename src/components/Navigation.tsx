@@ -21,6 +21,11 @@ const Navigation = (): JSX.Element => {
         className={`nav-menu${showMenu ? " show-menu" : ""}`}
         data-testid="nav-menu"
       >
+        <div className="grid-wrapper">
+          <div className="grid-line"></div>
+          <div className="grid-line"></div>
+          <div className="grid-line"></div>
+        </div>
         <li className="nav-item">
           <NavLink
             to="/about"
@@ -41,15 +46,6 @@ const Navigation = (): JSX.Element => {
         </li>
         <li className="nav-item">
           <NavLink
-            to="/faq"
-            className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}
-            onClick={handleLinkClick}
-          >
-            FAQ
-          </NavLink>
-        </li>
-        <li className="nav-item">
-          <NavLink
             to="/contact"
             className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}
             onClick={handleLinkClick}
@@ -57,14 +53,6 @@ const Navigation = (): JSX.Element => {
             Contact
           </NavLink>
         </li>
-
-        <div
-          data-testid="nav-settings"
-          className="nav-settings"
-          onClick={(): void => setShowMenu(false)}
-        >
-          <Settings />
-        </div>
       </div>
       <div
         className={`nav-toggle${showMenu ? " close" : ""}`}

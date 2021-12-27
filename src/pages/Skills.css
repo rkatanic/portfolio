@@ -1,5 +1,11 @@
 .txt-date {
+  font-family: rustyColaPen;
   text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+* {
+  cursor: inherit;
 }
 
 .div-parent {
@@ -23,15 +29,9 @@
   position: absolute;
 }
 
-.heading {
-}
-
 .heading h2 {
+  text-align: center;
   line-height: 1;
-}
-
-.heading h2:nth-child(2) {
-  text-align: end;
 }
 
 .resume-content {

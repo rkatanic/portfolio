@@ -23,11 +23,13 @@
 }
 
 .nav-link {
+  cursor: pointer;
   color: var(--color-title);
   letter-spacing: 1px;
   text-align: center;
   position: relative;
-  font-size: 1.125vw;
+  font-size: 0.825vw;
+  padding: 0.5rem;
 }
 
 .active {
@@ -102,21 +104,23 @@
   }
 
   .nav-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 100vw;
     height: 100vh;
     position: fixed;
-    left: 100vw;
-    top: 0;
-    padding: 3rem;
+    left: 0;
+    top: 100vh;
+    padding: 5vw;
     transition: 0.5s ease-in-out;
     z-index: 2;
-    background-color: var(--color-input);
+    background: black;
   }
 
-  .nav-list {
-    height: 100%;
-    align-items: center;
-    flex-direction: column;
+  .nav-link {
+    font-size: 2rem;
+    font-weight: 600;
   }
 
   .nav-item {
@@ -124,8 +128,17 @@
     margin: 1rem;
   }
 
+  .show-menu + .nav-toggle {
+    background: white;
+  }
+
+  .show-menu + .nav-toggle .nav-toggle-dash::before,
+  .show-menu + .nav-toggle .nav-toggle-dash::after {
+    background: black;
+  }
+
   .show-menu {
-    left: 0;
+    top: 0;
     z-index: 2;
   }
 }
@@ -136,6 +149,10 @@
     display: none;
   }
   .nav-settings {
+    display: none;
+  }
+
+  .nav-menu > .grid-wrapper {
     display: none;
   }
 }

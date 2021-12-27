@@ -11,7 +11,6 @@ const Home = (): JSX.Element => {
   return (
     <div id="main" className="main">
       <About />
-      <Skills />
     </div>
   );
 };

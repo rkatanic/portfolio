@@ -6,7 +6,45 @@
   color: white;
 }
 
-.contact-container {
+.contact-content {
+  margin-top: -15vh;
+}
+
+.contact-heading h2 {
+  line-height: 1;
+}
+
+.contact-heading h2:nth-child(2) {
+  text-align: end;
+  margin-right: 12vw;
+}
+
+.contact-heading h2:nth-child(3) {
+  text-align: end;
   display: flex;
-  align-items: flex-start;
+}
+
+.dash {
+  flex: 1;
+  height: 1.5vw;
+  margin: 0 2vw;
+  background: white;
+}
+
+.contact-heading h2:nth-child(5) {
+  text-align: end;
+  margin-right: 12vw;
+}
+
+.contact-heading h2:nth-child(6) {
+  margin-left: 12vw;
+}
+
+@media screen and (max-width: 768px) {
+  .contact-heading {
+    text-align: center;
+  }
+  .contact-heading h2:nth-child(3) {
+    margin-right: 24vw;
+  }
 }

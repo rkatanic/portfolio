@@ -11,6 +11,7 @@ import "./App.css";
 const App = () => {
   return (
     <>
+      <div className="noise"></div>
       {/* <Cursor /> */}
       <div className="App">
         <div data-testid="app" className="App">

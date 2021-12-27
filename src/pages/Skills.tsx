@@ -17,6 +17,7 @@ import { ReactComponent as MongoDbIcon } from "../assets/icons/mongodb.svg";
 import { ReactComponent as JavaIcon } from "../assets/icons/java.svg";
 import { ReactComponent as JavaScriptIcon } from "../assets/icons/javascript.svg";
 import { ReactComponent as SassIcon } from "../assets/icons/sass.svg";
+import Tilt from "react-parallax-tilt";
 
 import "./Skills.css";
 
@@ -80,16 +81,8 @@ const Skills = (): JSX.Element => {
           <div className="child-txt">
             <div className="heading">
               <h2 className="txt-xl txt-800">
-                <span className="txt-outlined">MY</span>
-                <span>
-                  {" "}
-                  RE
-                  <span className="txt-outlined"> -</span>
-                </span>
-              </h2>
-              <h2 className="txt-xl txt-800">
-                <span className="txt-outlined">- </span>SU
-                <span className="txt-outlined">ME</span>
+                _<span className="txt-outlined">RE</span>SU
+                <span className="txt-outlined">M</span>E
               </h2>
             </div>
           </div>
