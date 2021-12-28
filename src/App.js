@@ -11,6 +11,12 @@ import "./App.css";
 const App = () => {
   return (
     <>
+      <div id="grid-overlay" className="grid-overlay">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
       <div className="noise"></div>
       {/* <Cursor /> */}
       <div className="App">

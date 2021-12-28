@@ -26,12 +26,30 @@ const Contact = (): JSX.Element => {
       </mesh>
     );
   };
+
+  const handleScroll = () => {
+    const scrollTop = window.scrollY;
+    var element = document.getElementById("element-1");
+    if (element) element.style.transform = `translateX(-${scrollTop / 80}%)`;
+    var element = document.getElementById("element-2");
+    if (element) element.style.transform = `translateX(${scrollTop / 70}%)`;
+
+    var element = document.getElementById("element-3");
+    if (element) element.style.transform = `translateX(-${scrollTop / 50}%)`;
+  };
+  window.addEventListener("scroll", handleScroll);
+
   return (
     <Scroll>
-      <h1 className="section-title txt-lg txt-800">
+      <h1 className="section-title txt-800">
         <span className="txt-outlined">0</span>3
       </h1>
-      <h3 className="side-section-title txt-xxs txt-400">Get In Touch</h3>
+      <h3
+        style={{ transition: "0.5s ease" }}
+        className="side-section-title txt-xxs txt-400"
+      >
+        Get in touch
+      </h3>
 
       <div className="contact-content div-parent">
         <Canvas className="child-shape">
@@ -42,15 +60,15 @@ const Contact = (): JSX.Element => {
         </Canvas>
         <div className="child-txt">
           <div className="contact-heading">
-            <h2 className="txt-xl txt-800">
+            <h2 id="element-1" className="txt-xl txt-800">
               <span className="txt-outlined">HA</span>VE{" "}
               <span className="txt-outlined">A</span>
             </h2>
-            <h2 className="txt-xl txt-800">
+            <h2 id="element-2" className="txt-xl txt-800">
               <span className="txt-outlined">#</span>QUE
               <span className="txt-outlined">S</span>{" "}
             </h2>
-            <h2 className="txt-xl txt-800">
+            <h2 id="element-3" className="txt-xl txt-800">
               <div className="dash"></div>
               TIO
               <span className="txt-outlined">N?</span>
@@ -58,6 +76,9 @@ const Contact = (): JSX.Element => {
           </div>
         </div>
       </div>
+
+      <h2 className="txt-md txt-outlined  txt-800">E-MAIL</h2>
+      <h3 className="txt-xs txt-600">k.rade313@gmail.com</h3>
 
       <ContactForm />
     </Scroll>

@@ -1,11 +1,10 @@
-.txt-date {
-  font-family: rustyColaPen;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-}
-
 * {
   cursor: inherit;
+}
+
+.txt-date {
+  flex: 1;
+  text-align: end;
 }
 
 .div-parent {
@@ -29,13 +28,22 @@
   position: absolute;
 }
 
+.blinking {
+  animation: blinking 1s ease-out infinite;
+}
+
+.heading span {
+  display: inline-block;
+  transition: 0.5s ease;
+}
+
 .heading h2 {
   text-align: center;
   line-height: 1;
 }
 
 .resume-content {
-  margin-bottom: 1.25rem;
+  margin-bottom: 2rem;
 }
 
 .resume-content-item {
@@ -44,9 +52,11 @@
   align-items: baseline;
   justify-content: space-between;
 }
+
 .resume-content-item-desc {
   flex: 1;
 }
+
 .resume-content-item-desc h2:first-child {
   letter-spacing: 1px;
 }
@@ -58,5 +68,17 @@
 
   .heading h2:nth-child(2) {
     text-align: center;
+  }
+}
+
+@keyframes blinking {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }

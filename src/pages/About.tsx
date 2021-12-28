@@ -15,11 +15,11 @@ const About = (): JSX.Element => {
   return (
     <Scroll>
       <div id="about" className="about">
-        <h1 className="section-title txt-lg txt-800">
+        <h1 className="section-title txt-800">
           <span className="txt-outlined">0</span>1
         </h1>
         <h3 className="side-section-title txt-xxs txt-400">
-          Few Words About Me
+          Few words about me
         </h3>
 
         <h2 className="txt-content">
@@ -27,7 +27,7 @@ const About = (): JSX.Element => {
           my name is <br />
           <h2 className="txt-outlined txt-lg txt-600">Radivoje Katanić.</h2> I
           am a software developer located in Doboj, Bosnia{" "}
-          <span className="txt-outlined txt-600">&</span> Herzegovina.
+          <span className="txt-outlined txt-800">&</span> Herzegovina.
         </h2>
       </div>
     </Scroll>

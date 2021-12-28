@@ -1,18 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap");
 
-@font-face {
-  font-family: rustyColaPen;
-  src: url("./assets/fonts/Slash\ Revolver.otf") format("opentype");
-}
-
-@font-face {
-  font-family: rustyColaPen;
-  font-weight: bold;
-  src: url("./assets/fonts/Slash\ Revolver.otf") format("opentype");
-}
-
 :root {
   --color-hue: 160;
+  --color-black: hsl(0, 0%, 0%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-gray: hsla(0, 0%, 100%, 0.125);
+  --color-gray-two: hsl(0, 0%, 70%);
+
   --color-primary: hsl(var(--color-hue), 80%, 74%);
   --color-primary-two: hsl(var(--color-hue), 55%, 55%);
   --color-primary-light: hsl(var(--color-hue), 90%, 90%);
@@ -25,7 +19,8 @@
   --color-black: hsl(var(--color-hue), 10%, 17%);
 
   --font-body: "Montserrat", sans-serif;
-  --font-txt: rustyColaPen, sans-serif;
+
+  --margin-left: 20vw;
 
   --width-desktop: 60vw;
 }
@@ -54,6 +49,7 @@ body.day-mode {
 h1,
 h2,
 h3 {
+  line-height: 1;
   color: var(--color-title);
   align-items: center;
 }

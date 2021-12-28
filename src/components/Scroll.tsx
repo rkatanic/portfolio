@@ -11,7 +11,7 @@ const Scroll = (props: any) => {
 
   // Configs
   const data = {
-    ease: 0.025,
+    ease: 0.05,
     current: 0,
     previous: 0,
     rounded: 0,

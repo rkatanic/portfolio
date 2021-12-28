@@ -60,15 +60,29 @@ const Skills = (): JSX.Element => {
     );
   };
 
+  const handleScroll = () => {
+    const scrollTop = window.scrollY;
+    var element = document.getElementById("element-up");
+    if (element) element.style.transform = `translateY(-${scrollTop / 50}%)`;
+    var element = document.getElementById("element-up-2");
+    if (element) element.style.transform = `translateY(-${scrollTop / 10}%)`;
+
+    var element = document.getElementById("element-down");
+    if (element) element.style.transform = `translateY(${scrollTop / 12}%)`;
+    var element = document.getElementById("element-down-2");
+    if (element) element.style.transform = `translateY(${scrollTop / 30}%)`;
+  };
+  window.addEventListener("scroll", handleScroll);
+
   return (
     <Scroll>
       <div id="skills">
-        <h1 className="section-title txt-lg txt-800">
+        <h1 className="section-title txt-800">
           <span className="txt-outlined">0</span>2
         </h1>
 
         <h3 className="side-section-title txt-xxs txt-400">
-          My Personal Journey
+          My personal journey
         </h3>
 
         <div className="div-parent">
@@ -81,15 +95,22 @@ const Skills = (): JSX.Element => {
           <div className="child-txt">
             <div className="heading">
               <h2 className="txt-xl txt-800">
-                _<span className="txt-outlined">RE</span>SU
-                <span className="txt-outlined">M</span>E
+                <span className="blinking">{"_"}</span>
+                <span id="element-up" className="txt-outlined">
+                  RE
+                </span>
+                <span id="element-down">SU</span>
+                <span id="element-up-2" className="txt-outlined">
+                  M
+                </span>
+                <span id="element-down-2">E</span>
               </h2>
             </div>
           </div>
         </div>
 
         <div className="resume-content">
-          <h2 className="txt-lg txt-600">
+          <h2 className="txt-lg txt-800">
             <span className="txt-outlined ">EXP</span>ERIENCE
           </h2>
           <div className="resume-content-item">
@@ -97,18 +118,18 @@ const Skills = (): JSX.Element => {
               <h2 className="txt-sm txt-600">Software Developer</h2>
               <h2 className="txt-xs txt-400">ProductDock</h2>
             </div>
-            <h2 className="txt-xs txt-date txt-400">08/2019 - present</h2>
+            <h2 className="txt-xxs txt-date txt-400">08/2019 - PRESENT</h2>
           </div>
           <div className="resume-content-item">
             <div className="resume-content-item-desc">
               <h2 className="txt-sm txt-600">Intern</h2>
               <h2 className="txt-xs txt-400">ProductDock Rookie Boot Camp</h2>
             </div>
-            <h2 className="txt-xs txt-date txt-400">02/2019 - 05/2019</h2>
+            <h2 className="txt-xxs txt-date txt-400">02/2019 - 05/2019</h2>
           </div>
         </div>
         <div className="resume-content">
-          <h2 className="txt-lg txt-600">
+          <h2 className="txt-lg txt-800">
             <span className="txt-outlined">EDU</span>CATION
           </h2>
           <div className="resume-content-item">
@@ -116,14 +137,14 @@ const Skills = (): JSX.Element => {
               <h2 className="txt-sm txt-600">IT Engineer</h2>
               <h2 className="txt-xs txt-400">Slobomir P University</h2>
             </div>
-            <h2 className="txt-xs txt-date txt-400">2015 - 2019</h2>
+            <h2 className="txt-xxs txt-date txt-400">2015 - 2019</h2>
           </div>
           <div className="resume-content-item">
             <div className="resume-content-item-desc">
               <h2 className="txt-sm txt-600">Computer Technician</h2>
               <h2 className="txt-xs txt-400">Electro-technical High School</h2>
             </div>
-            <h2 className="txt-xs txt-date txt-400">2011 - 2015</h2>
+            <h2 className="txt-xxs txt-date txt-400">2011 - 2015</h2>
           </div>
         </div>
       </div>

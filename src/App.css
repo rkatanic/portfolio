@@ -30,10 +30,67 @@ body {
   background-size: cover; */
 }
 
+@keyframes slideDown {
+  0% {
+    transform: translateY(0vh);
+  }
+
+  30% {
+    transform: translateY(10vh);
+  }
+
+  45% {
+    transform: translateY(100vh);
+  }
+
+  82% {
+    transform: translateY(200vh);
+  }
+
+  100% {
+    transform: translateY(300vh);
+  }
+}
+
+.grid-overlay {
+  position: fixed;
+  top: -200vh;
+  left: 0;
+  display: flex;
+  width: 100vw;
+  height: 200vh;
+  z-index: 1;
+  opacity: 1;
+}
+
+.transition.grid-overlay div:first-child {
+  width: var(--margin-left);
+  background: white;
+  animation: slideDown 2s ease-in-out forwards;
+}
+
+.transition.grid-overlay div:nth-child(2) {
+  width: calc(var(--width-desktop) - 12vw);
+  background: white;
+  animation: slideDown 2s 0.175s ease-in-out forwards;
+}
+
+.transition.grid-overlay div:nth-child(3) {
+  width: 12vw;
+  background: white;
+  animation: slideDown 2s 0.35s ease-in-out forwards;
+}
+
+.transition.grid-overlay div:nth-child(4) {
+  width: var(--margin-left);
+  background: white;
+  animation: slideDown 2s 0.42s ease-in-out forwards;
+}
+
 .App {
   position: fixed;
   top: 0;
-  left: 20vw;
+  left: var(--margin-left);
   width: 100%;
   overflow: hidden;
 }
@@ -118,61 +175,55 @@ h2 {
 }
 
 .txt-xxs {
-  font-size: 1.25vw;
+  font-size: 1.125vw;
 }
 
 .section-title {
-  font-family: rustyColaPen;
+  font-size: 8vw;
+  font-weight: 800;
   letter-spacing: 2px;
   margin: 0;
   padding: 0;
-  width: 10vw;
+  width: 12vw;
   margin-left: calc(var(--width-desktop) - 13.5vw);
   text-align: end;
   position: relative;
 }
 
-.section-title::before {
-  /* content: "";
-  position: absolute;
-  width: 4.25vw;
-  height: 0.5vw;
-  bottom: 0.25vw;
-  right: 0.25vw;
-  background: white; */
-}
-
 .side-section-title {
-  font-family: rustyColaPen;
-  letter-spacing: 3px;
+  text-transform: uppercase;
   text-align: end;
-
+  color: var(--color-gray-two);
   margin: 0 12vw 0 0;
 }
 
 @media screen and (max-width: 768px) {
-  .App {
-    left: 5vw;
+  body {
+    --margin-left: 5vw;
     --width-desktop: 90vw;
   }
 
   .txt-xl {
-    font-size: 3.75rem;
+    font-size: 14vw;
   }
 
   .txt-lg {
-    font-size: 2rem;
+    font-size: 10vw;
+  }
+
+  .txt-md {
+    font-size: 8vw;
   }
 
   .txt-sm {
-    font-size: 1.5rem;
+    font-size: 6vw;
   }
 
   .txt-xs {
-    font-size: 0.925rem;
+    font-size: 4vw;
   }
 
   .txt-xxs {
-    font-size: 0.825rem;
+    font-size: 2.5vw;
   }
 }

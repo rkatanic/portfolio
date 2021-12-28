@@ -12,6 +12,7 @@
 
 .contact-heading h2 {
   line-height: 1;
+  transition: 0.5s ease;
 }
 
 .contact-heading h2:nth-child(2) {

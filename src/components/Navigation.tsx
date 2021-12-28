@@ -11,9 +11,16 @@ const Navigation = (): JSX.Element => {
   const handleMenuToggle = (): void => setShowMenu((prevState) => !prevState);
 
   const handleLinkClick = (): void => {
+    document.getElementById("grid-overlay")?.classList.add("transition");
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
-    setShowMenu(false);
+
+    setTimeout(() => {
+      setShowMenu(false);
+    }, 1500);
+    setTimeout((): void => {
+      document.getElementById("grid-overlay")?.classList.remove("transition");
+    }, 2500);
   };
   return (
     <nav className="nav">
@@ -29,7 +36,9 @@ const Navigation = (): JSX.Element => {
         <li className="nav-item">
           <NavLink
             to="/about"
-            className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}
+            className={({ isActive }) =>
+              `txt-lg txt-outlined txt-800 nav-link ${isActive ? "active" : ""}`
+            }
             onClick={handleLinkClick}
           >
             About
@@ -38,7 +47,9 @@ const Navigation = (): JSX.Element => {
         <li className="nav-item">
           <NavLink
             to="/skills"
-            className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}
+            className={({ isActive }) =>
+              `txt-lg txt-outlined txt-800 nav-link ${isActive ? "active" : ""}`
+            }
             onClick={handleLinkClick}
           >
             Skills
@@ -47,7 +58,9 @@ const Navigation = (): JSX.Element => {
         <li className="nav-item">
           <NavLink
             to="/contact"
-            className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}
+            className={({ isActive }) =>
+              `txt-lg txt-outlined txt-800 nav-link ${isActive ? "active" : ""}`
+            }
             onClick={handleLinkClick}
           >
             Contact
