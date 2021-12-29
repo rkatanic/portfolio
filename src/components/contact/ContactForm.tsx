@@ -94,10 +94,9 @@ const ContactForm = (): JSX.Element => {
                   Sending...
                 </>
               ) : (
-                "Send email"
+                "SEND E-MAIL"
               )
             }
-            icon={<EmailSendIcon />}
           />
           <ContactFormModal
             isSuccess={isSuccess}

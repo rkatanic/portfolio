@@ -7,25 +7,32 @@ import Navigation from "./components/Navigation";
 import Cursor from "./components/Cursor";
 
 import "./App.css";
+import { useEffect, useRef } from "react";
 
 const App = () => {
+  const app = useRef();
+
+  useEffect(() => {
+    app.current.className = "intro";
+    setTimeout(() => {
+      app.current.className = "";
+    }, 5000);
+  }, []);
   return (
-    <>
+    <div ref={app} id="content">
+      <div className="noise"></div>
+
       <div id="grid-overlay" className="grid-overlay">
         <div></div>
         <div></div>
         <div></div>
         <div></div>
       </div>
-      <div className="noise"></div>
-      {/* <Cursor /> */}
       <div className="App">
-        <div data-testid="app" className="App">
-          <div className="grid-wrapper">
-            <div className="grid-line"></div>
-            <div className="grid-line"></div>
-            <div className="grid-line"></div>
-          </div>
+        <div className="grid-wrapper">
+          <div className="grid-line"></div>
+          <div className="grid-line"></div>
+          <div className="grid-line"></div>
         </div>
         <Router>
           <Navigation />
@@ -38,7 +45,7 @@ const App = () => {
           </Routes>
         </Router>
       </div>
-    </>
+    </div>
   );
 };
 

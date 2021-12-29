@@ -4,10 +4,14 @@ import ContactForm from "../components/contact/ContactForm";
 import "./Contact.css";
 import Card from "../components/Card";
 import Scroll from "../components/Scroll";
-import { Suspense, useRef } from "react";
+import { Suspense, useEffect, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 
 const Contact = (): JSX.Element => {
+  const paragraphOne = useRef<any>();
+  const paragraphTwo = useRef<any>();
+  const paragraphThree = useRef<any>();
+
   const Box = () => {
     const boxRef = useRef<any>();
 
@@ -29,29 +33,32 @@ const Contact = (): JSX.Element => {
 
   const handleScroll = () => {
     const scrollTop = window.scrollY;
-    var element = document.getElementById("element-1");
-    if (element) element.style.transform = `translateX(-${scrollTop / 80}%)`;
-    var element = document.getElementById("element-2");
-    if (element) element.style.transform = `translateX(${scrollTop / 70}%)`;
-
-    var element = document.getElementById("element-3");
-    if (element) element.style.transform = `translateX(-${scrollTop / 50}%)`;
+    paragraphOne.current.style.transform = `translateX(-${scrollTop / 55}%)`;
+    paragraphTwo.current.style.transform = `translateX(${scrollTop / 75}%)`;
+    paragraphThree.current.style.transform = `translateX(-${scrollTop / 155}%)`;
   };
-  window.addEventListener("scroll", handleScroll);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <Scroll>
       <h1 className="section-title txt-800">
-        <span className="txt-outlined">0</span>3
+        <span className="txt-outlined">0</span>
+        <span>3</span>
       </h1>
       <h3
         style={{ transition: "0.5s ease" }}
         className="side-section-title txt-xxs txt-400"
       >
-        Get in touch
+        <span>Get</span> <span>in</span> <span>touch</span>
       </h3>
 
-      <div className="contact-content div-parent">
+      <div className="content contact-content div-parent">
         <Canvas className="child-shape">
           <Suspense fallback={null}>
             <pointLight position={[5, 5, 5]} />
@@ -60,15 +67,15 @@ const Contact = (): JSX.Element => {
         </Canvas>
         <div className="child-txt">
           <div className="contact-heading">
-            <h2 id="element-1" className="txt-xl txt-800">
+            <h2 ref={paragraphOne} className="txt-xl txt-800">
               <span className="txt-outlined">HA</span>VE{" "}
               <span className="txt-outlined">A</span>
             </h2>
-            <h2 id="element-2" className="txt-xl txt-800">
+            <h2 ref={paragraphTwo} className="txt-xl txt-800">
               <span className="txt-outlined">#</span>QUE
               <span className="txt-outlined">S</span>{" "}
             </h2>
-            <h2 id="element-3" className="txt-xl txt-800">
+            <h2 ref={paragraphThree} className="txt-xl txt-800">
               <div className="dash"></div>
               TIO
               <span className="txt-outlined">N?</span>

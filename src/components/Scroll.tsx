@@ -6,7 +6,6 @@ const Scroll = (props: any) => {
   const size = useWindowSize();
 
   // Ref for parent div and scrolling div
-  const app = useRef();
   const scrollContainer = useRef<any>();
 
   // Configs
@@ -43,15 +42,9 @@ const Scroll = (props: any) => {
     // Set rounded to
     data!.rounded = Math.round(data.previous * 100) / 100;
 
-    // Difference between
-    const difference = data.current - data.rounded;
-    const acceleration = difference / size.width;
-    const velocity = +acceleration;
-    const skew = velocity * 5;
-
     //Assign skew and smooth scrolling to the scroll container
     if (scrollContainer && scrollContainer.current)
-      scrollContainer!.current!.style!.transform = `translate3d(0, -${data.rounded}px, 0) skewY(${skew}deg)`;
+      scrollContainer!.current!.style!.transform = `translate3d(0, -${data.rounded}px, 0)`;
 
     //loop vai raf
     requestAnimationFrame(() => skewScrolling());

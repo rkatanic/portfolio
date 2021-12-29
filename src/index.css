@@ -1,11 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap");
 
+@font-face {
+  font-family: rustyColaPen;
+  src: url("./assets/fonts/Manchester\ Signature\ ttf.ttf") format("opentype");
+}
+
 :root {
   --color-hue: 160;
   --color-black: hsl(0, 0%, 0%);
   --color-white: hsl(0, 0%, 100%);
   --color-gray: hsla(0, 0%, 100%, 0.125);
-  --color-gray-two: hsl(0, 0%, 70%);
+  --color-gray-two: hsl(0, 0%, 65%);
 
   --color-primary: hsl(var(--color-hue), 80%, 74%);
   --color-primary-two: hsl(var(--color-hue), 55%, 55%);
@@ -19,6 +24,7 @@
   --color-black: hsl(var(--color-hue), 10%, 17%);
 
   --font-body: "Montserrat", sans-serif;
+  --font-text: rustyColaPen;
 
   --margin-left: 20vw;
 
@@ -44,6 +50,10 @@ body.day-mode {
   --color-input: hsl(var(--color-hue), 5%, 100%);
   --color-body: hsl(var(--color-hue), 10%, 97%);
   --color-container: hsl(var(--color-hue), 70%, 85%);
+}
+
+span {
+  display: inline-block;
 }
 
 h1,

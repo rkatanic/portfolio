@@ -5,6 +5,8 @@
   transform: translateY(-50%);
   width: 4rem;
   z-index: 1;
+  opacity: 0;
+  animation: txtFadeIn 3s 2.5s ease forwards;
 }
 
 .night-mode-switch {
@@ -32,29 +34,33 @@
   padding: 0.5rem;
 }
 
-.active {
-  color: var(--color-primary);
-}
-
 .nav-toggle {
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   position: fixed;
-  top: 90vh;
-  left: calc(var(--margin-left) + var(--width-desktop) + 3rem);
-  width: 3rem;
-  height: 3rem;
-  background-color: black;
+  top: 7vh;
+  left: calc(var(--margin-left) + var(--width-desktop) + 1rem);
   z-index: 2;
-  border: 1px solid white;
-  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+}
+
+.nav-toggle-txt {
+  flex: 1;
+  font-size: 0.75vw;
+}
+
+.nav-toggle-shape {
+  flex: 1;
 }
 
 .nav-toggle-dash {
-  width: 1.5rem;
+  left: -2rem;
+  width: 1rem;
   height: 2px;
-  background: white;
+  background: var(--color-white);
   position: relative;
   transition: 0.35s ease-in-out;
 }
@@ -63,20 +69,20 @@
 .nav-toggle-dash::before {
   position: absolute;
   content: "";
-  width: 1rem;
+  width: 0.75rem;
   height: 2px;
-  background: white;
+  background: var(--color-white);
   transition: 0.35s ease-in-out;
 }
 
 .nav-toggle-dash::before {
   top: -8px;
-  right: 0.125rem;
+  right: 0.25rem;
 }
 
 .nav-toggle-dash::after {
   top: 8px;
-  left: 0.125rem;
+  left: 0.25rem;
 }
 
 .nav-toggle.close .nav-toggle-dash {
@@ -110,7 +116,7 @@
   height: 100vh;
   position: fixed;
   left: var(--margin-left);
-  top: 100vh;
+  top: -100vh;
 
   transition: 0.5s ease-in-out;
   z-index: 2;
@@ -123,17 +129,44 @@
 }
 
 .nav-item {
+  max-width: var(--width-desktop);
   transform: rotate(0deg);
   margin: 1rem;
+  position: relative;
 }
 
-.show-menu + .nav-toggle {
-  background: white;
+.nav-item:hover .nav-item-shape {
+  opacity: 1;
+}
+
+.nav-item .nav-item-shape {
+  width: 5rem !important;
+  background: red;
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+}
+
+.show-menu .nav-item:first-of-type {
+  opacity: 0;
+  animation: txtFadeInDown 1.25s 0.25s ease forwards;
+}
+
+.show-menu .nav-item:nth-of-type(2) {
+  opacity: 0;
+  animation: txtFadeInDown 1.25s 0.5s ease forwards;
+}
+
+.show-menu .nav-item:last-of-type {
+  opacity: 0;
+
+  animation: txtFadeInDown 1.25s 0.75s ease forwards;
 }
 
 .show-menu + .nav-toggle .nav-toggle-dash::before,
 .show-menu + .nav-toggle .nav-toggle-dash::after {
-  background: black;
+  background: var(--color-white);
 }
 
 .show-menu {

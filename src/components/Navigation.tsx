@@ -1,17 +1,20 @@
-import { useState } from "react";
+import { Suspense, useRef, useState } from "react";
 import Scrollspy from "react-scrollspy";
 import Settings from "./Settings";
 
 import "./Navigation.css";
 import { NavLink } from "react-router-dom";
+import { Canvas, useFrame } from "@react-three/fiber";
+import Shape from "./Shape";
 
 const Navigation = (): JSX.Element => {
   const [showMenu, setShowMenu] = useState(false);
+  const img1 = useRef<any>();
 
   const handleMenuToggle = (): void => setShowMenu((prevState) => !prevState);
 
   const handleLinkClick = (): void => {
-    document.getElementById("grid-overlay")?.classList.add("transition");
+    document.getElementById("content")?.classList.add("transition");
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 
@@ -19,9 +22,14 @@ const Navigation = (): JSX.Element => {
       setShowMenu(false);
     }, 1500);
     setTimeout((): void => {
-      document.getElementById("grid-overlay")?.classList.remove("transition");
-    }, 2500);
+      document.getElementById("content")?.classList.remove("transition");
+    }, 4000);
   };
+
+  const handleImageShow = (e: any) => {
+    img1.current.style.right = `${e.screenX}px`;
+  };
+
   return (
     <nav className="nav">
       <div
@@ -55,7 +63,7 @@ const Navigation = (): JSX.Element => {
             Skills
           </NavLink>
         </li>
-        <li className="nav-item">
+        <li className="nav-item" onMouseEnter={handleImageShow}>
           <NavLink
             to="/contact"
             className={({ isActive }) =>
@@ -65,6 +73,11 @@ const Navigation = (): JSX.Element => {
           >
             Contact
           </NavLink>
+          <Canvas ref={img1} className="nav-item-shape">
+            <Suspense fallback={null}>
+              <Shape />
+            </Suspense>
+          </Canvas>
         </li>
       </div>
       <div
@@ -72,7 +85,11 @@ const Navigation = (): JSX.Element => {
         onClick={handleMenuToggle}
         data-testid="nav-toggle"
       >
-        <div className="nav-toggle-dash"></div>
+        <Canvas className="nav-toggle-shape">
+          <Suspense fallback={null}>
+            <Shape />
+          </Suspense>
+        </Canvas>
       </div>
     </nav>
   );

@@ -6,7 +6,6 @@ interface Props {
   type?: "button" | "submit";
   variant?: "btn-primary" | "btn-outline";
   label: string | JSX.Element;
-  icon?: JSX.Element;
 }
 
 const Button = ({
@@ -15,7 +14,6 @@ const Button = ({
   type = "button",
   variant = "btn-primary",
   label,
-  icon,
 }: Props): JSX.Element => (
   <button
     disabled={disabled}
@@ -23,8 +21,7 @@ const Button = ({
     onClick={onClick}
     type={type}
   >
-    <span className="btn-content btn-label">{label}</span>
-    {icon && <div className="btn-content btn-icon">{icon}</div>}
+    <span className="txt-xs txt-600">{label}</span>
   </button>
 );
 
