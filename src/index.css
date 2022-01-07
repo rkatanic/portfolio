@@ -30,6 +30,8 @@
   --color-white: hsl(0, 0%, 100%);
   --color-gray: hsl(0, 0%, 50%);
   --color-gray-two: hsla(0, 0%, 53%, 0.125);
+  --color-gray-three: hsla(0, 0%, 53%, 0.035);
+  --color-gray-four: hsl(0, 0%, 65%);
 
   --color-primary: hsl(var(--color-hue), 80%, 74%);
   --color-primary-two: hsl(var(--color-hue), 55%, 55%);

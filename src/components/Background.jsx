@@ -2,7 +2,7 @@ import "./Background.css";
 
 const Background = () => {
   return (
-    <>
+    <div className="background">
       <div className="grid">
         <div className="grid-line"></div>
         <div className="grid-line"></div>
@@ -42,7 +42,7 @@ const Background = () => {
       <div id="gb-17" className="git-bubble"></div>
       <div id="gb-18" className="git-bubble"></div>
       <div id="gb-19" className="git-bubble"></div>
-    </>
+    </div>
   );
 };
 

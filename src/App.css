@@ -1,6 +1,5 @@
 .icon {
-  width: 1.5rem;
-  fill: var(--color-white);
+  width: 0.825rem;
 }
 
 .main {
@@ -9,8 +8,21 @@
   margin-top: var(--nav-height);
 }
 
+.section {
+  z-index: 2;
+  margin: var(--nav-height) calc(var(--margin-left) / 2);
+}
+
 .primary {
   color: var(--color-primary);
+}
+
+.bg-gray-three {
+  background-color: var(--color-gray-three);
+}
+
+.mg-l-075 {
+  margin-left: 0.75rem;
 }
 
 .txt-outlined {
@@ -35,6 +47,10 @@
 
 .txt-end {
   text-align: end;
+}
+
+.txt-300 {
+  font-weight: 300;
 }
 
 .txt-400 {
