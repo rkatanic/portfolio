@@ -1,0 +1,276 @@
+.grid {
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+.grid::before {
+  content: "";
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-size: 1vw 1vw;
+  background-image: radial-gradient(
+    hsla(0, 0%, 48%, 0.075) 1px,
+    transparent 0.05vw
+  );
+}
+
+.grid-line {
+  position: fixed;
+  width: 0.075vw;
+  background-color: var(--color-gray-two);
+}
+
+.grid-line:first-child {
+  margin-left: 12.5vw;
+  height: 100vh;
+}
+
+.grid-line:nth-child(2) {
+  height: 70vh;
+  margin-left: calc(12.5vw * 2);
+}
+
+.grid-line:nth-child(3) {
+  top: 44vh;
+  height: 70vh;
+  margin-left: calc(12.5vw * 3);
+}
+
+.grid-line:nth-child(4) {
+  top: 12vh;
+  height: 90vh;
+  margin-left: calc(12.5vw * 4);
+}
+
+.grid-line:nth-child(5) {
+  top: 50vh;
+  height: 24vh;
+  margin-left: calc(12.5vw * 5);
+}
+
+.grid-line:nth-child(6) {
+  height: 100vh;
+  margin-left: calc(12.5vw * 6);
+}
+
+.grid-line:nth-child(7) {
+  height: 42vh;
+  margin-left: calc(12.5vw * 7 - 6.25vw);
+}
+
+.grid-line:nth-child(8) {
+  top: 70vh;
+  height: 30vh;
+  margin-left: calc(12.5vw * 7);
+}
+
+.grid-line:nth-child(9) {
+  top: 0;
+  height: 15vh;
+  margin-left: calc(12.5vw * 5 - 0.075vw * 2);
+}
+
+.git-line {
+  left: 12.5vw;
+  bottom: 10vh;
+  position: absolute;
+  width: 6.25vw;
+  border-top-left-radius: 100%;
+  height: 10vh;
+  border-top: 0.075vw solid var(--color-gray-two);
+  border-left: 0.075vw solid var(--color-gray-two);
+}
+
+.git-line::before {
+  left: calc(6.25vw - 0.075vw * 2);
+  position: absolute;
+  content: "";
+  width: 6.25vw;
+  height: 10vh;
+  top: calc(-10vh - 0.075vw * 1.85);
+  border-bottom-right-radius: 100%;
+  border-bottom: 0.075vw solid var(--color-gray-two);
+  border-right: 0.075vw solid var(--color-gray-two);
+}
+
+#gl-2 {
+  top: 2vh;
+  left: calc(12.5vw * 4);
+}
+
+#gl-3 {
+  bottom: 6vh;
+  left: calc(12.5vw * 4);
+}
+
+#gl-4 {
+  bottom: 0vh;
+  left: calc(12.5vw * 5);
+}
+
+.git-line-left {
+  left: calc(12.5vw * 2 + 6.25vw + 0.075vw * 2);
+  bottom: 56vh;
+  position: absolute;
+  width: 6.25vw;
+  border-top-right-radius: 100%;
+  height: 10vh;
+  border-top: 0.075vw solid var(--color-gray-two);
+  border-right: 0.075vw solid var(--color-gray-two);
+}
+
+.git-line-left::before {
+  right: calc(6.25vw - 0.075vw);
+  position: absolute;
+  content: "";
+  width: 6.25vw;
+  height: 10vh;
+  top: calc(-10vh - 0.075vw * 1.85);
+  border-bottom-left-radius: 100%;
+  border-bottom: 0.075vw solid var(--color-gray-two);
+  border-left: 0.075vw solid var(--color-gray-two);
+}
+
+#gll-3 {
+  bottom: 50vh;
+  left: calc(12.5vw * 4 + 6.25vw + 0.075vw * 2);
+}
+
+#gll-4 {
+  top: 25vh;
+  left: calc(12.5vw * 5 + 6.25vw + 0.075vw * 2);
+}
+
+.git-line-short {
+  left: calc(12.5vw * 6);
+  top: 52vh;
+  position: absolute;
+  width: 3.125vw;
+  border-top-left-radius: 100%;
+  height: 10vh;
+  border-top: 0.075vw solid var(--color-gray-two);
+  border-left: 0.075vw solid var(--color-gray-two);
+}
+
+.git-line-short::before {
+  left: calc(3.125vw - 0.075vw * 2);
+  position: absolute;
+  content: "";
+  width: 3.125vw;
+  height: 10vh;
+  top: calc(-10vh - 0.075vw * 1.85);
+  border-bottom-right-radius: 100%;
+  border-bottom: 0.075vw solid var(--color-gray-two);
+  border-right: 0.075vw solid var(--color-gray-two);
+}
+
+.git-bubble {
+  opacity: 1;
+  position: fixed;
+  width: 3.125vw;
+  height: 3.125vw;
+  border-radius: 50%;
+  background-color: var(--color-black);
+  border: 0.075vw solid var(--color-gray-two);
+}
+
+#gb-1 {
+  bottom: calc(10vh - 3.125vw);
+  left: calc(12.5vw - (3.125vw / 2));
+}
+
+#gb-2 {
+  bottom: calc(36vh - 3.125vw);
+  left: calc(25vw - (3.125vw / 2));
+}
+
+#gb-3 {
+  bottom: -3vh;
+  left: calc((12.5vw * 3) - (3.125vw / 2));
+}
+
+#gb-4 {
+  bottom: 50vh;
+  left: calc((12.5vw * 3) - (3.125vw / 2));
+}
+
+#gb-5 {
+  bottom: 76vh;
+  left: calc((12.5vw * 2) - (3.125vw / 2));
+}
+
+#gb-6 {
+  bottom: 1vh;
+  left: calc((12.5vw * 4) - (3.125vw / 2));
+}
+
+#gb-7 {
+  bottom: 25vh;
+  left: calc((12.5vw * 3) - (3.125vw / 2));
+}
+
+#gb-8 {
+  top: 24vh;
+  left: calc((12.5vw * 4) - (3.125vw / 2));
+}
+
+#gb-9 {
+  top: 10vh;
+  left: calc((12.5vw * 4) - (3.125vw / 2));
+}
+
+#gb-10 {
+  top: 55vh;
+  left: calc((12.5vw * 4) - (3.125vw / 2));
+}
+
+#gb-11 {
+  bottom: 45vh;
+  left: calc((12.5vw * 5) - (3.125vw / 2));
+}
+
+#gb-12 {
+  top: 60vh;
+  left: calc((12.5vw * 6) - (3.125vw / 2));
+}
+
+#gb-13 {
+  top: 74vh;
+  left: calc((12.5vw * 6) - (3.125vw / 2));
+}
+
+#gb-14 {
+  top: 8vh;
+  left: calc((12.5vw * 5) - (3.125vw / 2));
+}
+
+#gb-15 {
+  top: 34vh;
+  left: calc((12.5vw * 6) - (3.125vw / 2));
+}
+
+#gb-16 {
+  bottom: 30vh;
+  left: calc((12.5vw * 7) - (3.125vw / 2));
+}
+
+#gb-17 {
+  bottom: 4vh;
+  left: calc((12.5vw * 7) - (3.125vw / 2));
+}
+
+#gb-18 {
+  top: 40vh;
+  left: calc((12.5vw * 7 - 6.25vw) - (3.125vw / 2));
+}
+
+#gb-19 {
+  bottom: 24vh;
+  left: calc((12.5vw * 5) - (3.125vw / 2));
+}

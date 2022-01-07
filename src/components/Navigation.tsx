@@ -1,96 +1,89 @@
-import { Suspense, useRef, useState } from "react";
+import { Suspense, useEffect, useRef, useState } from "react";
 import Scrollspy from "react-scrollspy";
 import Settings from "./Settings";
+import { ReactComponent as CloseIcon } from "../assets/icons/close.svg";
+import { ReactComponent as ExternalLinkIcon } from "../assets/icons/external-link.svg";
+import { ReactComponent as ArrowRightIcon } from "../assets/icons/arrow-right.svg";
 
 import "./Navigation.css";
 import { NavLink } from "react-router-dom";
-import { Canvas, useFrame } from "@react-three/fiber";
-import Shape from "./Shape";
 
 const Navigation = (): JSX.Element => {
   const [showMenu, setShowMenu] = useState(false);
-  const img1 = useRef<any>();
 
   const handleMenuToggle = (): void => setShowMenu((prevState) => !prevState);
 
-  const handleLinkClick = (): void => {
-    document.getElementById("content")?.classList.add("transition");
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-
-    setTimeout(() => {
-      setShowMenu(false);
-    }, 1500);
-    setTimeout((): void => {
-      document.getElementById("content")?.classList.remove("transition");
-    }, 4000);
-  };
-
-  const handleImageShow = (e: any) => {
-    img1.current.style.right = `${e.screenX}px`;
-  };
-
   return (
     <nav className="nav">
-      <div
-        className={`nav-menu${showMenu ? " show-menu" : ""}`}
-        data-testid="nav-menu"
-      >
-        <div className="grid-wrapper">
-          <div className="grid-line"></div>
-          <div className="grid-line"></div>
-          <div className="grid-line"></div>
-        </div>
-        <li className="nav-item">
-          <NavLink
-            to="/about"
-            className={({ isActive }) =>
-              `txt-lg txt-outlined txt-800 nav-link ${isActive ? "active" : ""}`
-            }
-            onClick={handleLinkClick}
-          >
-            About
-          </NavLink>
-        </li>
-        <li className="nav-item">
-          <NavLink
-            to="/skills"
-            className={({ isActive }) =>
-              `txt-lg txt-outlined txt-800 nav-link ${isActive ? "active" : ""}`
-            }
-            onClick={handleLinkClick}
-          >
-            Skills
-          </NavLink>
-        </li>
-        <li className="nav-item" onMouseEnter={handleImageShow}>
-          <NavLink
-            to="/contact"
-            className={({ isActive }) =>
-              `txt-lg txt-outlined txt-800 nav-link ${isActive ? "active" : ""}`
-            }
-            onClick={handleLinkClick}
-          >
-            Contact
-          </NavLink>
-          <Canvas ref={img1} className="nav-item-shape">
-            <Suspense fallback={null}>
-              <Shape />
-            </Suspense>
-          </Canvas>
-        </li>
-      </div>
+      <div className="nav-header">radivoje.katanic</div>
       <div
         className={`nav-toggle${showMenu ? " close" : ""}`}
         onClick={handleMenuToggle}
         data-testid="nav-toggle"
       >
-        <Canvas className="nav-toggle-shape">
-          <Suspense fallback={null}>
-            <Shape />
-          </Suspense>
-        </Canvas>
+        <div className="nav-toggle-dash"></div>
       </div>
+
+      {showMenu && (
+        <div
+          className={`nav-menu${showMenu ? " show-menu" : ""}`}
+          data-testid="nav-menu"
+        >
+          <div className="nav-menu-heading">
+            <div className="nav-menu-heading-title">Pages</div>
+            <div className="nav-menu-heading-close-icon">
+              <CloseIcon onClick={() => setShowMenu(false)} />
+            </div>
+          </div>
+          <ul>
+            <li className="nav-item">
+              <NavLink
+                className={({ isActive }) =>
+                  `nav-link ${isActive ? "active" : ""}`
+                }
+                to="/"
+                onClick={() => setShowMenu(false)}
+              >
+                <div className="nav-link-txt">
+                  <ExternalLinkIcon />
+                  <span>Home</span>
+                </div>
+                <ArrowRightIcon />
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                className={({ isActive }) =>
+                  `nav-link ${isActive ? "active" : ""}`
+                }
+                to="/about"
+                onClick={() => setShowMenu(false)}
+              >
+                <div className="nav-link-txt">
+                  <ExternalLinkIcon />
+                  <span>About</span>
+                </div>
+                <ArrowRightIcon />
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                className={({ isActive }) =>
+                  `nav-link ${isActive ? "active" : ""}`
+                }
+                to="/contact"
+                onClick={() => setShowMenu(false)}
+              >
+                <div className="nav-link-txt">
+                  <ExternalLinkIcon />
+                  <span>Contact</span>
+                </div>
+                <ArrowRightIcon />
+              </NavLink>
+            </li>
+          </ul>
+        </div>
+      )}
     </nav>
   );
 };

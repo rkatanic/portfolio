@@ -1,7 +1,11 @@
 import { useFrame } from "@react-three/fiber";
 import { useRef } from "react";
 
-const Shape = (): JSX.Element => {
+interface Props {
+  type: "tetrahedron" | "octahedron";
+}
+
+const Shape = ({ type }: Props): JSX.Element => {
   const boxRef = useRef<any>();
 
   useFrame((): void => {
@@ -10,7 +14,11 @@ const Shape = (): JSX.Element => {
 
   return (
     <mesh ref={boxRef} rotation-x={Math.PI * 0.25} rotation-y={Math.PI * 0.25}>
-      <tetrahedronBufferGeometry args={[2.5]} />
+      {type === "tetrahedron" ? (
+        <tetrahedronBufferGeometry args={[3]} />
+      ) : (
+        <octahedronBufferGeometry args={[3]} />
+      )}
       <meshBasicMaterial wireframe color={"hsl(0,0%,30%)"} />
     </mesh>
   );

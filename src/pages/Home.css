@@ -1,11 +1,118 @@
-.main {
-  max-width: calc(var(--width-desktop));
-  padding: 0.5rem;
+.section {
 }
 
-.side-section {
-  margin-left: calc(var(--width-desktop) - 11.5vw);
+.statue {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
-@media screen and (max-width: 600px) {
+.statue img {
+  width: 28rem;
+  animation: levitate 5s ease-in-out infinite;
+}
+
+.pinpoint {
+  position: absolute;
+  background-color: var(--color-white);
+  border-radius: 50%;
+  width: 0.75vw;
+  height: 0.75vw;
+}
+
+#pin-1 {
+  top: 62%;
+  z-index: 1;
+  left: 57%;
+}
+
+#pin-1:hover + .pinpoint-txt {
+  opacity: 1;
+  transform: translateY(0);
+  transform: translateY(-20px);
+}
+
+#pin-2:hover + .pinpoint-txt {
+  opacity: 1;
+  transform: translateY(0);
+  transform: translateY(-20px);
+}
+
+#pin-2 {
+  top: 15%;
+  z-index: 1;
+  left: 40%;
+}
+
+#pin-2::before {
+  animation-delay: 1.25s;
+}
+
+.pinpoint::before {
+  content: "";
+  position: absolute;
+  width: 0.75vw;
+  height: 0.75vw;
+  border-radius: 50%;
+  background-color: var(--color-white);
+  animation: pinpoint-pulse 2s linear infinite;
+}
+
+.pinpoint-txt {
+  z-index: 1;
+  position: absolute;
+  bottom: -5rem;
+  opacity: 0;
+  text-align: center;
+  width: 50vw;
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  transition: 0.5s ease;
+}
+
+#main-pinpoint-txt {
+  transform: translateY(-20px);
+  opacity: 1;
+}
+
+.desc {
+  align-self: center;
+  flex: 1;
+  text-align: start;
+}
+
+.desc .col {
+  margin: 2vw 0;
+}
+
+.desc .col p {
+  margin: 0.5vw 0;
+}
+
+@keyframes pinpoint-pulse {
+  0% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(5);
+  }
+}
+
+@keyframes levitate {
+  0% {
+    transform: translateY(10px);
+  }
+
+  50% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(10px);
+  }
 }
